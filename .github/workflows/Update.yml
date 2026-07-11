@@ -44,7 +44,8 @@ on:
         type: string
         default: 'latest-release'
 
-permissions: write-all
+permissions:
+  contents: read
 
 jobs:
   update:
@@ -98,12 +99,17 @@ jobs:
 
       - name: 提交并推回（如有变化）
         shell: bash
+        env:
+          PAT: ${{ secrets.PAT }}
         run: |
           set -euo pipefail
           # 不要把稀疏克隆出来的源码仓库(src)一起提交（会变成嵌套子模块）
           rm -rf src
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 改用 PAT 推送：本实例的 GITHUB_TOKEN 不被允许修改工作流文件（.github/workflows/Build.yml）
+          git config --unset-all "http.https://github.com/.extraheader" 2>/dev/null || true
+          git remote set-url origin "https://${PAT}@github.com/poying2018/IMMWRT-CI.git"
           git add -A
           if git diff --cached --quiet; then
             echo "::notice::无变化，跳过提交"
