@@ -1,0 +1,112 @@
+# 同步官方最新发布渠道 → 刷新 Build.yml 的三个下拉
+#
+# 手动触发（workflow_dispatch）。每次运行会：
+#   1. 解析所选源码仓库的「官方最新发布渠道」（默认取 openwrt-* 中版本最大的分支，
+#      如当前为 openwrt-25.12）；
+#   2. 稀疏克隆该分支的 target/linux（只取设备/内核定义，体积小）；
+#   3. 重新生成 Build.yml 的 branch / kernel / device 三个 options 下拉，
+#      并同步更新仓库根目录的 device-map.txt（全量机型，无下拉字符上限约束）；
+#   4. 若内容有变化，自动提交并推回本仓库。
+#
+# 说明：
+#   - branch：来自 git ls-remote 的真实分支（openwrt-* 倒序 + master），默认指向最新发布渠道；
+#   - kernel：扫描各目标 Makefile 的 KERNEL_PATCHVER，取源码真实支持的内核集合；
+#   - device：扫描所有「被实例化」的 define Device/<profile>（排除 FitImage/Initramfs 等
+#     镜像模板），生成中文短名；下拉受 GitHub 单输入 ~65535 字符上限约束，放不下的机型
+#     仍可在 device-map.txt 查到、并用「⚙ 自定义」按 target/subtarget|profile 编译。
+#   - 旧设备的中文名尽量沿用（device-map.txt 连续保留），新增设备自动起名。
+#
+# 不会自动触发 Build 编译（Build.yml 仅 workflow_dispatch 触发）。
+
+name: Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: '源码仓库'
+        required: true
+        type: choice
+        default: immortalwrt/immortalwrt
+        options:
+          - immortalwrt/immortalwrt
+          - VIKINGYFY/immortalwrt
+          - openwrt/openwrt
+          - custom
+      custom_repo:
+        description: '自定义仓库(source 选 custom 时填写，格式 owner/repo)'
+        required: false
+        type: string
+        default: ''
+      ref:
+        description: '快照来源分支（默认=官方最新发布渠道：openwrt-* 中版本最大者；也可填具体分支如 openwrt-24.10）'
+        required: true
+        type: string
+        default: 'latest-release'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 本仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 解析源码仓库与官方最新发布渠道
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="${{ inputs.source }}"
+          if [ "$SRC" = "custom" ]; then SRC="${{ inputs.custom_repo }}"; fi
+          echo "src=$SRC" >> "$GITHUB_OUTPUT"
+          REF="${{ inputs.ref }}"
+          if [ "$REF" = "latest-release" ]; then
+            REF=$(git ls-remote --heads "https://github.com/$SRC.git" \
+              | awk -F'refs/heads/' '/refs\/heads\/openwrt-/{print $2}' \
+              | sort -V | tail -n1)
+            if [ -z "$REF" ]; then REF=master; fi
+          fi
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "::notice::快照来源 = $SRC @ $REF"
+
+      - name: 稀疏克隆源码(target/linux)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --no-checkout --depth 1 \
+            -b "${{ steps.meta.outputs.ref }}" \
+            "https://github.com/${{ steps.meta.outputs.src }}.git" src
+          cd src
+          git sparse-checkout init --cone
+          git sparse-checkout set target/linux
+          git checkout
+
+      - name: 生成下拉并回写 Build.yml / device-map.txt
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/update_build.py \
+            --src-dir src \
+            --repo "${{ steps.meta.outputs.src }}" \
+            --ref "${{ steps.meta.outputs.ref }}" \
+            --build .github/workflows/Build.yml \
+            --map device-map.txt
+
+      - name: 提交并推回（如有变化）
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "::notice::无变化，跳过提交"
+          else
+            git commit -m "chore: 同步官方最新发布渠道(${{ steps.meta.outputs.src }} @ ${{ steps.meta.outputs.ref }}) 的设备/内核/系统版本 [skip ci]"
+            git push
+          fi

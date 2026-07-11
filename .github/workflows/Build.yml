@@ -3,9 +3,10 @@
 # 特点：
 #   - 纯手动触发（workflow_dispatch），不定时、不自动
 #   - 所有选项（含设备）以下拉框 / 输入框形式在「Run workflow」界面选择
-#   - 设备下拉内置精选热门机型（共约 300 项，受 GitHub 单输入 65535 字符上限限制）；
-#     未列出的机型请在 device 下拉选「⚙ 自定义」，再到 custom_device 填写 target|profile
-#     （全部 877 个机型见仓库根目录 devices.txt，复制粘贴即可）
+#   - 设备下拉内置大量机型（受 GitHub 单输入 65535 字符上限约束，放不下的用「⚙ 自定义」）；
+#     中文名 ↔ target/subtarget|profile 的映射见仓库根目录 device-map.txt
+#   - 下拉选项（系统版本 / 内核 / 设备）由 Update.yml 工作流从「官方最新发布渠道」自动同步，
+#     运行一次 Update 即可把三者刷新为所选源码真实支持的最新内容（详见 README）
 #   - 只编译你选中的那一个设备，速度快、产物小
 #   - 所有源码都在 workflow 运行时才 git clone 拉取
 #

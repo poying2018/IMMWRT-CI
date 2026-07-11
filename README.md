@@ -14,8 +14,10 @@
 ```
 .github/workflows/
   Build.yml        # 主工作流：手动选参数 → 只编译单设备
-device-map.txt   # 中文设备名 ↔ target/subtarget|profile 映射（工作流运行时反查用）
-devices.txt      # 全部 877 个机型原始 profile 清单（自定义时复制用）
+  Update.yml       # 手动触发：把 Build.yml 的下拉同步为官方最新发布渠道的真实内容
+scripts/
+  update_build.py  # Update.yml 调用的生成脚本（解析源码、回写下拉与 device-map.txt）
+device-map.txt   # 中文设备名 ↔ target/subtarget|profile 映射（全量机型，运行时反查用）
 README.md
 ```
 
@@ -34,15 +36,38 @@ README.md
 
 ---
 
+## 同步最新发布渠道（Update 工作流）
+
+`Build.yml` 的三个下拉（**系统版本 / 内核 / 设备**）不是写死的，而是由 `Update.yml`
+工作流从你选的源码仓库**真实拉取后生成**，保证和「官方最新发布渠道」一致：
+
+1. **Actions → Update → Run workflow**。
+2. 选项：
+   - `source`：源码仓库（同 Build，默认 `immortalwrt/immortalwrt`）；
+   - `custom_repo`：`source` 选 `custom` 时填 `owner/repo`；
+   - `ref`：快照来源分支，**默认 `latest-release`**（自动取 `openwrt-*` 中版本最大的分支，
+     如当前为 `openwrt-25.12`）；也可手动填具体分支（如 `openwrt-24.10`）。
+3. 运行后会自动：稀疏克隆该分支的 `target/linux` → 解析真实分支/内核/设备 →
+   回写 `Build.yml` 下拉并同步 `device-map.txt` → 有变化则提交推回本仓库。
+
+刷新内容：
+- **系统版本 `branch`**：来自 `git ls-remote` 的真实分支（`openwrt-*` 倒序 + `master`），默认指向最新发布渠道；
+- **内核 `kernel`**：扫描各目标 `Makefile` 的 `KERNEL_PATCHVER`，取源码真实支持的内核集合（首项固定「自动（源码默认）」）；
+- **设备 `device`**：扫描所有**被实例化**的 `define Device/<profile>`（自动排除 `FitImage`/`Initramfs` 等镜像模板），生成中文短名；下拉受 GitHub 单输入 ~65535 字符上限约束，放不下的机型仍可在 `device-map.txt` 查到、并用「⚙ 自定义」按 `target/subtarget|profile` 编译。旧设备的中文名尽量沿用，新增设备自动起名。
+
+> 提示：官方发布新机型 / 新内核后，跑一次 Update 即可让 Build 的下拉跟上，无需手改 YAML。
+
+---
+
 ## 可选项说明（Run workflow 界面）
 
 | 选项 | 类型 | 说明 |
 | --- | --- | --- |
 | **source 源码仓库** | 下拉 | `immortalwrt/immortalwrt`(官方) / `VIKINGYFY/immortalwrt`(高通满血NSS) / `openwrt/openwrt`(原版) / `custom` |
 | **custom_repo** | 输入 | 选 `custom` 时填 `owner/repo` |
-| **branch 系统版本/分支** | 下拉 | 真实分支：`openwrt-24.10` / `openwrt-23.05` / `openwrt-22.03` / `master`；clone 前用 `git ls-remote` 校验该分支/tag 是否真实存在于所选源码仓库，不存在则列出可用分支并中断 |
-| **kernel 内核版本** | 下拉 | `自动（源码默认）` / `5.15` / `6.1` / `6.6` / `6.12`：**运行时读取所选目标源码实际支持的内核列表**，选具体版本则校验该目标是否支持，不支持回退默认并 `::warning`；选「自动」用分支自带内核 |
-| **device 设备型号** | 下拉 | **全部 877 个机型，以「中文名」显示**（如 `小米 AX6000`、`网件 RAX120`、`X86 软路由`）；列表外的机型选「⚙ 自定义」后在 `custom_device` 填写 |
+| **branch 系统版本/分支** | 下拉 | 由 Update 工作流从源码 `git ls-remote` 同步的真实分支（默认指向官方最新发布渠道，如 `openwrt-25.12`）；clone 前校验该分支/tag 是否真实存在，不存在则列出可用分支并中断 |
+| **kernel 内核版本** | 下拉 | `自动（源码默认）` + 由 Update 工作流从源码 `KERNEL_PATCHVER` 同步的真实内核版本：**运行时校验所选目标是否支持该内核**，不支持回退默认并 `::warning`；选「自动」用分支自带内核 |
+| **device 设备型号** | 下拉 | **官方最新发布渠道支持的大量机型，以「中文名」显示**（由 Update 工作流同步）；受 GitHub 单输入字符上限约束放不下的机型，选「⚙ 自定义」后在 `custom_device` 填写 |
 | **custom_device** | 输入 | 选「自定义」时填，格式 `target/subtarget\|profile`，如 `mediatek/filogic\|xiaomi_redmi-router-ax6000` |
 | **theme 主题** | 下拉 | `argon` / `bootstrap` / `material` / `design` |
 | **plugins 预装插件** | 多行输入 | 每行一个包名，见下方 |
@@ -66,7 +91,7 @@ README.md
   不存在的会 `::warning` 并跳过，不会导致失败。
 
 ### 关于"设备型号"下拉
-`device` 下拉**内置全部 877 个机型**，但显示为**中文名**（品牌 + 型号，如 `小米 AX6000`、`网件 RAX120`、
+`device` 下拉**内置由 Update 工作流同步的大量机型**，显示为**中文名**（品牌 + 型号，如 `小米 AX6000`、`网件 RAX120`、
 `X86 软路由`、`瑞莎 Rock 5B`、`香橙派 Orangepi 5`），比原来的 `target/subtarget|profile` 原始串更直观、更短。
 
 下拉最底部有 **「⚙ 自定义」**：选它后在 `custom_device` 里填 `target/subtarget|profile`
@@ -78,11 +103,12 @@ README.md
 > （每行 `中文名|target/subtarget|profile`），工作流运行时用 `awk` 精确反查，你无需记忆任何代码。
 > 完整清单也可直接看 `device-map.txt`。
 
-> 机型列表取自 ImmortalWrt / OpenWrt 源码里真实的 `define Device/<profile>`：MT798x / Rockchip / 高通 NSS 系列取自
-> VIKINGYFY `main` 与 23.05 发布版，其余平台（MT7621 / MT76x8 / MT7622 / ATH79 / IPQ40xx / 树莓派）取自 23.05.5 发布版的 `profiles.json`。
+> 机型列表由 Update 工作流从所选源码的**最新发布分支**实时解析：扫描所有**被实例化**的
+> `define Device/<profile>`（自动排除 `FitImage` / `Initramfs` 等镜像模板），生成中文短名；
+> 下拉受 GitHub 单输入 ~65535 字符上限约束，放不下的机型仍在 `device-map.txt` 里、可用「⚙ 自定义」编译。
 > 不同分支的个别 profile 名可能有差异（如 `-stock` / `-ubootmod` 后缀），列表里没找到或编不出 → 选「⚙ 自定义」填对应分支的确切名即可。
 
-常见 profile 示例（下拉里直接搜，或在 `devices.txt` 里找）：
+常见 profile 示例（下拉里直接搜，或在 `device-map.txt` 里找）：
 - x86_64：`generic`
 - 红米 AX6000（uboot）：`xiaomi_redmi-router-ax6000-ubootmod`
 - 小米 AX3000T：`xiaomi_mi-router-ax3000t`
