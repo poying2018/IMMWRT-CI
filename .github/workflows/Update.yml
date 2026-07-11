@@ -44,16 +44,11 @@ on:
         type: string
         default: 'latest-release'
 
-permissions:
-  contents: read
+permissions: write-all
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    # 需要 workflows 权限：本工作流会改写 .github/workflows/Build.yml 并推回
-    permissions:
-      contents: write
-      workflows: write
     steps:
       - name: Checkout 本仓库
         uses: actions/checkout@v4
