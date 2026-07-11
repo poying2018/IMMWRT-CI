@@ -972,6 +972,8 @@ permissions: write-all
 
 env:
   TZ: Asia/Shanghai
+  # 用户预装插件（多行输入，运行时按空白切分成多个包名）
+  PLUGINS_RAW: ${{ inputs.plugins }}
 
 jobs:
   build:
@@ -1079,13 +1081,11 @@ jobs:
             fi
           }
           fetch "luci-theme-argon"
-          while IFS= read -r line; do
-            name="$(echo "$line" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
+          for raw in $PLUGINS_RAW; do
+            name="$(echo "$raw" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
             [ -z "$name" ] && continue
             if [ -n "${EXTRA[$name]:-}" ]; then fetch "$name"; fi
-          done <<'PLUGINS'
-          ${{ inputs.plugins }}
-          PLUGINS
+          done
 
       - name: 生成 .config（仅此设备）
         working-directory: openwrt
@@ -1148,28 +1148,24 @@ jobs:
             echo "CONFIG_TARGET_ROOTFS_PARTSIZE=1024"   >> $CFG
           fi
 
-          # 用户预装插件（逐行追加）
-          while IFS= read -r line; do
-            name="$(echo "$line" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
+          # 用户预装插件（按空白切分，兼容换行/空格分隔）
+          for raw in $PLUGINS_RAW; do
+            name="$(echo "$raw" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
             [ -z "$name" ] && continue
             echo "CONFIG_PACKAGE_${name}=y" >> $CFG
-          done <<'PLUGINS'
-          ${{ inputs.plugins }}
-          PLUGINS
+          done
 
           make defconfig
           # 校验预装插件是否真实存在于源码/feeds（根据源代码支持情况）
           if [ -f tmp/.config-package.in ]; then
-            while IFS= read -r line; do
-              p="$(echo "$line" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
+            for raw in $PLUGINS_RAW; do
+              p="$(echo "$raw" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
               [ -z "$p" ] && continue
               if ! grep -q "CONFIG_PACKAGE_${p}" tmp/.config-package.in 2>/dev/null; then
                 echo "::warning::插件 ${p} 在源码/feeds 中不存在，已跳过"
                 sed -i "/CONFIG_PACKAGE_${p}=y/d" .config
               fi
-            done <<'PLUGINS'
-            ${{ inputs.plugins }}
-            PLUGINS
+            done
           fi
           echo "===== 最终 target 相关配置 ====="
           grep -E 'CONFIG_TARGET.*=y' .config | head -n 40

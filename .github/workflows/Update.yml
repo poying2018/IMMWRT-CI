@@ -46,6 +46,7 @@ on:
 
 permissions:
   contents: write
+  workflows: write
 
 jobs:
   update:
@@ -101,6 +102,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # 不要把稀疏克隆出来的源码仓库(src)一起提交（会变成嵌套子模块）
+          rm -rf src
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
