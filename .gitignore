@@ -1,0 +1,18 @@
+# 本地私钥 / 凭据 / 环境变量
+*.local
+.env
+secrets.*
+*.token
+
+# 操作系统 & 编辑器
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# 编译产物（IMMWRT 源码在 workflow 运行时才克隆，不在仓库内）
+/build/
+/bin/
+/dl/

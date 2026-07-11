@@ -1,0 +1,31 @@
+# 手动清理旧的 Workflow 运行记录 / 旧 Release，节省 GitHub 配额
+# 纯手动触发，不定时
+name: Auto-Clean
+
+on:
+  workflow_dispatch:
+    inputs:
+      retain_days:
+        description: '保留最近多少天的运行记录'
+        required: true
+        type: string
+        default: '7'
+      keep_runs:
+        description: '每个 workflow 至少保留几次运行'
+        required: true
+        type: string
+        default: '3'
+
+permissions: write-all
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 删除旧的 workflow 运行记录
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: ${{ inputs.retain_days }}
+          keep_minimum_runs: ${{ inputs.keep_runs }}
