@@ -1,877 +1,2253 @@
-X86 软路由|x86/64|generic
-树莓派 4|bcm27xx/bcm2711|rpi-4
-9Tripod X3568 V4|rockchip/armv8|9tripod_x3568-v4
-AriaBoard Photonicat|rockchip/armv8|ariaboard_photonicat
-AriaBoard Photonicat2|rockchip/armv8|ariaboard_photonicat2
-ArmSoM Sige3|rockchip/armv8|armsom_sige3
-ArmSoM Sige7|rockchip/armv8|armsom_sige7
-Cyber Cyber3588 Aib|rockchip/armv8|cyber_cyber3588-aib
-EZPro Mrkaio M68s|rockchip/armv8|ezpro_mrkaio-m68s
-Firefly Roc Rk3328 Cc|rockchip/armv8|firefly_roc-rk3328-cc
-Firefly Roc Rk3568 Pc|rockchip/armv8|firefly_roc-rk3568-pc
-友善 Nanopc T4|rockchip/armv8|friendlyarm_nanopc-t4
-友善 Nanopc T6|rockchip/armv8|friendlyarm_nanopc-t6
-友善 Nanopi M5|rockchip/armv8|friendlyarm_nanopi-m5
-友善 Nanopi R2c|rockchip/armv8|friendlyarm_nanopi-r2c
-友善 Nanopi R2c Plus|rockchip/armv8|friendlyarm_nanopi-r2c-plus
-友善 Nanopi R2s|rockchip/armv8|friendlyarm_nanopi-r2s
-友善 Nanopi R2s Plus|rockchip/armv8|friendlyarm_nanopi-r2s-plus
-友善 Nanopi R3s|rockchip/armv8|friendlyarm_nanopi-r3s
-友善 Nanopi R4s|rockchip/armv8|friendlyarm_nanopi-r4s
-友善 Nanopi R4s Enterprise|rockchip/armv8|friendlyarm_nanopi-r4s-enterprise
-友善 Nanopi R4se|rockchip/armv8|friendlyarm_nanopi-r4se
-友善 Nanopi R5c|rockchip/armv8|friendlyarm_nanopi-r5c
-友善 Nanopi R5s|rockchip/armv8|friendlyarm_nanopi-r5s
-友善 Nanopi R6c|rockchip/armv8|friendlyarm_nanopi-r6c
-友善 Nanopi R6s|rockchip/armv8|friendlyarm_nanopi-r6s
-友善 Nanopi R76s|rockchip/armv8|friendlyarm_nanopi-r76s
-Huake Guangmiao G4c|rockchip/armv8|huake_guangmiao-g4c
-LinkEase Easepi R1|rockchip/armv8|linkease_easepi-r1
-Lunzn Fastrhino R66s|rockchip/armv8|lunzn_fastrhino-r66s
-Lunzn Fastrhino R68s|rockchip/armv8|lunzn_fastrhino-r68s
-LYT T68m|rockchip/armv8|lyt_t68m
-MMBOX Anas3035|rockchip/armv8|mmbox_anas3035
-NLnet Xiguapi V3|rockchip/armv8|nlnet_xiguapi-v3
-Pine64 Rock64|rockchip/armv8|pine64_rock64
-Pine64 Rockpro64|rockchip/armv8|pine64_rockpro64
-瑞莎 Cm3 Io|rockchip/armv8|radxa_cm3-io
-瑞莎 E20c|rockchip/armv8|radxa_e20c
-瑞莎 E25|rockchip/armv8|radxa_e25
-瑞莎 E52c|rockchip/armv8|radxa_e52c
-瑞莎 Rock 2a|rockchip/armv8|radxa_rock-2a
-瑞莎 Rock 2f|rockchip/armv8|radxa_rock-2f
-瑞莎 Rock 3a|rockchip/armv8|radxa_rock-3a
-瑞莎 Rock 3b|rockchip/armv8|radxa_rock-3b
-瑞莎 Rock 3c|rockchip/armv8|radxa_rock-3c
-瑞莎 Rock 4c Plus|rockchip/armv8|radxa_rock-4c-plus
-瑞莎 Rock 4d|rockchip/armv8|radxa_rock-4d
-瑞莎 Rock 4se|rockchip/armv8|radxa_rock-4se
-瑞莎 Rock 5 Itx|rockchip/armv8|radxa_rock-5-itx
-瑞莎 Rock 5a|rockchip/armv8|radxa_rock-5a
-瑞莎 Rock 5b|rockchip/armv8|radxa_rock-5b
-瑞莎 Rock 5b Plus|rockchip/armv8|radxa_rock-5b-plus
-瑞莎 Rock 5c|rockchip/armv8|radxa_rock-5c
-瑞莎 Rock 5t|rockchip/armv8|radxa_rock-5t
-瑞莎 Rock Pi 4a|rockchip/armv8|radxa_rock-pi-4a
-瑞莎 Rock Pi E|rockchip/armv8|radxa_rock-pi-e
-瑞莎 Rock Pi S|rockchip/armv8|radxa_rock-pi-s
-瑞莎 Zero 3e|rockchip/armv8|radxa_zero-3e
-瑞莎 Zero 3w|rockchip/armv8|radxa_zero-3w
-香蕉派 Bpi R2 Pro|rockchip/armv8|sinovoip_bpi-r2-pro
-Widora Mangopi M28c|rockchip/armv8|widora_mangopi-m28c
-Widora Mangopi M28k|rockchip/armv8|widora_mangopi-m28k
-香橙派 Orangepi 5|rockchip/armv8|xunlong_orangepi-5
-香橙派 Orangepi 5 Plus|rockchip/armv8|xunlong_orangepi-5-plus
-香橙派 Orangepi R1 Plus|rockchip/armv8|xunlong_orangepi-r1-plus
-香橙派 Orangepi R1 Plus Lts|rockchip/armv8|xunlong_orangepi-r1-plus-lts
-中国移动 Mr3000d Ci|qualcommax/ipq50xx|cmcc_mr3000d-ci
-中国移动 Pz L8|qualcommax/ipq50xx|cmcc_pz-l8
-日电 Wrc X3000gs2|qualcommax/ipq50xx|elecom_wrc-x3000gs2
-日电 Wrc X3000gst2|qualcommax/ipq50xx|elecom_wrc-x3000gst2
-GL.iNet Gl B3000|qualcommax/ipq50xx|glinet_gl-b3000
-I-O Data Wn Dax3000gr|qualcommax/ipq50xx|iodata_wn-dax3000gr
-领势 Mr5500|qualcommax/ipq50xx|linksys_mr5500
-领势 Mx2000|qualcommax/ipq50xx|linksys_mx2000
-领势 Mx5500|qualcommax/ipq50xx|linksys_mx5500
-领势 Mx6200|qualcommax/ipq50xx|linksys_mx6200
-领势 Spnmx56|qualcommax/ipq50xx|linksys_spnmx56
-小米 Ax6000|qualcommax/ipq50xx|xiaomi_ax6000
-小米 Redmi Ax5400|qualcommax/ipq50xx|xiaomi_redmi-ax5400
-云核 Ax830|qualcommax/ipq50xx|yuncore_ax830
-云核 Ax850|qualcommax/ipq50xx|yuncore_ax850
-合勤 Scr50axe|qualcommax/ipq50xx|zyxel_scr50axe
-8Devices Mango Dvk|qualcommax/ipq60xx|8devices_mango-dvk
-阿尔法 Ap120c Ax|qualcommax/ipq60xx|alfa-network_ap120c-ax
-Anysafe E1|qualcommax/ipq60xx|anysafe_e1
-Cambium Xe3 4|qualcommax/ipq60xx|cambiumnetworks_xe3-4
-中国移动 Ax18|qualcommax/ipq60xx|cmiot_ax18
-Dptech Ap3000 2c|qualcommax/ipq60xx|dptech_ap3000-2c
-GL.iNet Gl Ax1800|qualcommax/ipq60xx|glinet_gl-ax1800
-GL.iNet Gl Axt1800|qualcommax/ipq60xx|glinet_gl-axt1800
-京东云 Re Cs 02|qualcommax/ipq60xx|jdcloud_re-cs-02
-京东云 Re Cs 07|qualcommax/ipq60xx|jdcloud_re-cs-07
-京东云 Re Ss 01|qualcommax/ipq60xx|jdcloud_re-ss-01
-Link Nn6000 V1|qualcommax/ipq60xx|link_nn6000-v1
-Link Nn6000 V2|qualcommax/ipq60xx|link_nn6000-v2
-领势 Mr7350|qualcommax/ipq60xx|linksys_mr7350
-领势 Mr7500|qualcommax/ipq60xx|linksys_mr7500
-网件 Rbr350|qualcommax/ipq60xx|netgear_rbr350
-网件 Rbs350|qualcommax/ipq60xx|netgear_rbs350
-网件 Wax214|qualcommax/ipq60xx|netgear_wax214
-网件 Wax610|qualcommax/ipq60xx|netgear_wax610
-网件 Wax610y|qualcommax/ipq60xx|netgear_wax610y
-飞利浦 Ly1800|qualcommax/ipq60xx|philips_ly1800
-360 360v6|qualcommax/ipq60xx|qihoo_360v6
-红米 Ax5|qualcommax/ipq60xx|redmi_ax5
-红米 Ax5 Jdcloud|qualcommax/ipq60xx|redmi_ax5-jdcloud
-SY Y6010|qualcommax/ipq60xx|sy_y6010
-TP-Link Eap610 Outdoor|qualcommax/ipq60xx|tplink_eap610-outdoor
-TP-Link Eap620 Hd V3|qualcommax/ipq60xx|tplink_eap620-hd-v3
-TP-Link Eap623 Outdoor Hd V1|qualcommax/ipq60xx|tplink_eap623-outdoor-hd-v1
-TP-Link Eap625 Outdoor Hd V1|qualcommax/ipq60xx|tplink_eap625-outdoor-hd-v1
-小米 Ax1800|qualcommax/ipq60xx|xiaomi_ax1800
-云核 Fap650|qualcommax/ipq60xx|yuncore_fap650
-ZN M2|qualcommax/ipq60xx|zn_m2
-阿里云 Ap8220|qualcommax/ipq807x|aliyun_ap8220
-智易 Aw1000|qualcommax/ipq807x|arcadyan_aw1000
-Arista Ap C260|qualcommax/ipq807x|arista_ap-c260
-Arista Ap C360|qualcommax/ipq807x|arista_ap-c360
-华硕 Rt Ax89x|qualcommax/ipq807x|asus_rt-ax89x
-巴法络 Wxr 5950ax12|qualcommax/ipq807x|buffalo_wxr-5950ax12
-中国移动 Rm2 6|qualcommax/ipq807x|cmcc_rm2-6
-Compex Wpq873|qualcommax/ipq807x|compex_wpq873
-Dynalink Dl Wrx36|qualcommax/ipq807x|dynalink_dl-wrx36
-智邦 Eap102|qualcommax/ipq807x|edgecore_eap102
-Edimax Cax1800|qualcommax/ipq807x|edimax_cax1800
-领势 Homewrk|qualcommax/ipq807x|linksys_homewrk
-领势 Mx|qualcommax/ipq807x|linksys_mx
-领势 Mx4200v1|qualcommax/ipq807x|linksys_mx4200v1
-领势 Mx4200v2|qualcommax/ipq807x|linksys_mx4200v2
-领势 Mx4300|qualcommax/ipq807x|linksys_mx4300
-领势 Mx4x00|qualcommax/ipq807x|linksys_mx4x00
-领势 Mx5300|qualcommax/ipq807x|linksys_mx5300
-领势 Mx8500|qualcommax/ipq807x|linksys_mx8500
-网件 Rax120v2|qualcommax/ipq807x|netgear_rax120v2
-网件 Rbr750|qualcommax/ipq807x|netgear_rbr750
-网件 Rbs750|qualcommax/ipq807x|netgear_rbs750
-网件 Rbx750|qualcommax/ipq807x|netgear_rbx750
-网件 Sxk80|qualcommax/ipq807x|netgear_sxk80
-网件 Sxr80|qualcommax/ipq807x|netgear_sxr80
-网件 Sxs80|qualcommax/ipq807x|netgear_sxs80
-网件 Wax218|qualcommax/ipq807x|netgear_wax218
-网件 Wax620|qualcommax/ipq807x|netgear_wax620
-网件 Wax630|qualcommax/ipq807x|netgear_wax630
-Prpl Haze|qualcommax/ipq807x|prpl_haze
-威联通 301w|qualcommax/ipq807x|qnap_301w
-红米 Ax6|qualcommax/ipq807x|redmi_ax6
-红米 Ax6 Stock|qualcommax/ipq807x|redmi_ax6-stock
-Spectrum Sax1v1k|qualcommax/ipq807x|spectrum_sax1v1k
-TCL Linkhub Hh500v|qualcommax/ipq807x|tcl_linkhub-hh500v
-TP-Link Deco X80 5g|qualcommax/ipq807x|tplink_deco-x80-5g
-TP-Link Eap620 Hd V1|qualcommax/ipq807x|tplink_eap620-hd-v1
-TP-Link Eap660 Hd V1|qualcommax/ipq807x|tplink_eap660-hd-v1
-Verizon Cr1000a|qualcommax/ipq807x|verizon_cr1000a
-小米 Ax3600|qualcommax/ipq807x|xiaomi_ax3600
-小米 Ax3600 Stock|qualcommax/ipq807x|xiaomi_ax3600-stock
-小米 Ax9000|qualcommax/ipq807x|xiaomi_ax9000
-小米 Ax9000 Stock|qualcommax/ipq807x|xiaomi_ax9000-stock
-云核 Ax880|qualcommax/ipq807x|yuncore_ax880
-ZBT Zbt Z800ax|qualcommax/ipq807x|zbtlink_zbt-z800ax
-中兴 Mf269|qualcommax/ipq807x|zte_mf269
-中兴 Mf269 Stock|qualcommax/ipq807x|zte_mf269-stock
-合勤 Nbg7815|qualcommax/ipq807x|zyxel_nbg7815
-合勤 Nwa110ax|qualcommax/ipq807x|zyxel_nwa110ax
-合勤 Nwa210ax|qualcommax/ipq807x|zyxel_nwa210ax
-合勤 Nwax10ax Common|qualcommax/ipq807x|zyxel_nwax10ax_common
-ABT Asr3000|mediatek/filogic|abt_asr3000
-Acelink Ew 7886cax|mediatek/filogic|acelink_ew-7886cax
-宏碁 Predator W6|mediatek/filogic|acer_predator-w6
-宏碁 Predator W6d|mediatek/filogic|acer_predator-w6d
-宏碁 Predator W6x Stock|mediatek/filogic|acer_predator-w6x-stock
-宏碁 Predator W6x Ubootmod|mediatek/filogic|acer_predator-w6x-ubootmod
-宏碁 Vero W6m|mediatek/filogic|acer_vero-w6m
-AirPi Ap3000m|mediatek/filogic|airpi_ap3000m
-Alwaylink M01k43|mediatek/filogic|alwaylink_m01k43
-智易 Mozart|mediatek/filogic|arcadyan_mozart
-AsiaRF Ap7986 003|mediatek/filogic|asiarf_ap7986-003
-华硕 Rt Ax52|mediatek/filogic|asus_rt-ax52
-华硕 Rt Ax57m|mediatek/filogic|asus_rt-ax57m
-华硕 Rt Ax59u|mediatek/filogic|asus_rt-ax59u
-华硕 Tuf Ax4200|mediatek/filogic|asus_tuf-ax4200
-华硕 Tuf Ax4200q|mediatek/filogic|asus_tuf-ax4200q
-华硕 Tuf Ax6000|mediatek/filogic|asus_tuf-ax6000
-华硕 Zenwifi Bt8|mediatek/filogic|asus_zenwifi-bt8
-华硕 Zenwifi Bt8 Ubootmod|mediatek/filogic|asus_zenwifi-bt8-ubootmod
-香蕉派 Bpi R3|mediatek/filogic|bananapi_bpi-r3
-香蕉派 Bpi R3 Mini|mediatek/filogic|bananapi_bpi-r3-mini
-香蕉派 Bpi R4|mediatek/filogic|bananapi_bpi-r4
-香蕉派 Bpi R4 Lite|mediatek/filogic|bananapi_bpi-r4-lite
-香蕉派 Bpi R4 Poe|mediatek/filogic|bananapi_bpi-r4-poe
-Bazis Ax3000wm|mediatek/filogic|bazis_ax3000wm
-巴法络 Wsr 3000ax4p|mediatek/filogic|buffalo_wsr-3000ax4p
-巴法络 Wsr 6000ax8|mediatek/filogic|buffalo_wsr-6000ax8
-Cetron Ct3003|mediatek/filogic|cetron_ct3003
-Cetron Ct3003 Ubootmod|mediatek/filogic|cetron_ct3003-ubootmod
-中国移动 A10 Stock|mediatek/filogic|cmcc_a10-stock
-中国移动 A10 Ubootmod|mediatek/filogic|cmcc_a10-ubootmod
-中国移动 Rax3000m|mediatek/filogic|cmcc_rax3000m
-中国移动 Rax3000me|mediatek/filogic|cmcc_rax3000me
-Comfast Cf E393ax|mediatek/filogic|comfast_cf-e393ax
-Comfast Cf Wr632ax|mediatek/filogic|comfast_cf-wr632ax
-Comfast Cf Wr632ax Ubootmod|mediatek/filogic|comfast_cf-wr632ax-ubootmod
-Comfast Cf Xr186|mediatek/filogic|comfast_cf-xr186
-ConfiaBits Mt7981|mediatek/filogic|confiabits_mt7981
-CreatLan Clt R30b1|mediatek/filogic|creatlentem_clt-r30b1
-CreatLan Clt R30b1 112m|mediatek/filogic|creatlentem_clt-r30b1-112m
-CreatLan Clt R30b1 Ubi|mediatek/filogic|creatlentem_clt-r30b1-ubi
-Cudy Ap3000 V1|mediatek/filogic|cudy_ap3000-v1
-Cudy Ap3000outdoor V1|mediatek/filogic|cudy_ap3000outdoor-v1
-Cudy Ap3000wall V1|mediatek/filogic|cudy_ap3000wall-v1
-Cudy M3000 V1|mediatek/filogic|cudy_m3000-v1
-Cudy M3000 V1 Ubootmod|mediatek/filogic|cudy_m3000-v1-ubootmod
-Cudy M3000 V2 Yt8821|mediatek/filogic|cudy_m3000-v2-yt8821
-Cudy M3000 V2 Yt8821 Ubootmod|mediatek/filogic|cudy_m3000-v2-yt8821-ubootmod
-Cudy Re3000 V1|mediatek/filogic|cudy_re3000-v1
-Cudy Tr3000 256mb V1|mediatek/filogic|cudy_tr3000-256mb-v1
-Cudy Tr3000 V1|mediatek/filogic|cudy_tr3000-v1
-Cudy Tr3000 V1 Ubootmod|mediatek/filogic|cudy_tr3000-v1-ubootmod
-Cudy Wbr3000uax V1|mediatek/filogic|cudy_wbr3000uax-v1
-Cudy Wbr3000uax V1 Ubootmod|mediatek/filogic|cudy_wbr3000uax-v1-ubootmod
-Cudy Wr3000 V1|mediatek/filogic|cudy_wr3000-v1
-Cudy Wr3000e V1|mediatek/filogic|cudy_wr3000e-v1
-Cudy Wr3000e V1 Ubootmod|mediatek/filogic|cudy_wr3000e-v1-ubootmod
-Cudy Wr3000h V1|mediatek/filogic|cudy_wr3000h-v1
-Cudy Wr3000h V1 Ubootmod|mediatek/filogic|cudy_wr3000h-v1-ubootmod
-Cudy Wr3000p V1|mediatek/filogic|cudy_wr3000p-v1
-Cudy Wr3000p V1 Ubootmod|mediatek/filogic|cudy_wr3000p-v1-ubootmod
-Cudy Wr3000s V1|mediatek/filogic|cudy_wr3000s-v1
-Cudy Wr3000s V1 Ubootmod|mediatek/filogic|cudy_wr3000s-v1-ubootmod
-Dlink Aquila Pro Ai E30 A1|mediatek/filogic|dlink_aquila-pro-ai-e30-a1
-Dlink Aquila Pro Ai M30 A1|mediatek/filogic|dlink_aquila-pro-ai-m30-a1
-Dlink Aquila Pro Ai M60 A1|mediatek/filogic|dlink_aquila-pro-ai-m60-a1
-智邦 Eap111|mediatek/filogic|edgecore_eap111
-日电 Wrc X3000gs3|mediatek/filogic|elecom_wrc-x3000gs3
-日电 Wrc X6000gsd|mediatek/filogic|elecom_wrc-x6000gsd
-日电 Wrc X6000qs|mediatek/filogic|elecom_wrc-x6000qs
-Gato Gdsp|mediatek/filogic|gatonetworks_gdsp
-GL.iNet Gl Mt2500|mediatek/filogic|glinet_gl-mt2500
-GL.iNet Gl Mt2500 Airoha|mediatek/filogic|glinet_gl-mt2500-airoha
-GL.iNet Gl Mt3000|mediatek/filogic|glinet_gl-mt3000
-GL.iNet Gl Mt3600be|mediatek/filogic|glinet_gl-mt3600be
-GL.iNet Gl Mt6000|mediatek/filogic|glinet_gl-mt6000
-GL.iNet Gl X3000|mediatek/filogic|glinet_gl-x3000
-GL.iNet Gl Xe3000|mediatek/filogic|glinet_gl-xe3000
-Globitel Bt R320|mediatek/filogic|globitel_bt-r320
-华三 Magic Nx30 Pro|mediatek/filogic|h3c_magic-nx30-pro
-Huasifei Wh3000 Emmc|mediatek/filogic|huasifei_wh3000-emmc
-Huasifei Wh3000 Pro Emmc|mediatek/filogic|huasifei_wh3000-pro-emmc
-Huasifei Wh3000 Pro Nand|mediatek/filogic|huasifei_wh3000-pro-nand
-Huasifei Wh3000r Nand|mediatek/filogic|huasifei_wh3000r-nand
-乐橙 Hx21|mediatek/filogic|imou_hx21
-ipTIME Ax3000m|mediatek/filogic|iptime_ax3000m
-ipTIME Ax3000q|mediatek/filogic|iptime_ax3000q
-ipTIME Ax3000se|mediatek/filogic|iptime_ax3000se
-ipTIME Ax3000sm|mediatek/filogic|iptime_ax3000sm
-ipTIME Ax7800m 6e|mediatek/filogic|iptime_ax7800m-6e
-JCG Q30 Pro|mediatek/filogic|jcg_q30-pro
-京东云 Re Cp 03|mediatek/filogic|jdcloud_re-cp-03
-Jio Ax6000 Jidu6101|mediatek/filogic|jiorouter_ax6000-jidu6101
-KebiduMei Ax3000 U22|mediatek/filogic|kebidumei_ax3000-u22
-Keenetic Kap 630|mediatek/filogic|keenetic_kap-630
-Keenetic Kn 1812|mediatek/filogic|keenetic_kn-1812
-Keenetic Kn 3711|mediatek/filogic|keenetic_kn-3711
-Keenetic Kn 3811|mediatek/filogic|keenetic_kn-3811
-Keenetic Kn 3911|mediatek/filogic|keenetic_kn-3911
-康佳 Komi A31|mediatek/filogic|konka_komi-a31
-Livinet Li320|mediatek/filogic|livinet_li320
-Livinet Zr 3020|mediatek/filogic|livinet_zr-3020
-Livinet Zr 3020 Ubootmod|mediatek/filogic|livinet_zr-3020-ubootmod
-联发科 Mt7981 Rfb|mediatek/filogic|mediatek_mt7981-rfb
-联发科 Mt7986a Rfb Nand|mediatek/filogic|mediatek_mt7986a-rfb-nand
-联发科 Mt7986b Rfb|mediatek/filogic|mediatek_mt7986b-rfb
-联发科 Mt7987a Rfb|mediatek/filogic|mediatek_mt7987a-rfb
-联发科 Mt7988a Rfb|mediatek/filogic|mediatek_mt7988a-rfb
-MERCUSYS Mr80x V3|mediatek/filogic|mercusys_mr80x-v3
-MERCUSYS Mr85x|mediatek/filogic|mercusys_mr85x
-MERCUSYS Mr90x V1|mediatek/filogic|mercusys_mr90x-v1
-MERCUSYS Mr90x V1 Ubi|mediatek/filogic|mercusys_mr90x-v1-ubi
-磊科 N60|mediatek/filogic|netcore_n60
-网件 Wax220|mediatek/filogic|netgear_wax220
-360 360t7|mediatek/filogic|qihoo_360t7
-Routerich Ax3000|mediatek/filogic|routerich_ax3000
-SmartRG Sdg 8612|mediatek/filogic|smartrg_sdg-8612
-SmartRG Sdg 8614|mediatek/filogic|smartrg_sdg-8614
-SmartRG Sdg 8622|mediatek/filogic|smartrg_sdg-8622
-SmartRG Sdg 8632|mediatek/filogic|smartrg_sdg-8632
-TP-Link Tl Xdr4288|mediatek/filogic|tplink_tl-xdr4288
-TP-Link Tl Xdr6086|mediatek/filogic|tplink_tl-xdr6086
-TP-Link Tl Xdr6088|mediatek/filogic|tplink_tl-xdr6088
-Ubiquiti Unifi 6 Plus|mediatek/filogic|ubnt_unifi-6-plus
-UniElec U7981 01 Emmc|mediatek/filogic|unielec_u7981-01-emmc
-UniElec U7981 01 Nand|mediatek/filogic|unielec_u7981-01-nand
-小米 Mi Router Ax3000t|mediatek/filogic|xiaomi_mi-router-ax3000t
-小米 Mi Router Ax3000t Ubootmod|mediatek/filogic|xiaomi_mi-router-ax3000t-ubootmod
-小米 Mi Router Wr30u Stock|mediatek/filogic|xiaomi_mi-router-wr30u-stock
-小米 Mi Router Wr30u Ubootmod|mediatek/filogic|xiaomi_mi-router-wr30u-ubootmod
-小米 Redmi Router Ax6000 Stock|mediatek/filogic|xiaomi_redmi-router-ax6000-stock
-小米 Redmi Router Ax6000 Ubootmod|mediatek/filogic|xiaomi_redmi-router-ax6000-ubootmod
-云核 Ax835|mediatek/filogic|yuncore_ax835
-ZBT Zbt Z8102ax|mediatek/filogic|zbtlink_zbt-z8102ax
-ZBT Zbt Z8103ax|mediatek/filogic|zbtlink_zbt-z8103ax
-合勤 Ex5601 T0 Stock|mediatek/filogic|zyxel_ex5601-t0-stock
-合勤 Ex5601 T0 Ubootmod|mediatek/filogic|zyxel_ex5601-t0-ubootmod
-合勤 Ex5700 Telenor|mediatek/filogic|zyxel_ex5700-telenor
-合勤 Nwa50ax Pro|mediatek/filogic|zyxel_nwa50ax-pro
-ADSLR G7|ramips/mt7621|adslr_g7
-AFoundry Ew1200|ramips/mt7621|afoundry_ew1200
-阿尔法 Ax1800rm|ramips/mt7621|alfa-network_ax1800rm
-阿尔法 Quad E4g|ramips/mt7621|alfa-network_quad-e4g
-Amped Ally 00x19k|ramips/mt7621|ampedwireless_ally-00x19k
-Amped Ally R1900k|ramips/mt7621|ampedwireless_ally-r1900k
-智易 We420223 99|ramips/mt7621|arcadyan_we420223-99
-AsiaRF Ap7621 001|ramips/mt7621|asiarf_ap7621-001
-AsiaRF Ap7621 Nv1|ramips/mt7621|asiarf_ap7621-nv1
-华硕 Rp Ac56|ramips/mt7621|asus_rp-ac56
-华硕 Rp Ac87|ramips/mt7621|asus_rp-ac87
-华硕 Rt Ac57u V1|ramips/mt7621|asus_rt-ac57u-v1
-华硕 Rt Ac65p|ramips/mt7621|asus_rt-ac65p
-华硕 Rt Ac85p|ramips/mt7621|asus_rt-ac85p
-华硕 Rt Ax53u|ramips/mt7621|asus_rt-ax53u
-华硕 Rt Ax54|ramips/mt7621|asus_rt-ax54
-华硕 Rt N56u B1|ramips/mt7621|asus_rt-n56u-b1
-Beeline Smartbox Flash|ramips/mt7621|beeline_smartbox-flash
-Beeline Smartbox Giga|ramips/mt7621|beeline_smartbox-giga
-Beeline Smartbox Pro|ramips/mt7621|beeline_smartbox-pro
-Beeline Smartbox Turbo|ramips/mt7621|beeline_smartbox-turbo
-Beeline Smartbox Turbo Plus|ramips/mt7621|beeline_smartbox-turbo-plus
-Belkin Rt1800|ramips/mt7621|belkin_rt1800
-Bolt Arion|ramips/mt7621|bolt_arion
-巴法络 Wsr 1166dhp|ramips/mt7621|buffalo_wsr-1166dhp
-巴法络 Wsr 2533dhpl|ramips/mt7621|buffalo_wsr-2533dhpl
-巴法络 Wsr 600dhp|ramips/mt7621|buffalo_wsr-600dhp
-Comfast Cf E390ax|ramips/mt7621|comfast_cf-e390ax
-Comfast Cf Ew72 V2|ramips/mt7621|comfast_cf-ew72-v2
-Cudy M1800|ramips/mt7621|cudy_m1800
-Cudy Wr1300 V1|ramips/mt7621|cudy_wr1300-v1
-Cudy Wr1300 V2|ramips/mt7621|cudy_wr1300-v2
-Cudy Wr1300 V3|ramips/mt7621|cudy_wr1300-v3
-Cudy Wr2100|ramips/mt7621|cudy_wr2100
-Cudy X6 V1|ramips/mt7621|cudy_x6-v1
-Cudy X6 V2|ramips/mt7621|cudy_x6-v2
-D-Team Newifi D2|ramips/mt7621|d-team_newifi-d2
-D-Team Pbr M1|ramips/mt7621|d-team_pbr-m1
-Dlink Covr X1860 A1|ramips/mt7621|dlink_covr-x1860-a1
-Dlink Dap 1620 B1|ramips/mt7621|dlink_dap-1620-b1
-Dlink Dap X1860 A1|ramips/mt7621|dlink_dap-x1860-a1
-Dlink Dir 1935 A1|ramips/mt7621|dlink_dir-1935-a1
-Dlink Dir 1960 A1|ramips/mt7621|dlink_dir-1960-a1
-Dlink Dir 2640 A1|ramips/mt7621|dlink_dir-2640-a1
-Dlink Dir 2660 A1|ramips/mt7621|dlink_dir-2660-a1
-Dlink Dir 3060 A1|ramips/mt7621|dlink_dir-3060-a1
-Dlink Dir 853 A1|ramips/mt7621|dlink_dir-853-a1
-Dlink Dir 853 A3|ramips/mt7621|dlink_dir-853-a3
-Dlink Dir 853 R1|ramips/mt7621|dlink_dir-853-r1
-Dlink Dir 860l B1|ramips/mt7621|dlink_dir-860l-b1
-Dlink Dir 867 A1|ramips/mt7621|dlink_dir-867-a1
-Dlink Dir 878 A1|ramips/mt7621|dlink_dir-878-a1
-Dlink Dir 878 R1|ramips/mt7621|dlink_dir-878-r1
-Dlink Dir 882 A1|ramips/mt7621|dlink_dir-882-a1
-Dlink Dir 882 R1|ramips/mt7621|dlink_dir-882-r1
-Dual-Q H721|ramips/mt7621|dual-q_h721
-Edimax Ra21s|ramips/mt7621|edimax_ra21s
-Edimax Re23s|ramips/mt7621|edimax_re23s
-Edimax Rg21s|ramips/mt7621|edimax_rg21s
-日电 Wrc 1167ghbk2 S|ramips/mt7621|elecom_wrc-1167ghbk2-s
-日电 Wrc 1167gs2 B|ramips/mt7621|elecom_wrc-1167gs2-b
-日电 Wrc 1167gst2|ramips/mt7621|elecom_wrc-1167gst2
-日电 Wrc 1750gs|ramips/mt7621|elecom_wrc-1750gs
-日电 Wrc 1750gst2|ramips/mt7621|elecom_wrc-1750gst2
-日电 Wrc 1750gsv|ramips/mt7621|elecom_wrc-1750gsv
-日电 Wrc 1900gst|ramips/mt7621|elecom_wrc-1900gst
-日电 Wrc 2533ghbk I|ramips/mt7621|elecom_wrc-2533ghbk-i
-日电 Wrc 2533ghbk2 T|ramips/mt7621|elecom_wrc-2533ghbk2-t
-日电 Wrc 2533gs2|ramips/mt7621|elecom_wrc-2533gs2
-日电 Wrc 2533gst|ramips/mt7621|elecom_wrc-2533gst
-日电 Wrc 2533gst2|ramips/mt7621|elecom_wrc-2533gst2
-Etisalat S3|ramips/mt7621|etisalat_s3
-Firefly Firewrt|ramips/mt7621|firefly_firewrt
-Gehua Ghl R 001|ramips/mt7621|gehua_ghl-r-001
-GL.iNet Gl Mt1300|ramips/mt7621|glinet_gl-mt1300
-GnuBee Gb Pc1|ramips/mt7621|gnubee_gb-pc1
-GnuBee Gb Pc2|ramips/mt7621|gnubee_gb-pc2
-华三 Tx1800 Plus|ramips/mt7621|h3c_tx1800-plus
-华三 Tx1801 Plus|ramips/mt7621|h3c_tx1801-plus
-华三 Tx1806|ramips/mt7621|h3c_tx1806
-海尔 Har 20s2u1|ramips/mt7621|haier_har-20s2u1
-Hanyang Hyc G920|ramips/mt7621|hanyang_hyc-g920
-HiLink Hlk 7621a Evb|ramips/mt7621|hilink_hlk-7621a-evb
-极路由 Hc5962|ramips/mt7621|hiwifi_hc5962
-Huasifei Ws1208v2|ramips/mt7621|huasifei_ws1208v2
-HUMAX E10|ramips/mt7621|humax_e10
-I-O Data Wn Ax1167gr|ramips/mt7621|iodata_wn-ax1167gr
-I-O Data Wn Ax1167gr2|ramips/mt7621|iodata_wn-ax1167gr2
-I-O Data Wn Ax2033gr|ramips/mt7621|iodata_wn-ax2033gr
-I-O Data Wn Dx1167r|ramips/mt7621|iodata_wn-dx1167r
-I-O Data Wn Dx1200gr|ramips/mt7621|iodata_wn-dx1200gr
-I-O Data Wn Dx2033gr|ramips/mt7621|iodata_wn-dx2033gr
-I-O Data Wn Gx300gr|ramips/mt7621|iodata_wn-gx300gr
-I-O Data Wnpr2600g|ramips/mt7621|iodata_wnpr2600g
-ipTIME A3002mesh|ramips/mt7621|iptime_a3002mesh
-ipTIME A3004ns Dual|ramips/mt7621|iptime_a3004ns-dual
-ipTIME A3004t|ramips/mt7621|iptime_a3004t
-ipTIME A6004ns M|ramips/mt7621|iptime_a6004ns-m
-ipTIME A6ns M|ramips/mt7621|iptime_a6ns-m
-ipTIME A8004t|ramips/mt7621|iptime_a8004t
-JediDesign Jdc 1|ramips/mt7621|jediesign_jdc-1
-Keenetic Kn 3010|ramips/mt7621|keenetic_kn-3010
-领势 E5400|ramips/mt7621|linksys_e5400
-水星 D12|ramips/mt7621|mercury_d12
-水星 D12g|ramips/mt7621|mercury_d12g
-水星 D191g|ramips/mt7621|mercury_d191g
-水星 Mac1200r V2|ramips/mt7621|mercury_mac1200r-v2
-水星 Mac1900r V2|ramips/mt7621|mercury_mac1900r-v2
-水星 X18g|ramips/mt7621|mercury_x18g
-MTC Mtc Ruter2|ramips/mt7621|mtc_mtc-ruter2
-MTS Wr855ac|ramips/mt7621|mts_wr855ac
-MikroTik Lhg 5g Xl R11e|ramips/mt7621|mikrotik_lhg-5g-xl-r11e
-网件 Ex6150|ramips/mt7621|netgear_ex6150
-网件 Ex7300|ramips/mt7621|netgear_ex7300
-网件 R6220|ramips/mt7621|netgear_r6220
-网件 R6230|ramips/mt7621|netgear_r6230
-网件 R6260|ramips/mt7621|netgear_r6260
-网件 R6350|ramips/mt7621|netgear_r6350
-网件 R6400 V2|ramips/mt7621|netgear_r6400-v2
-网件 R6800|ramips/mt7621|netgear_r6800
-网件 R6850|ramips/mt7621|netgear_r6850
-网件 R7200|ramips/mt7621|netgear_r7200
-网件 R7450|ramips/mt7621|netgear_r7450
-网件 Wnr3500r|ramips/mt7621|netgear_wnr3500r
-Netis Wf2881|ramips/mt7621|netis_wf2881
-Nova Na301|ramips/mt7621|nova_na301
-Nx30pro|ramips/mt7621|nx30pro
-Ombyt 445t|ramips/mt7621|ombyt_445t
-OMI Liara L25c|ramips/mt7621|omi_liara-l25c
-OpenFi Lab Mini|ramips/mt7621|openfi_lab_mini
-花生壳 X3 A|ramips/mt7621|oraybox_x3-a
-花生壳 X5|ramips/mt7621|oraybox_x5
-斐讯 K2p|ramips/mt7621|phicomm_k2p
-斐讯 K2p A1|ramips/mt7621|phicomm_k2p-a1
-斐讯 K2p A2|ramips/mt7621|phicomm_k2p-a2
-Planex Csr 3000|ramips/mt7621|planex_csr-3000
-Planex Db Wrt01|ramips/mt7621|planex_db-wrt01
-Planex Mzk Ex300np|ramips/mt7621|planex_mzk-ex300np
-Planex Mzk W3001n|ramips/mt7621|planex_mzk-w3001n
-ProfiPLUS Pplc 1000|ramips/mt7621|profiplus_pplc-1000
-360 360t7 (mt7621)|ramips/mt7621|qihoo_360t7
-QTS Br 1200ac|ramips/mt7621|qts_br-1200ac
-QTS Br 910ac|ramips/mt7621|qts_br-910ac
-Raisecom Msg1200f|ramips/mt7621|raisecom_msg1200f
-RT-RK Rk10|ramips/mt7621|rt-rk_rk10
-三星 Cy Swr1100|ramips/mt7621|samsung_cy-swr1100
-Sercomm Ah1170|ramips/mt7621|sercomm_ah1170
-Sercomm Na930|ramips/mt7621|sercomm_na930
-Sk Wb8|ramips/mt7621|sk-wb8
-Skyware Dsa 10|ramips/mt7621|skyware_dsa-10
-Snail Technologies Sn M|ramips/mt7621|snail_technologies_sn-m
-Snail Technologies Sn R|ramips/mt7621|snail_technologies_sn-r
-Spark Hc5962|ramips/mt7621|spark_hc5962
-Supermicro Sba7310 As|ramips/mt7621|supermicro_sba7310-as
-腾达 3g150b|ramips/mt7621|tenda_3g150b
-腾达 3g300m|ramips/mt7621|tenda_3g300m
-腾达 4g300|ramips/mt7621|tenda_4g300
-腾达 4g301|ramips/mt7621|tenda_4g301
-腾达 4g600|ramips/mt7621|tenda_4g600
-腾达 Ac10|ramips/mt7621|tenda_ac10
-腾达 Ac10i|ramips/mt7621|tenda_ac10i
-腾达 Ac10u|ramips/mt7621|tenda_ac10u
-腾达 Ac1206|ramips/mt7621|tenda_ac1206
-腾达 Ac15|ramips/mt7621|tenda_ac15
-腾达 Ac18|ramips/mt7621|tenda_ac18
-腾达 Ac21|ramips/mt7621|tenda_ac21
-腾达 Ac23|ramips/mt7621|tenda_ac23
-腾达 Ac5 V15|ramips/mt7621|tenda_ac5-v15
-腾达 Ac5 V3|ramips/mt7621|tenda_ac5-v3
-腾达 Ac6 V1|ramips/mt7621|tenda_ac6-v1
-腾达 Ac6 V2|ramips/mt7621|tenda_ac6-v2
-腾达 Ac6 V3|ramips/mt7621|tenda_ac6-v3
-腾达 Ac7|ramips/mt7621|tenda_ac7
-腾达 Ac8|ramips/mt7621|tenda_ac8
-腾达 Ac9 V1|ramips/mt7621|tenda_ac9-v1
-腾达 Ac9 V2|ramips/mt7621|tenda_ac9-v2
-腾达 Ac10 V1|ramips/mt7621|tenda_ac10-v1
-腾达 Fh1201|ramips/mt7621|tenda_fh1201
-腾达 Fh1202|ramips/mt7621|tenda_fh1202
-腾达 Fh1203|ramips/mt7621|tenda_fh1203
-腾达 Fh1206|ramips/mt7621|tenda_fh1206
-腾达 N301|ramips/mt7621|tenda_n301
-腾达 N301 V2|ramips/mt7621|tenda_n301-v2
-腾达 N3|ramips/mt7621|tenda_n3
-腾达 N4|ramips/mt7621|tenda_n4
-腾达 N4 3g|ramips/mt7621|tenda_n4-3g
-腾达 W150m|ramips/mt7621|tenda_w150m
-腾达 W3002r V1|ramips/mt7621|tenda_w3002r-v1
-腾达 W3002r V2|ramips/mt7621|tenda_w3002r-v2
-腾达 W300a|ramips/mt7621|tenda_w300a
-腾达 W306r|ramips/mt7621|tenda_w306r
-腾达 W311r|ramips/mt7621|tenda_w311r
-腾达 W330r|ramips/mt7621|tenda_w330r
-TOTOLINK A3002ru|ramips/mt7621|totolink_a3002ru
-TOTOLINK A7000r|ramips/mt7621|totolink_a7000r
-TOTOLINK F1|ramips/mt7621|totolink_f1
-TOTOLINK Lr1200|ramips/mt7621|totolink_lr1200
-TOTOLINK N301rt|ramips/mt7621|totolink_n301rt
-TOTOLINK X5000r|ramips/mt7621|totolink_x5000r
-TP-Link Archer A6 V3|ramips/mt7621|tplink_archer-a6-v3
-TP-Link Archer C5400 V2|ramips/mt7621|tplink_archer-c5400-v2
-TP-Link Archer C6 V3|ramips/mt7621|tplink_archer-c6-v3
-TP-Link Archer C6u V1|ramips/mt7621|tplink_archer-c6u-v1
-TP-Link Archer Mr200 V5|ramips/mt7621|tplink_archer-mr200-v5
-TP-Link Ec330 G5u V1|ramips/mt7621|tplink_ec330-g5u-v1
-TP-Link Ec420 G5u V1|ramips/mt7621|tplink_ec420-g5u-v1
-TP-Link Re355 V1|ramips/mt7621|tplink_re355-v1
-TP-Link Re355 V3|ramips/mt7621|tplink_re355-v3
-TP-Link Re365 V1|ramips/mt7621|tplink_re365-v1
-TP-Link Re365 V3|ramips/mt7621|tplink_re365-v3
-TP-Link Re500 V1|ramips/mt7621|tplink_re500-v1
-TP-Link Re505x V1|ramips/mt7621|tplink_re505x-v1
-TP-Link Re605x V1|ramips/mt7621|tplink_re605x-v1
-TP-Link Tl Mr100 V1|ramips/mt7621|tplink_tl-mr100-v1
-TP-Link Tl Mr6400 V1|ramips/mt7621|tplink_tl-mr6400-v1
-TP-Link Tl Wpa8630p V2|ramips/mt7621|tplink_tl-wpa8630p-v2
-TP-Link Tl Wr1043n V5|ramips/mt7621|tplink_tl-wr1043n-v5
-TP-Link Tl Wr1043nd V4|ramips/mt7621|tplink_tl-wr1043nd-v4
-TP-Link Tl Wr740n V4|ramips/mt7621|tplink_tl-wr740n-v4
-TP-Link Tl Wr740n V5|ramips/mt7621|tplink_tl-wr740n-v5
-TP-Link Tl Wr740n V6|ramips/mt7621|tplink_tl-wr740n-v6
-TP-Link Tl Wr741nd V4|ramips/mt7621|tplink_tl-wr741nd-v4
-TP-Link Tl Wr741nd V5|ramips/mt7621|tplink_tl-wr741nd-v5
-TP-Link Tl Wr743nd V2|ramips/mt7621|tplink_tl-wr743nd-v2
-TP-Link Tl Wr802n V4|ramips/mt7621|tplink_tl-wr802n-v4
-TP-Link Tl Wr810n V1|ramips/mt7621|tplink_tl-wr810n-v1
-TP-Link Tl Wr810n V2|ramips/mt7621|tplink_tl-wr810n-v2
-TP-Link Tl Wr840n V4|ramips/mt7621|tplink_tl-wr840n-v4
-TP-Link Tl Wr840n V5|ramips/mt7621|tplink_tl-wr840n-v5
-TP-Link Tl Wr840n V6|ramips/mt7621|tplink_tl-wr840n-v6
-TP-Link Tl Wr841hp V3|ramips/mt7621|tplink_tl-wr841hp-v3
-TP-Link Tl Wr841n V13|ramips/mt7621|tplink_tl-wr841n-v13
-TP-Link Tl Wr841n V14|ramips/mt7621|tplink_tl-wr841n-v14
-TP-Link Tl Wr841nd V11|ramips/mt7621|tplink_tl-wr841nd-v11
-TP-Link Tl Wr841nd V9|ramips/mt7621|tplink_tl-wr841nd-v9
-TP-Link Tl Wr842n V5|ramips/mt7621|tplink_tl-wr842n-v5
-TP-Link Tl Wr902ac V3|ramips/mt7621|tplink_tl-wr902ac-v3
-TP-Link Tl Wr902ac V4|ramips/mt7621|tplink_tl-wr902ac-v4
-TP-Link Tl Wr940n V4|ramips/mt7621|tplink_tl-wr940n-v4
-TP-Link Tl Wr940n V6|ramips/mt7621|tplink_tl-wr940n-v6
-TP-Link Tl Wr941hp V1|ramips/mt7621|tplink_tl-wr941hp-v1
-TP-Link Tl Wr941nd V6|ramips/mt7621|tplink_tl-wr941nd-v6
-TP-Link Tl Wr941nd V7|ramips/mt7621|tplink_tl-wr941nd-v7
-Trendnet Tew 827dru|ramips/mt7621|trendnet_tew-827dru
-Ubiquiti Edgerouter X|ramips/mt7621|ubiquiti_edgerouter-x
-Ubiquiti Edgerouter X Sfp|ramips/mt7621|ubiquiti_edgerouter-x-sfp
-Ubiquiti Unifi 6 Lite|ramips/mt7621|ubiquiti_unifi-6-lite
-Ubiquiti Unifi Flexhd|ramips/mt7621|ubiquiti_unifi-flexhd
-Ubiquiti Unifi Ac Lite|ramips/mt7621|ubnt_unifi-ac-lite
-Ubiquiti Unifi Ac Lr|ramips/mt7621|ubnt_unifi-ac-lr
-Ubiquiti Unifi Ac Mesh|ramips/mt7621|ubnt_unifi-ac-mesh
-Ubiquiti Unifi Ac Mesh Pro|ramips/mt7621|ubnt_unifi-ac-mesh-pro
-Ubiquiti Unifi Ac Pro|ramips/mt7621|ubnt_unifi-ac-pro
-Ubiquiti Unifi Nanohd|ramips/mt7621|ubnt_unifi-nanohd
-UniElec U7621 06|ramips/mt7621|unielec_u7621-06
-UniElec U7621 06 16m|ramips/mt7621|unielec_u7621-06-16m
-UniElec U7621 06 32m|ramips/mt7621|unielec_u7621-06-32m
-Victure Wr1200|ramips/mt7621|victure_wr1200
-Vilfo Vilfo Router|ramips/mt7621|vilfo_vilfo-router
-Wavlink Wl Wn530hg4|ramips/mt7621|wavlink_wl-wn530hg4
-Wavlink Wl Wn535g3|ramips/mt7621|wavlink_wl-wn535g3
-Wavlink Wl Wn575a3|ramips/mt7621|wavlink_wl-wn575a3
-WeVO 11acnas|ramips/mt7621|wevo_11acnas
-WeVO W2914nf|ramips/mt7621|wevo_w2914nf
-WeVO W2914n|ramips/mt7621|wevo_w2914n
-WiFire S1500|ramips/mt7621|wifire_s1500
-WiFire S1500 Nb|ramips/mt7621|wifire_s1500-nb
-Winks W Kr3981|ramips/mt7621|winks_w-kr3981
-Winstars Ws Wn583a2|ramips/mt7621|winstars_ws-wn583a2
-WIO Wt3700|ramips/mt7621|wio_wt3700
-Xchyma Xc 1|ramips/mt7621|xchyma_xc-1
-小米 Mi Router 3g|ramips/mt7621|xiaomi_mi-router-3g
-小米 Mi Router 3g V2|ramips/mt7621|xiaomi_mi-router-3g-v2
-小米 Mi Router 3 Pro|ramips/mt7621|xiaomi_mi-router-3-pro
-小米 Mi Router 4|ramips/mt7621|xiaomi_mi-router-4
-小米 Mi Router 4a Gigabit|ramips/mt7621|xiaomi_mi-router-4a-gigabit
-小米 Mi Router 4a 100m|ramips/mt7621|xiaomi_mi-router-4a-100m
-小米 Mi Router 4c|ramips/mt7621|xiaomi_mi-router-4c
-小米 Redmi Router Ac2100|ramips/mt7621|xiaomi_redmi-router-ac2100
-小米 Redmi Router Ax6s|ramips/mt7621|xiaomi_redmi-router-ax6s
-小米 Mi Router 4q|ramips/mt7621|xiaomi_mi-router-4q
-Youhua Wr1200js|ramips/mt7621|youhua_wr1200js
-Youhua Wr330|ramips/mt7621|youhua_wr330
-优酷 Yk L2|ramips/mt7621|youku_yk-l2
-云核 Ax820|ramips/mt7621|yuncore_ax820
-云核 Fap640|ramips/mt7621|yuncore_fap640
-云核 Fap680|ramips/mt7621|yuncore_fap680
-云核 G720|ramips/mt7621|yuncore_g720
-云核 M150|ramips/mt7621|yuncore_m150
-ZBT D525|ramips/mt7621|zbt_d525
-ZBT Link Zbt We1326|ramips/mt7621|zbt_link_zbt-we1326
-ZBT Link Zbt We3526|ramips/mt7621|zbt_link_zbt-we3526
-ZBT Link Zbt We826 16m|ramips/mt7621|zbt_link_zbt-we826-16m
-ZBT Link Zbt We826 32m|ramips/mt7621|zbt_link_zbt-we826-32m
-ZBT Wg3526 16m|ramips/mt7621|zbt_wg3526-16m
-ZBT Wg3526 32m|ramips/mt7621|zbt_wg3526-32m
-ZBT Zbt Ape522ii|ramips/mt7621|zbt_zbt-ape522ii
-ZBT Zbt Cpe1020|ramips/mt7621|zbt_zbt-cpe1020
-ZBT Zbt Wd323|ramips/mt7621|zbt_zbt-wd323
-ZBT Zbt We2805|ramips/mt7621|zbtlink_zbt-we2805
-Zetlian Kli 1p|ramips/mt7621|zetlian_kli-1p
-Zrooom Zr 3000|ramips/mt7621|zrooom_zr-3000
-阿尔法 Awusfree1|ramips/mt76x8|alfa-network_awusfree1
-华硕 Rt Ac1200|ramips/mt76x8|asus_rt-ac1200
-华硕 Rt Ac1200 V2|ramips/mt76x8|asus_rt-ac1200-v2
-华硕 Rt N12 Vp B1|ramips/mt76x8|asus_rt-n12-vp-b1
-巴法络 Wcr 1166ds|ramips/mt76x8|buffalo_wcr-1166ds
-Comfast Cf Wr617ac|ramips/mt76x8|comfast_cf-wr617ac
-Comfast Cf Wr758ac V1|ramips/mt76x8|comfast_cf-wr758ac-v1
-Comfast Cf Wr758ac V2|ramips/mt76x8|comfast_cf-wr758ac-v2
-Cudy Tr1200 V1|ramips/mt76x8|cudy_tr1200-v1
-Cudy Wr1000|ramips/mt76x8|cudy_wr1000
-D-Team Pbr D1|ramips/mt76x8|d-team_pbr-d1
-Dlink Dap 1325 A1|ramips/mt76x8|dlink_dap-1325-a1
-Duzun Dm06|ramips/mt76x8|duzun_dm06
-日电 Wrc 1167fs|ramips/mt76x8|elecom_wrc-1167fs
-GL.iNet Gl Mt300n V2|ramips/mt76x8|glinet_gl-mt300n-v2
-GL.iNet Microuter N300|ramips/mt76x8|glinet_microuter-n300
-GL.iNet Vixmini|ramips/mt76x8|glinet_vixmini
-Hak5 Wifi Pineapple Mk7|ramips/mt76x8|hak5_wifi-pineapple-mk7
-HiLink Hlk 7628n|ramips/mt76x8|hilink_hlk-7628n
-HiLink Hlk 7688a|ramips/mt76x8|hilink_hlk-7688a
-极路由 Hc5611|ramips/mt76x8|hiwifi_hc5611
-极路由 Hc5661a|ramips/mt76x8|hiwifi_hc5661a
-极路由 Hc5761a|ramips/mt76x8|hiwifi_hc5761a
-极路由 Hc5861b|ramips/mt76x8|hiwifi_hc5861b
-ipTIME A3|ramips/mt76x8|iptime_a3
-ipTIME A604m|ramips/mt76x8|iptime_a604m
-Jotale Js76x8 16m|ramips/mt76x8|jotale_js76x8-16m
-Jotale Js76x8 32m|ramips/mt76x8|jotale_js76x8-32m
-Jotale Js76x8 8m|ramips/mt76x8|jotale_js76x8-8m
-Keenetic Kn 1613|ramips/mt76x8|keenetic_kn-1613
-Kroks Kndrt31r16|ramips/mt76x8|kroks_kndrt31r16
-Kroks Kndrt31r19|ramips/mt76x8|kroks_kndrt31r19
-领势 E5400 (mt76x8)|ramips/mt76x8|linksys_e5400
-联发科 Linkit Smart 7688|ramips/mt76x8|mediatek_linkit-smart-7688
-联发科 Mt7628an Eval Board|ramips/mt76x8|mediatek_mt7628an-eval-board
-水星 Mac1200r V2 (mt76x8)|ramips/mt76x8|mercury_mac1200r-v2
-Minew G1 C|ramips/mt76x8|minew_g1-c
-摩托罗拉 Mwr03|ramips/mt76x8|motorola_mwr03
-网件 R6020|ramips/mt76x8|netgear_r6020
-网件 R6080|ramips/mt76x8|netgear_r6080
-网件 R6120|ramips/mt76x8|netgear_r6120
-Onion Omega2|ramips/mt76x8|onion_omega2
-Onion Omega2p|ramips/mt76x8|onion_omega2p
-花生壳 X1|ramips/mt76x8|oraybox_x1
-RAK Rak633|ramips/mt76x8|rakwireless_rak633
-RAVPower Rp Wd009|ramips/mt76x8|ravpower_rp-wd009
-SkyLab Skw92a|ramips/mt76x8|skylab_skw92a
-Tama W06|ramips/mt76x8|tama_w06
-TOTOLINK A3|ramips/mt76x8|totolink_a3
-TOTOLINK Lr1200 (mt76x8)|ramips/mt76x8|totolink_lr1200
-TP-Link Archer C20 V4|ramips/mt76x8|tplink_archer-c20-v4
-TP-Link Archer C20 V5|ramips/mt76x8|tplink_archer-c20-v5
-TP-Link Archer C50 V3|ramips/mt76x8|tplink_archer-c50-v3
-TP-Link Archer C50 V4|ramips/mt76x8|tplink_archer-c50-v4
-TP-Link Re200 V2|ramips/mt76x8|tplink_re200-v2
-TP-Link Re200 V3|ramips/mt76x8|tplink_re200-v3
-TP-Link Re200 V4|ramips/mt76x8|tplink_re200-v4
-TP-Link Re220 V2|ramips/mt76x8|tplink_re220-v2
-TP-Link Re305 V1|ramips/mt76x8|tplink_re305-v1
-TP-Link Re305 V3|ramips/mt76x8|tplink_re305-v3
-TP-Link Tl Mr3020 V3|ramips/mt76x8|tplink_tl-mr3020-v3
-TP-Link Tl Mr3420 V5|ramips/mt76x8|tplink_tl-mr3420-v5
-TP-Link Tl Mr6400 V4|ramips/mt76x8|tplink_tl-mr6400-v4
-TP-Link Tl Mr6400 V5|ramips/mt76x8|tplink_tl-mr6400-v5
-TP-Link Tl Wa801nd V5|ramips/mt76x8|tplink_tl-wa801nd-v5
-TP-Link Tl Wr802n V4 (mt76x8)|ramips/mt76x8|tplink_tl-wr802n-v4
-TP-Link Tl Wr840n V4 (mt76x8)|ramips/mt76x8|tplink_tl-wr840n-v4
-TP-Link Tl Wr841n V13 (mt76x8)|ramips/mt76x8|tplink_tl-wr841n-v13
-TP-Link Tl Wr842n V5 (mt76x8)|ramips/mt76x8|tplink_tl-wr842n-v5
-TP-Link Tl Wr850n V2|ramips/mt76x8|tplink_tl-wr850n-v2
-TP-Link Tl Wr902ac V3 (mt76x8)|ramips/mt76x8|tplink_tl-wr902ac-v3
-UniElec U7628 01 16m|ramips/mt76x8|unielec_u7628-01-16m
-VoCore Vocore2|ramips/mt76x8|vocore_vocore2
-VoCore Vocore2 Lite|ramips/mt76x8|vocore_vocore2-lite
-Wavlink Wl Wn531a3|ramips/mt76x8|wavlink_wl-wn531a3
-Wavlink Wl Wn570ha1|ramips/mt76x8|wavlink_wl-wn570ha1
-Wavlink Wl Wn575a3 (mt76x8)|ramips/mt76x8|wavlink_wl-wn575a3
-Wavlink Wl Wn576a2|ramips/mt76x8|wavlink_wl-wn576a2
-Wavlink Wl Wn577a2|ramips/mt76x8|wavlink_wl-wn577a2
-Wavlink Wl Wn578a2|ramips/mt76x8|wavlink_wl-wn578a2
-Widora Neo 16m|ramips/mt76x8|widora_neo-16m
-Widora Neo 32m|ramips/mt76x8|widora_neo-32m
-Wiznet Wizfi630s|ramips/mt76x8|wiznet_wizfi630s
-WRTnode Wrtnode2p|ramips/mt76x8|wrtnode_wrtnode2p
-WRTnode Wrtnode2r|ramips/mt76x8|wrtnode_wrtnode2r
-小米 Mi Ra75|ramips/mt76x8|xiaomi_mi-ra75
-小米 Mi Router 4a 100m (mt76x8)|ramips/mt76x8|xiaomi_mi-router-4a-100m
-小米 Mi Router 4a 100m Intl|ramips/mt76x8|xiaomi_mi-router-4a-100m-intl
-小米 Mi Router 4c (mt76x8)|ramips/mt76x8|xiaomi_mi-router-4c
-小米 Miwifi 3c|ramips/mt76x8|xiaomi_miwifi-3c
-小米 Miwifi Nano|ramips/mt76x8|xiaomi_miwifi-nano
-ZBT Zbt We1226|ramips/mt76x8|zbtlink_zbt-we1226
-合勤 Keenetic Extra Ii|ramips/mt76x8|zyxel_keenetic-extra-ii
-8Devices Carambola2|ath79/generic|8dev_carambola2
-8Devices Lima|ath79/generic|8dev_lima
-Adtran Bsap1800 V2|ath79/generic|adtran_bsap1800-v2
-Adtran Bsap1840|ath79/generic|adtran_bsap1840
-Airtight C 75|ath79/generic|airtight_c-75
-阿尔卡特 Hh40v|ath79/generic|alcatel_hh40v
-阿尔法 Ap121f|ath79/generic|alfa-network_ap121f
-阿尔法 Ap121fe|ath79/generic|alfa-network_ap121fe
-阿尔法 N2q|ath79/generic|alfa-network_n2q
-阿尔法 N5q|ath79/generic|alfa-network_n5q
-阿尔法 Pi Wifi4|ath79/generic|alfa-network_pi-wifi4
-阿尔法 R36a|ath79/generic|alfa-network_r36a
-阿尔法 Tube 2hq|ath79/generic|alfa-network_tube-2hq
-Allnet All Wap02860ac|ath79/generic|allnet_all-wap02860ac
-Araknis An 300 Ap I N|ath79/generic|araknis_an-300-ap-i-n
-Araknis An 500 Ap I Ac|ath79/generic|araknis_an-500-ap-i-ac
-Araknis An 700 Ap I Ac|ath79/generic|araknis_an-700-ap-i-ac
-Arduino Yun|ath79/generic|arduino_yun
-Aruba Ap 105|ath79/generic|aruba_ap-105
-Aruba Ap 115|ath79/generic|aruba_ap-115
-Aruba Ap 175|ath79/generic|aruba_ap-175
-华硕 Pl Ac56|ath79/generic|asus_pl-ac56
-华硕 Rp Ac51|ath79/generic|asus_rp-ac51
-华硕 Rp Ac66|ath79/generic|asus_rp-ac66
-Atheros Db120|ath79/generic|atheros_db120
-AVM Fritz1750e|ath79/generic|avm_fritz1750e
-AVM Fritz300e|ath79/generic|avm_fritz300e
-AVM Fritz4020|ath79/generic|avm_fritz4020
-AVM Fritz450e|ath79/generic|avm_fritz450e
-AVM Fritzdvbc|ath79/generic|avm_fritzdvbc
-Belkin F9j1108 V2|ath79/generic|belkin_f9j1108-v2
-Belkin F9k1115 V2|ath79/generic|belkin_f9k1115-v2
-巴法络 Bhr 4grv|ath79/generic|buffalo_bhr-4grv
-巴法络 Bhr 4grv2|ath79/generic|buffalo_bhr-4grv2
-巴法络 Wzr 600dhp|ath79/generic|buffalo_wzr-600dhp
-巴法络 Wzr Hp Ag300h|ath79/generic|buffalo_wzr-hp-ag300h
-巴法络 Wzr Hp G300nh Rb|ath79/generic|buffalo_wzr-hp-g300nh-rb
-巴法络 Wzr Hp G300nh S|ath79/generic|buffalo_wzr-hp-g300nh-s
-巴法络 Wzr Hp G302h A1a0|ath79/generic|buffalo_wzr-hp-g302h-a1a0
-巴法络 Wzr Hp G450h|ath79/generic|buffalo_wzr-hp-g450h
-Comfast Cf E110n V2|ath79/generic|comfast_cf-e110n-v2
-Comfast Cf E120a V3|ath79/generic|comfast_cf-e120a-v3
-Comfast Cf E130n V2|ath79/generic|comfast_cf-e130n-v2
-Comfast Cf E313ac|ath79/generic|comfast_cf-e313ac
-Comfast Cf E314n V2|ath79/generic|comfast_cf-e314n-v2
-Comfast Cf E375ac|ath79/generic|comfast_cf-e375ac
-Comfast Cf E5|ath79/generic|comfast_cf-e5
-Comfast Cf E560ac|ath79/generic|comfast_cf-e560ac
-Comfast Cf Ew72|ath79/generic|comfast_cf-ew72
-Comfast Cf Wr650ac V1|ath79/generic|comfast_cf-wr650ac-v1
-Comfast Cf Wr650ac V2|ath79/generic|comfast_cf-wr650ac-v2
-Comfast Cf Wr752ac V1|ath79/generic|comfast_cf-wr752ac-v1
-Compex Wpj344 16m|ath79/generic|compex_wpj344-16m
-Compex Wpj531 16m|ath79/generic|compex_wpj531-16m
-Compex Wpj558 16m|ath79/generic|compex_wpj558-16m
-Compex Wpj563|ath79/generic|compex_wpj563
-Devolo Dlan Pro 1200plus Ac|ath79/generic|devolo_dlan-pro-1200plus-ac
-Devolo Dvl1200e|ath79/generic|devolo_dvl1200e
-Devolo Dvl1200i|ath79/generic|devolo_dvl1200i
-Devolo Dvl1750c|ath79/generic|devolo_dvl1750c
-Devolo Dvl1750e|ath79/generic|devolo_dvl1750e
-Devolo Dvl1750i|ath79/generic|devolo_dvl1750i
-Devolo Dvl1750x|ath79/generic|devolo_dvl1750x
-Devolo Magic 2 Wifi|ath79/generic|devolo_magic-2-wifi
-Dlink Dap 1330 A1|ath79/generic|dlink_dap-1330-a1
-Dlink Dap 1365 A1|ath79/generic|dlink_dap-1365-a1
-Dlink Dap 2230 A1|ath79/generic|dlink_dap-2230-a1
-Dlink Dap 2660 A1|ath79/generic|dlink_dap-2660-a1
-Dlink Dap 2680 A1|ath79/generic|dlink_dap-2680-a1
-Dlink Dap 2695 A1|ath79/generic|dlink_dap-2695-a1
-Dlink Dap 3320 A1|ath79/generic|dlink_dap-3320-a1
-Dlink Dap 3662 A1|ath79/generic|dlink_dap-3662-a1
-Dlink Dch G020 A1|ath79/generic|dlink_dch-g020-a1
-Dlink Dir 505|ath79/generic|dlink_dir-505
-Dlink Dir 629 A1|ath79/generic|dlink_dir-629-a1
-Dlink Dir 825 B1|ath79/generic|dlink_dir-825-b1
-Dlink Dir 825 C1|ath79/generic|dlink_dir-825-c1
-Dlink Dir 835 A1|ath79/generic|dlink_dir-835-a1
-Dlink Dir 842 C1|ath79/generic|dlink_dir-842-c1
-Dlink Dir 842 C2|ath79/generic|dlink_dir-842-c2
-Dlink Dir 842 C3|ath79/generic|dlink_dir-842-c3
-Dlink Dir 859 A1|ath79/generic|dlink_dir-859-a1
-Dlink Dir 859 A3|ath79/generic|dlink_dir-859-a3
-Dlink Dir 869 A1|ath79/generic|dlink_dir-869-a1
-日电 Wrc 1750ghbk2 I|ath79/generic|elecom_wrc-1750ghbk2-i
-日电 Wrc 300ghbk2 I|ath79/generic|elecom_wrc-300ghbk2-i
-Embedded Wireless Balin|ath79/generic|embeddedwireless_balin
-Embedded Wireless Dorin|ath79/generic|embeddedwireless_dorin
-EnGenius Eap1200h|ath79/generic|engenius_eap1200h
-EnGenius Eap1750h|ath79/generic|engenius_eap1750h
-EnGenius Eap300 V2|ath79/generic|engenius_eap300-v2
-EnGenius Eap600|ath79/generic|engenius_eap600
-EnGenius Ecb1200|ath79/generic|engenius_ecb1200
-EnGenius Ecb1750|ath79/generic|engenius_ecb1750
-EnGenius Ecb600|ath79/generic|engenius_ecb600
-EnGenius Ens202ext V1|ath79/generic|engenius_ens202ext-v1
-EnGenius Enstationac V1|ath79/generic|engenius_enstationac-v1
-8Devices Habanero Dvk|ipq40xx/generic|8dev_habanero-dvk
-8Devices Jalapeno|ipq40xx/generic|8dev_jalapeno
-阿尔法 Ap120c Ac|ipq40xx/generic|alfa-network_ap120c-ac
-Aruba Ap 303|ipq40xx/generic|aruba_ap-303
-Aruba Ap 303h|ipq40xx/generic|aruba_ap-303h
-Aruba Ap 365|ipq40xx/generic|aruba_ap-365
-华硕 Map Ac2200|ipq40xx/generic|asus_map-ac2200
-华硕 Rt Ac42u|ipq40xx/generic|asus_rt-ac42u
-华硕 Rt Ac58u|ipq40xx/generic|asus_rt-ac58u
-AVM Fritzbox 4040|ipq40xx/generic|avm_fritzbox-4040
-AVM Fritzbox 7530|ipq40xx/generic|avm_fritzbox-7530
-AVM Fritzrepeater 1200|ipq40xx/generic|avm_fritzrepeater-1200
-AVM Fritzrepeater 3000|ipq40xx/generic|avm_fritzrepeater-3000
-巴法络 Wtr M2133hp|ipq40xx/generic|buffalo_wtr-m2133hp
-CellC Rtl30vw|ipq40xx/generic|cellc_rtl30vw
-Dlink Dap 2610|ipq40xx/generic|dlink_dap-2610
-智邦 Ecw5211|ipq40xx/generic|edgecore_ecw5211
-EnGenius Eap1300|ipq40xx/generic|engenius_eap1300
-Extreme Ws Ap3915i|ipq40xx/generic|extreme-networks_ws-ap3915i
-萤石 Cs W3 Wd1200g Eup|ipq40xx/generic|ezviz_cs-w3-wd1200g-eup
-GL.iNet Gl A1300|ipq40xx/generic|glinet_gl-a1300
-GL.iNet Gl Ap1300|ipq40xx/generic|glinet_gl-ap1300
-GL.iNet Gl B1300|ipq40xx/generic|glinet_gl-b1300
-GL.iNet Gl B2200|ipq40xx/generic|glinet_gl-b2200
-领势 Ea6350v3|ipq40xx/generic|linksys_ea6350v3
-领势 Ea8300|ipq40xx/generic|linksys_ea8300
-领势 Mr8300|ipq40xx/generic|linksys_mr8300
-领势 Whw01|ipq40xx/generic|linksys_whw01
-领势 Whw03v2|ipq40xx/generic|linksys_whw03v2
-Luma Wrtq 329acn|ipq40xx/generic|luma_wrtq-329acn
-Meraki Mr33|ipq40xx/generic|meraki_mr33
-Meraki Mr74|ipq40xx/generic|meraki_mr74
-MobiPromo Cm520 79f|ipq40xx/generic|mobipromo_cm520-79f
-网件 Ex6100v2|ipq40xx/generic|netgear_ex6100v2
-网件 Ex6150v2|ipq40xx/generic|netgear_ex6150v2
-网件 Rbr50|ipq40xx/generic|netgear_rbr50
-网件 Rbs50|ipq40xx/generic|netgear_rbs50
-网件 Srr60|ipq40xx/generic|netgear_srr60
-网件 Srs60|ipq40xx/generic|netgear_srs60
-网件 Wac510|ipq40xx/generic|netgear_wac510
-OpenMesh A42|ipq40xx/generic|openmesh_a42
-OpenMesh A62|ipq40xx/generic|openmesh_a62
-P2W R619ac 128m|ipq40xx/generic|p2w_r619ac-128m
-P2W R619ac 64m|ipq40xx/generic|p2w_r619ac-64m
-Pakedge Wr 1|ipq40xx/generic|pakedge_wr-1
-PlasmaCloud Pa1200|ipq40xx/generic|plasmacloud_pa1200
-PlasmaCloud Pa2200|ipq40xx/generic|plasmacloud_pa2200
-Qxwlan E2600ac C1|ipq40xx/generic|qxwlan_e2600ac-c1
-Qxwlan E2600ac C2|ipq40xx/generic|qxwlan_e2600ac-c2
-索尼 Ncp Hg100 Cellular|ipq40xx/generic|sony_ncp-hg100-cellular
-Teltonika Rutx50|ipq40xx/generic|teltonika_rutx50
-Wallys Dr40x9|ipq40xx/generic|wallys_dr40x9
-中兴 Mf18a|ipq40xx/generic|zte_mf18a
-中兴 Mf286d|ipq40xx/generic|zte_mf286d
-中兴 Mf287|ipq40xx/generic|zte_mf287
-中兴 Mf287plus|ipq40xx/generic|zte_mf287plus
-中兴 Mf287pro|ipq40xx/generic|zte_mf287pro
-中兴 Mf289f|ipq40xx/generic|zte_mf289f
-合勤 Nbg6617|ipq40xx/generic|zyxel_nbg6617
-香蕉派 Bpi R64|mediatek/mt7622|bananapi_bpi-r64
-巴法络 Wsr 2533dhp2|mediatek/mt7622|buffalo_wsr-2533dhp2
-巴法络 Wsr 3200ax4s|mediatek/mt7622|buffalo_wsr-3200ax4s
-Dlink Eagle Pro Ai M32 A1|mediatek/mt7622|dlink_eagle-pro-ai-m32-a1
-Dlink Eagle Pro Ai R32 A1|mediatek/mt7622|dlink_eagle-pro-ai-r32-a1
-日电 Wrc 2533gent|mediatek/mt7622|elecom_wrc-2533gent
-日电 Wrc X3200gst3|mediatek/mt7622|elecom_wrc-x3200gst3
-领势 E8450|mediatek/mt7622|linksys_e8450
-领势 E8450 Ubi|mediatek/mt7622|linksys_e8450-ubi
-联发科 Mt7622 Rfb1|mediatek/mt7622|mediatek_mt7622-rfb1
-联发科 Mt7622 Rfb1 Ubi|mediatek/mt7622|mediatek_mt7622-rfb1-ubi
-网件 Wax206|mediatek/mt7622|netgear_wax206
-Reyee Ax3200 E5|mediatek/mt7622|reyee_ax3200-e5
-锐捷 Rg Ew3200gx Pro|mediatek/mt7622|ruijie_rg-ew3200gx-pro
-TOTOLINK A8000ru|mediatek/mt7622|totolink_a8000ru
-Ubiquiti Unifi 6 Lr V1|mediatek/mt7622|ubnt_unifi-6-lr-v1
-Ubiquiti Unifi 6 Lr V1 Ubootmod|mediatek/mt7622|ubnt_unifi-6-lr-v1-ubootmod
-Ubiquiti Unifi 6 Lr V2|mediatek/mt7622|ubnt_unifi-6-lr-v2
-Ubiquiti Unifi 6 Lr V2 Ubootmod|mediatek/mt7622|ubnt_unifi-6-lr-v2-ubootmod
-Ubiquiti Unifi 6 Lr V3|mediatek/mt7622|ubnt_unifi-6-lr-v3
-Ubiquiti Unifi 6 Lr V3 Ubootmod|mediatek/mt7622|ubnt_unifi-6-lr-v3-ubootmod
-小米 Redmi Router Ax6s (mt7622)|mediatek/mt7622|xiaomi_redmi-router-ax6s
+AN7581 Evaluation Board (SNAND)|airoha/airoha|airoha_an7581-evb
+AN7581 Evaluation Board (EMMC)|airoha/airoha|airoha_an7581-evb-emmc
+AN7583 Evaluation Board (SNAND)|airoha/airoha|airoha_an7583-evb
+AN7583 Evaluation Board (EMMC)|airoha/airoha|airoha_an7583-evb-emmc
+EN7523 Evaluation Board|airoha/airoha|airoha_en7523-evb
+MR24|apm821xx/apm821xx|meraki_mr24
+MX60|apm821xx/apm821xx|meraki_mx60
+WNDAP620 (Premium Wireless N)|apm821xx/apm821xx|netgear_wndap620
+WNDAP660 (Dual Radio Dual Band Wireless N)|apm821xx/apm821xx|netgear_wndap660
+Centria N900 WNDR4700|apm821xx/apm821xx|netgear_wndr4700
+My Book Live|apm821xx/apm821xx|wd_mybooklive
+AT91SAM9263 EK|at91/at91|atmel_at91sam9263ek
+AT91SAM9G15 EK|at91/at91|atmel_at91sam9g15ek
+AT91SAM9G20 EK|at91/at91|atmel_at91sam9g20ek
+AT91SAM9G20 EK (at91)|at91/at91|atmel_at91sam9g20ek-2mmc
+AT91SAM9G25 EK|at91/at91|atmel_at91sam9g25ek
+AT91SAM9G35 EK|at91/at91|atmel_at91sam9g35ek
+AT91SAM9M10G45 EK|at91/at91|atmel_at91sam9m10g45ek
+AT91SAM9X25 EK|at91/at91|atmel_at91sam9x25ek
+AT91SAM9X35 EK|at91/at91|atmel_at91sam9x35ek
+LMU5000|at91/at91|calamp_lmu5000
+TNY A9260|at91/at91|calao_tny-a9260
+TNY A9263|at91/at91|calao_tny-a9263
+TNY A9G20|at91/at91|calao_tny-a9g20
+USB A9260|at91/at91|calao_usb-a9260
+USB A9263|at91/at91|calao_usb-a9263
+USB A9G20|at91/at91|calao_usb-a9g20
+Ethernut 5|at91/at91|egnite_ethernut5
+Q5x|at91/at91|exegin_q5xr5
+WB45N|at91/at91|laird_wb45n
+WB50N|at91/at91|laird_wb50n
+SAM9X60 EK|at91/at91|microchip_sam9x60ek
+SAMA5D2 ICP|at91/at91|microchip_sama5d2-icp
+SAMA5D2 PTC Ek|at91/at91|microchip_sama5d2-ptc-ek
+SAMA5D2 Xplained|at91/at91|microchip_sama5d2-xplained
+SAMA5D27 SOM1 Ek|at91/at91|microchip_sama5d27-som1-ek
+SAMA5D27 WSOM1 Ek|at91/at91|microchip_sama5d27-wlsom1-ek
+SAMA5D3 Xplained|at91/at91|microchip_sama5d3-xplained
+SAMA5D4 Xplained|at91/at91|microchip_sama5d4-xplained
+SAMA7G5 EK|at91/at91|microchip_sama7g5-ek
+8Devices Carambola2|ath79/ath79|8dev_carambola2
+Carambola3|ath79/ath79|8dev_carambola3
+8Devices Lima|ath79/ath79|8dev_lima
+Rambutan|ath79/ath79|8dev_rambutan
+Adtran Bsap1800 V2|ath79/ath79|adtran_bsap1800-v2
+Adtran Bsap1840|ath79/ath79|adtran_bsap1840
+HiveAP 121|ath79/ath79|aerohive_hiveap-121
+Airtight C 75|ath79/ath79|airtight_c-75
+阿尔卡特 Hh40v|ath79/ath79|alcatel_hh40v
+阿尔法 Ap121f|ath79/ath79|alfa-network_ap121f
+阿尔法 Ap121fe|ath79/ath79|alfa-network_ap121fe
+阿尔法 N2q|ath79/ath79|alfa-network_n2q
+阿尔法 N5q|ath79/ath79|alfa-network_n5q
+阿尔法 Pi Wifi4|ath79/ath79|alfa-network_pi-wifi4
+阿尔法 R36a|ath79/ath79|alfa-network_r36a
+阿尔法 Tube 2hq|ath79/ath79|alfa-network_tube-2hq
+WiFi CampPro Nano Duo|ath79/ath79|alfa-network_wifi-camppro-nano-duo
+Allnet All Wap02860ac|ath79/ath79|allnet_all-wap02860ac
+Araknis An 300 Ap I N|ath79/ath79|araknis_an-300-ap-i-n
+Araknis An 500 Ap I Ac|ath79/ath79|araknis_an-500-ap-i-ac
+Araknis An 700 Ap I Ac|ath79/ath79|araknis_an-700-ap-i-ac
+Arduino Yun|ath79/ath79|arduino_yun
+Aruba Ap 105|ath79/ath79|aruba_ap-105
+Aruba Ap 115|ath79/ath79|aruba_ap-115
+Aruba Ap 175|ath79/ath79|aruba_ap-175
+华硕 Pl Ac56|ath79/ath79|asus_pl-ac56
+华硕 Rp Ac51|ath79/ath79|asus_rp-ac51
+华硕 Rp Ac66|ath79/ath79|asus_rp-ac66
+RT AC59U|ath79/ath79|asus_rt-ac59u
+RT AC59U (ath79)|ath79/ath79|asus_rt-ac59u-v2
+ZenWiFi CD6N|ath79/ath79|asus_zenwifi-cd6n
+ZenWiFi CD6R|ath79/ath79|asus_zenwifi-cd6r
+Atheros Db120|ath79/ath79|atheros_db120
+AVM Fritz1750e|ath79/ath79|avm_fritz1750e
+AVM Fritz300e|ath79/ath79|avm_fritz300e
+AVM Fritz4020|ath79/ath79|avm_fritz4020
+AVM Fritz450e|ath79/ath79|avm_fritz450e
+AVM Fritzdvbc|ath79/ath79|avm_fritzdvbc
+Belkin F9j1108 V2|ath79/ath79|belkin_f9j1108-v2
+Belkin F9k1115 V2|ath79/ath79|belkin_f9k1115-v2
+巴法络 Bhr 4grv|ath79/ath79|buffalo_bhr-4grv
+巴法络 Bhr 4grv2|ath79/ath79|buffalo_bhr-4grv2
+WHR G301N|ath79/ath79|buffalo_whr-g301n
+WZR 450HP2|ath79/ath79|buffalo_wzr-450hp2
+巴法络 Wzr 600dhp|ath79/ath79|buffalo_wzr-600dhp
+巴法络 Wzr Hp Ag300h|ath79/ath79|buffalo_wzr-hp-ag300h
+巴法络 Wzr Hp G300nh Rb|ath79/ath79|buffalo_wzr-hp-g300nh-rb
+巴法络 Wzr Hp G300nh S|ath79/ath79|buffalo_wzr-hp-g300nh-s
+巴法络 Wzr Hp G302h A1a0|ath79/ath79|buffalo_wzr-hp-g302h-a1a0
+巴法络 Wzr Hp G450h|ath79/ath79|buffalo_wzr-hp-g450h
+Comfast Cf E110n V2|ath79/ath79|comfast_cf-e110n-v2
+Comfast Cf E120a V3|ath79/ath79|comfast_cf-e120a-v3
+Comfast Cf E130n V2|ath79/ath79|comfast_cf-e130n-v2
+Comfast Cf E313ac|ath79/ath79|comfast_cf-e313ac
+Comfast Cf E314n V2|ath79/ath79|comfast_cf-e314n-v2
+CF E355AC|ath79/ath79|comfast_cf-e355ac-v2
+Comfast Cf E375ac|ath79/ath79|comfast_cf-e375ac
+CF E380AC|ath79/ath79|comfast_cf-e380ac-v2
+Comfast Cf E5|ath79/ath79|comfast_cf-e5
+Comfast Cf E560ac|ath79/ath79|comfast_cf-e560ac
+CF EW71|ath79/ath79|comfast_cf-ew71-v2
+Comfast Cf Ew72|ath79/ath79|comfast_cf-ew72
+Comfast Cf Wr650ac V1|ath79/ath79|comfast_cf-wr650ac-v1
+Comfast Cf Wr650ac V2|ath79/ath79|comfast_cf-wr650ac-v2
+Comfast Cf Wr752ac V1|ath79/ath79|comfast_cf-wr752ac-v1
+Compex Wpj344 16m|ath79/ath79|compex_wpj344-16m
+Compex Wpj531 16m|ath79/ath79|compex_wpj531-16m
+Compex Wpj558 16m|ath79/ath79|compex_wpj558-16m
+Compex Wpj563|ath79/ath79|compex_wpj563
+dell apl26 0ae|ath79/ath79|dell_apl26-0ae
+dell apl27 0b1|ath79/ath79|dell_apl27-0b1
+Devolo Dlan Pro 1200plus Ac|ath79/ath79|devolo_dlan-pro-1200plus-ac
+Devolo Dvl1200e|ath79/ath79|devolo_dvl1200e
+Devolo Dvl1200i|ath79/ath79|devolo_dvl1200i
+Devolo Dvl1750c|ath79/ath79|devolo_dvl1750c
+Devolo Dvl1750e|ath79/ath79|devolo_dvl1750e
+Devolo Dvl1750i|ath79/ath79|devolo_dvl1750i
+Devolo Dvl1750x|ath79/ath79|devolo_dvl1750x
+Devolo Magic 2 Wifi|ath79/ath79|devolo_magic-2-wifi
+COVR C1200|ath79/ath79|dlink_covr-c1200-a1
+COVR P2500|ath79/ath79|dlink_covr-p2500-a1
+Dlink Dap 1330 A1|ath79/ath79|dlink_dap-1330-a1
+Dlink Dap 1365 A1|ath79/ath79|dlink_dap-1365-a1
+DAP 1720|ath79/ath79|dlink_dap-1720-a1
+Dlink Dap 2230 A1|ath79/ath79|dlink_dap-2230-a1
+Dlink Dap 2660 A1|ath79/ath79|dlink_dap-2660-a1
+Dlink Dap 2680 A1|ath79/ath79|dlink_dap-2680-a1
+Dlink Dap 2695 A1|ath79/ath79|dlink_dap-2695-a1
+Dlink Dap 3320 A1|ath79/ath79|dlink_dap-3320-a1
+Dlink Dap 3662 A1|ath79/ath79|dlink_dap-3662-a1
+Dlink Dch G020 A1|ath79/ath79|dlink_dch-g020-a1
+Dlink Dir 505|ath79/ath79|dlink_dir-505
+DIR 615 (ath79)|ath79/ath79|dlink_dir-615-e4
+Dlink Dir 629 A1|ath79/ath79|dlink_dir-629-a1
+Dlink Dir 825 B1|ath79/ath79|dlink_dir-825-b1
+Dlink Dir 825 C1|ath79/ath79|dlink_dir-825-c1
+Dlink Dir 835 A1|ath79/ath79|dlink_dir-835-a1
+Dlink Dir 842 C1|ath79/ath79|dlink_dir-842-c1
+Dlink Dir 842 C2|ath79/ath79|dlink_dir-842-c2
+Dlink Dir 842 C3|ath79/ath79|dlink_dir-842-c3
+Dlink Dir 859 A1|ath79/ath79|dlink_dir-859-a1
+Dlink Dir 859 A3|ath79/ath79|dlink_dir-859-a3
+Dlink Dir 869 A1|ath79/ath79|dlink_dir-869-a1
+DW33D|ath79/ath79|domywifi_dw33d
+dongwon dw02 412h 128m|ath79/ath79|dongwon_dw02-412h-128m
+dongwon dw02 412h 64m|ath79/ath79|dongwon_dw02-412h-64m
+WAB I1750 PS|ath79/ath79|elecom_wab-i1750-ps
+WAB S1167 PS|ath79/ath79|elecom_wab-s1167-ps
+WAB S600 PS|ath79/ath79|elecom_wab-s600-ps
+日电 Wrc 1750ghbk2 I|ath79/ath79|elecom_wrc-1750ghbk2-i
+日电 Wrc 300ghbk2 I|ath79/ath79|elecom_wrc-300ghbk2-i
+Embedded Wireless Balin|ath79/ath79|embeddedwireless_balin
+Embedded Wireless Dorin|ath79/ath79|embeddedwireless_dorin
+EnGenius Eap1200h|ath79/ath79|engenius_eap1200h
+EnGenius Eap1750h|ath79/ath79|engenius_eap1750h
+EnGenius Eap300 V2|ath79/ath79|engenius_eap300-v2
+EAP350|ath79/ath79|engenius_eap350-v1
+EnGenius Eap600|ath79/ath79|engenius_eap600
+EnGenius Ecb1200|ath79/ath79|engenius_ecb1200
+EnGenius Ecb1750|ath79/ath79|engenius_ecb1750
+ECB350|ath79/ath79|engenius_ecb350-v1
+EnGenius Ecb600|ath79/ath79|engenius_ecb600
+ENH202|ath79/ath79|engenius_enh202-v1
+ENS1750|ath79/ath79|engenius_ens1750
+EnGenius Ens202ext V1|ath79/ath79|engenius_ens202ext-v1
+EnGenius Enstationac V1|ath79/ath79|engenius_enstationac-v1
+EPG5000|ath79/ath79|engenius_epg5000
+ESR1200|ath79/ath79|engenius_esr1200
+ESR1750|ath79/ath79|engenius_esr1750
+ESR900|ath79/ath79|engenius_esr900
+EWS511AP|ath79/ath79|engenius_ews511ap
+EWS660AP|ath79/ath79|engenius_ews660ap
+WS AP3705i|ath79/ath79|enterasys_ws-ap3705i
+EG200|ath79/ath79|etactica_eg200
+WS AP3805i|ath79/ath79|extreme-networks_ws-ap3805i
+FAP 220 B|ath79/ath79|fortinet_fap-220-b
+FAP 221 B|ath79/ath79|fortinet_fap-221-b
+FAP 221 C|ath79/ath79|fortinet_fap-221-c
+6408|ath79/ath79|glinet_6408
+6416|ath79/ath79|glinet_6416
+GL.iNet AR150|ath79/ath79|glinet_gl-ar150
+GL.iNet AR300M|ath79/ath79|glinet_gl-ar300m-lite
+GL.iNet GL.iNet ar300m nand|ath79/ath79|glinet_gl-ar300m-nand
+GL.iNet GL.iNet ar300m nor|ath79/ath79|glinet_gl-ar300m-nor
+GL.iNet AR300M16|ath79/ath79|glinet_gl-ar300m16
+GL.iNet AR750|ath79/ath79|glinet_gl-ar750
+GL.iNet GL.iNet ar750s nor|ath79/ath79|glinet_gl-ar750s-nor
+GL.iNet GL.iNet ar750s nor nand|ath79/ath79|glinet_gl-ar750s-nor-nand
+GL.iNet E750|ath79/ath79|glinet_gl-e750
+GL.iNet MiFi|ath79/ath79|glinet_gl-mifi
+GL.iNet GL.iNet s200 nor|ath79/ath79|glinet_gl-s200-nor
+GL.iNet GL.iNet s200 nor nand|ath79/ath79|glinet_gl-s200-nor-nand
+GL.iNet USB150|ath79/ath79|glinet_gl-usb150
+GL.iNet GL.iNet x1200 nor|ath79/ath79|glinet_gl-x1200-nor
+GL.iNet GL.iNet x1200 nor nand|ath79/ath79|glinet_gl-x1200-nor-nand
+GL.iNet X300B|ath79/ath79|glinet_gl-x300b
+GL.iNet X750|ath79/ath79|glinet_gl-x750
+GL.iNet XE300|ath79/ath79|glinet_gl-xe300
+LAN Turtle|ath79/ath79|hak5_lan-turtle
+Packet Squirrel|ath79/ath79|hak5_packet-squirrel
+WiFi Pineapple NANO|ath79/ath79|hak5_wifi-pineapple-nano
+HC6361|ath79/ath79|hiwifi_hc6361
+AP5030DN|ath79/ath79|huawei_ap5030dn
+AP6010DN|ath79/ath79|huawei_ap6010dn
+ETG3 R|ath79/ath79|iodata_etg3-r
+WN AC1167DGR|ath79/ath79|iodata_wn-ac1167dgr
+WN AC1600DGR|ath79/ath79|iodata_wn-ac1600dgr
+WN AC1600DGR2/DGR3|ath79/ath79|iodata_wn-ac1600dgr2
+WN AG300DGR|ath79/ath79|iodata_wn-ag300dgr
+JA76PF2|ath79/ath79|jjplus_ja76pf2
+JWAP230|ath79/ath79|jjplus_jwap230
+JT OR750i|ath79/ath79|joyit_jt-or750i
+C910|ath79/ath79|kuwfi_c910
+N650|ath79/ath79|kuwfi_n650
+LBA 047 CH|ath79/ath79|letv_lba-047-ch
+LibreRouter|ath79/ath79|librerouter_librerouter-v1
+EA4500|ath79/ath79|linksys_ea4500-v3
+APS256|ath79/ath79|longdata_aps256
+MR12|ath79/ath79|meraki_mr12
+MR16|ath79/ath79|meraki_mr16
+MR18|ath79/ath79|meraki_mr18
+MW4530R|ath79/ath79|mercury_mw4530r-v1
+RouterBOARD 2011UiAS 2HnD|ath79/ath79|mikrotik_routerboard-2011uias-2hnd
+RouterBOARD 493G|ath79/ath79|mikrotik_routerboard-493g
+RouterBOARD 750 r2 (hEX lite)|ath79/ath79|mikrotik_routerboard-750-r2
+RouterBOARD 911 Lite2/Lite5 (2Hn/5Hn)|ath79/ath79|mikrotik_routerboard-911-lite
+RouterBOARD 911G 5HPacD|ath79/ath79|mikrotik_routerboard-911g-5hpacd
+RouterBOARD 911G 2HPnD|ath79/ath79|mikrotik_routerboard-911g-xhpnd
+RouterBOARD 912UAG 2HPnD|ath79/ath79|mikrotik_routerboard-912uag-2hpnd
+RouterBOARD 921GS 5HPacD 15s (mANTBox 15s)|ath79/ath79|mikrotik_routerboard-921gs-5hpacd-15s
+RouterBOARD 922UAGS 5HPacD|ath79/ath79|mikrotik_routerboard-922uags-5hpacd
+RouterBOARD 951G 2HnD|ath79/ath79|mikrotik_routerboard-951g-2hnd
+RouterBOARD 951Ui 2HnD|ath79/ath79|mikrotik_routerboard-951ui-2hnd
+RouterBOARD 951Ui 2nD (hAP)|ath79/ath79|mikrotik_routerboard-951ui-2nd
+RouterBOARD 952Ui 5ac2nD (hAP ac lite)|ath79/ath79|mikrotik_routerboard-952ui-5ac2nd
+RouterBOARD 960PGS (hEX PoE/PowerBox Pro)|ath79/ath79|mikrotik_routerboard-960pgs
+RouterBOARD 962UiGS 5HacT2HnT (hAP ac)|ath79/ath79|mikrotik_routerboard-962uigs-5hact2hnt
+RouterBOARD LHG 2nD (LHG 2)|ath79/ath79|mikrotik_routerboard-lhg-2nd
+RouterBOARD LHG 5nD (LHG 5)|ath79/ath79|mikrotik_routerboard-lhg-5nd
+RouterBOARD mAP 2nD (mAP)|ath79/ath79|mikrotik_routerboard-map-2nd
+RouterBOARD mAPL 2nD (mAP lite)|ath79/ath79|mikrotik_routerboard-mapl-2nd
+RouterBOARD SXT 5nD r2 (SXT Lite5)|ath79/ath79|mikrotik_routerboard-sxt-5nd-r2
+RouterBOARD wAP 2nD (wAP)|ath79/ath79|mikrotik_routerboard-wap-2nd
+RouterBOARD wAP G 5HacT2HnD (wAP AC)|ath79/ath79|mikrotik_routerboard-wap-g-5hact2hnd
+RouterBOARD wAPR 2nD (wAP R)|ath79/ath79|mikrotik_routerboard-wapr-2nd
+AWK 1137C|ath79/ath79|moxa_awk-1137c
+Aterm WF1200CR|ath79/ath79|nec_wf1200cr
+Aterm WF1200HP|ath79/ath79|nec_wf1200hp
+Aterm WF1200HP2|ath79/ath79|nec_wf1200hp2
+Aterm WG1200CR|ath79/ath79|nec_wg1200cr
+Aterm WG1400HP|ath79/ath79|nec_wg1400hp
+Aterm WG1800HP|ath79/ath79|nec_wg1800hp
+Aterm WG1800HP2|ath79/ath79|nec_wg1800hp2
+Aterm WG2200HP|ath79/ath79|nec_wg2200hp
+Aterm WG600HP|ath79/ath79|nec_wg600hp
+Aterm WG800HP|ath79/ath79|nec_wg800hp
+Aterm WR8750N|ath79/ath79|nec_wr8750n
+Aterm WR9500N|ath79/ath79|nec_wr9500n
+网件 Ex7300|ath79/ath79|netgear_ex7300
+EX7300|ath79/ath79|netgear_ex7300-v2
+PGZNG1|ath79/ath79|netgear_pgzng1
+R6100|ath79/ath79|netgear_r6100
+WNDAP360|ath79/ath79|netgear_wndap360
+WNDR3700 (ath79)|ath79/ath79|netgear_wndr3700
+WNDR3700 (2)|ath79/ath79|netgear_wndr3700-v2
+WNDR3700 (3)|ath79/ath79|netgear_wndr3700-v4
+WNDR3800|ath79/ath79|netgear_wndr3800
+WNDR3800CH|ath79/ath79|netgear_wndr3800ch
+WNDR4300|ath79/ath79|netgear_wndr4300
+WNDR4300 (ath79)|ath79/ath79|netgear_wndr4300-v2
+WNDR4300SW|ath79/ath79|netgear_wndr4300sw
+WNDR4300TN|ath79/ath79|netgear_wndr4300tn
+WNDR4500|ath79/ath79|netgear_wndr4500-v3
+WNDRMAC|ath79/ath79|netgear_wndrmac-v1
+WNDRMAC (ath79)|ath79/ath79|netgear_wndrmac-v2
+WNR1000|ath79/ath79|netgear_wnr1000-v2
+WNR2000|ath79/ath79|netgear_wnr2000-v3
+网件 wnr2200 16m|ath79/ath79|netgear_wnr2200-16m
+网件 wnr2200 8m|ath79/ath79|netgear_wnr2200-8m
+WNR612|ath79/ath79|netgear_wnr612-v2
+Koala|ath79/ath79|ocedo_koala
+Raccoon|ath79/ath79|ocedo_raccoon
+Ursus|ath79/ath79|ocedo_ursus
+N150R|ath79/ath79|on_n150r
+Omega|ath79/ath79|onion_omega
+A40|ath79/ath79|openmesh_a40
+A60|ath79/ath79|openmesh_a60
+MR1750|ath79/ath79|openmesh_mr1750-v1
+MR1750 (ath79)|ath79/ath79|openmesh_mr1750-v2
+MR600 (ath79)|ath79/ath79|openmesh_mr600-v1
+MR600 (2)|ath79/ath79|openmesh_mr600-v2
+MR900|ath79/ath79|openmesh_mr900-v1
+MR900 (ath79)|ath79/ath79|openmesh_mr900-v2
+OM2P HS|ath79/ath79|openmesh_om2p-hs-v1
+OM2P HS (ath79)|ath79/ath79|openmesh_om2p-hs-v2
+OM2P HS (2)|ath79/ath79|openmesh_om2p-hs-v3
+OM2P HS (3)|ath79/ath79|openmesh_om2p-hs-v4
+OM2P LC|ath79/ath79|openmesh_om2p-lc
+OM2P|ath79/ath79|openmesh_om2p-v1
+OM2P (ath79)|ath79/ath79|openmesh_om2p-v2
+OM2P (2)|ath79/ath79|openmesh_om2p-v4
+OM5P|ath79/ath79|openmesh_om5p
+OM5P AC|ath79/ath79|openmesh_om5p-ac-v1
+OM5P AC (ath79)|ath79/ath79|openmesh_om5p-ac-v2
+OM5P AN|ath79/ath79|openmesh_om5p-an
+CAP324|ath79/ath79|pcs_cap324
+CR3000|ath79/ath79|pcs_cr3000
+CR5000|ath79/ath79|pcs_cr5000
+K2T|ath79/ath79|phicomm_k2t
+TS D084|ath79/ath79|pisen_ts-d084
+WMB001N|ath79/ath79|pisen_wmb001n
+Cloud Easy Power (WMM003N)|ath79/ath79|pisen_wmm003n
+PA300|ath79/ath79|plasmacloud_pa300
+PA300E|ath79/ath79|plasmacloud_pa300e
+Air Pen|ath79/ath79|pqi_air-pen
+qca ap143 16m|ath79/ath79|qca_ap143-16m
+qca ap143 8m|ath79/ath79|qca_ap143-8m
+C301|ath79/ath79|qihoo_c301
+qxwlan e1700ac v2 16m|ath79/ath79|qxwlan_e1700ac-v2-16m
+qxwlan e1700ac v2 8m|ath79/ath79|qxwlan_e1700ac-v2-8m
+qxwlan e558 v2 16m|ath79/ath79|qxwlan_e558-v2-16m
+qxwlan e558 v2 8m|ath79/ath79|qxwlan_e558-v2-8m
+qxwlan e600g v2 16m|ath79/ath79|qxwlan_e600g-v2-16m
+qxwlan e600g v2 8m|ath79/ath79|qxwlan_e600g-v2-8m
+qxwlan e600gac v2 16m|ath79/ath79|qxwlan_e600gac-v2-16m
+qxwlan e600gac v2 8m|ath79/ath79|qxwlan_e600gac-v2-8m
+qxwlan e750a v4 16m|ath79/ath79|qxwlan_e750a-v4-16m
+qxwlan e750a v4 8m|ath79/ath79|qxwlan_e750a-v4-8m
+qxwlan e750g v8 16m|ath79/ath79|qxwlan_e750g-v8-16m
+qxwlan e750g v8 8m|ath79/ath79|qxwlan_e750g-v8-8m
+WR818|ath79/ath79|rosinson_wr818
+R500|ath79/ath79|ruckus_r500
+ZoneFlex 7025|ath79/ath79|ruckus_zf7025
+ZoneFlex 7321[ U]|ath79/ath79|ruckus_zf7321
+ZoneFlex 7341[ U]|ath79/ath79|ruckus_zf7341
+ZoneFlex 7351[ U]|ath79/ath79|ruckus_zf7351
+ZoneFlex 7363[ U]|ath79/ath79|ruckus_zf7363
+ZoneFlex 7352/7372[ E/ U]|ath79/ath79|ruckus_zf7372
+WAM250|ath79/ath79|samsung_wam250
+WS AP3610|ath79/ath79|siemens_ws-ap3610
+WLR 7100|ath79/ath79|sitecom_wlr-7100
+WLR 8100|ath79/ath79|sitecom_wlr-8100
+AP100|ath79/ath79|sophos_ap100
+AP100C|ath79/ath79|sophos_ap100c
+AP15|ath79/ath79|sophos_ap15
+AP15C|ath79/ath79|sophos_ap15c
+AP55|ath79/ath79|sophos_ap55
+AP55C|ath79/ath79|sophos_ap55c
+T1|ath79/ath79|telco_t1
+RUT230|ath79/ath79|teltonika_rut230-v1
+RUT300|ath79/ath79|teltonika_rut300
+RUT955|ath79/ath79|teltonika_rut955
+teltonika rut955 h7v3c0|ath79/ath79|teltonika_rut955-h7v3c0
+Archer A7|ath79/ath79|tplink_archer-a7-v5
+Archer A9|ath79/ath79|tplink_archer-a9-v6
+Archer C2 (ath79)|ath79/ath79|tplink_archer-c2-v3
+Archer C25|ath79/ath79|tplink_archer-c25-v1
+Archer C5 (ath79)|ath79/ath79|tplink_archer-c5-v1
+Archer C58|ath79/ath79|tplink_archer-c58-v1
+Archer C59|ath79/ath79|tplink_archer-c59-v1
+Archer C59 (ath79)|ath79/ath79|tplink_archer-c59-v2
+Archer C6|ath79/ath79|tplink_archer-c6-v2
+Archer C6 (ath79)|ath79/ath79|tplink_archer-c6-v2-us
+Archer C60|ath79/ath79|tplink_archer-c60-v1
+Archer C60 (ath79)|ath79/ath79|tplink_archer-c60-v2
+Archer C60 (2)|ath79/ath79|tplink_archer-c60-v3
+Archer C7|ath79/ath79|tplink_archer-c7-v1
+Archer C7 (ath79)|ath79/ath79|tplink_archer-c7-v2
+Archer C7 (2)|ath79/ath79|tplink_archer-c7-v4
+Archer C7 (3)|ath79/ath79|tplink_archer-c7-v5
+Archer D50|ath79/ath79|tplink_archer-d50-v1
+Archer D7|ath79/ath79|tplink_archer-d7-v1
+Archer D7b|ath79/ath79|tplink_archer-d7b-v1
+CPE210|ath79/ath79|tplink_cpe210-v1
+CPE210 (ath79)|ath79/ath79|tplink_cpe210-v2
+CPE210 (2)|ath79/ath79|tplink_cpe210-v3
+CPE220|ath79/ath79|tplink_cpe220-v2
+CPE220 (ath79)|ath79/ath79|tplink_cpe220-v3
+CPE510|ath79/ath79|tplink_cpe510-v1
+CPE510 (ath79)|ath79/ath79|tplink_cpe510-v2
+CPE510 (2)|ath79/ath79|tplink_cpe510-v3
+CPE605|ath79/ath79|tplink_cpe605-v1
+CPE610|ath79/ath79|tplink_cpe610-v1
+CPE610 (ath79)|ath79/ath79|tplink_cpe610-v2
+CPE710|ath79/ath79|tplink_cpe710-v1
+CPE710 (ath79)|ath79/ath79|tplink_cpe710-v2
+Deco M4R (ath79)|ath79/ath79|tplink_deco-m4r-v1
+Deco S4|ath79/ath79|tplink_deco-s4-v2
+EAP225 Outdoor|ath79/ath79|tplink_eap225-outdoor-v1
+EAP225 Outdoor (ath79)|ath79/ath79|tplink_eap225-outdoor-v3
+EAP225 (ath79)|ath79/ath79|tplink_eap225-v1
+EAP225 (2)|ath79/ath79|tplink_eap225-v3
+EAP225 (3)|ath79/ath79|tplink_eap225-v4
+EAP225 Wall|ath79/ath79|tplink_eap225-wall-v2
+EAP245|ath79/ath79|tplink_eap245-v1
+EAP245 (ath79)|ath79/ath79|tplink_eap245-v3
+RE350K|ath79/ath79|tplink_re350k-v1
+TP-Link Re355 V1|ath79/ath79|tplink_re355-v1
+RE450|ath79/ath79|tplink_re450-v1
+RE450 (ath79)|ath79/ath79|tplink_re450-v2
+RE450 (2)|ath79/ath79|tplink_re450-v3
+RE455|ath79/ath79|tplink_re455-v1
+TL MR10U|ath79/ath79|tplink_tl-mr10u
+TL MR3020|ath79/ath79|tplink_tl-mr3020-v1
+TL MR3040|ath79/ath79|tplink_tl-mr3040-v2
+TL MR3220|ath79/ath79|tplink_tl-mr3220-v1
+TL MR3420|ath79/ath79|tplink_tl-mr3420-v1
+TL MR3420 (ath79)|ath79/ath79|tplink_tl-mr3420-v2
+TL MR3420 (2)|ath79/ath79|tplink_tl-mr3420-v3
+TP-Link Tl Mr6400 V1|ath79/ath79|tplink_tl-mr6400-v1
+TL WA1201|ath79/ath79|tplink_tl-wa1201-v2
+TL WA701ND|ath79/ath79|tplink_tl-wa701nd-v1
+TL WA730RE|ath79/ath79|tplink_tl-wa730re-v1
+TL WA801ND|ath79/ath79|tplink_tl-wa801nd-v1
+TL WA801ND (ath79)|ath79/ath79|tplink_tl-wa801nd-v3
+TL WA801ND (2)|ath79/ath79|tplink_tl-wa801nd-v4
+TL WA830RE|ath79/ath79|tplink_tl-wa830re-v1
+TL WA850RE|ath79/ath79|tplink_tl-wa850re-v1
+TL WA850RE (ath79)|ath79/ath79|tplink_tl-wa850re-v2
+TL WA860RE|ath79/ath79|tplink_tl-wa860re-v1
+TL WA901ND|ath79/ath79|tplink_tl-wa901nd-v1
+TL WA901ND (ath79)|ath79/ath79|tplink_tl-wa901nd-v2
+TL WA901ND (2)|ath79/ath79|tplink_tl-wa901nd-v3
+TL WA901ND (3)|ath79/ath79|tplink_tl-wa901nd-v4
+TL WA901ND (4)|ath79/ath79|tplink_tl-wa901nd-v5
+TL WDR3500|ath79/ath79|tplink_tl-wdr3500-v1
+TL WDR3600|ath79/ath79|tplink_tl-wdr3600-v1
+TL WDR4300|ath79/ath79|tplink_tl-wdr4300-v1
+TL WDR4300 (ath79)|ath79/ath79|tplink_tl-wdr4300-v1-il
+TL WDR4310|ath79/ath79|tplink_tl-wdr4310-v1
+TL WDR4900 (ath79)|ath79/ath79|tplink_tl-wdr4900-v2
+TL WDR6500|ath79/ath79|tplink_tl-wdr6500-v2
+TL WDR7500|ath79/ath79|tplink_tl-wdr7500-v3
+TL WPA8630|ath79/ath79|tplink_tl-wpa8630-v1
+TP-Link tl wpa8630p v2 int|ath79/ath79|tplink_tl-wpa8630p-v2-int
+TP-Link tl wpa8630p v2.0 eu|ath79/ath79|tplink_tl-wpa8630p-v2.0-eu
+TP-Link tl wpa8630p v2.1 eu|ath79/ath79|tplink_tl-wpa8630p-v2.1-eu
+TP-Link Tl Wr1043n V5|ath79/ath79|tplink_tl-wr1043n-v5
+TL WR1043N/ND|ath79/ath79|tplink_tl-wr1043nd-v1
+TL WR1043N/ND (ath79)|ath79/ath79|tplink_tl-wr1043nd-v2
+TL WR1043N/ND (2)|ath79/ath79|tplink_tl-wr1043nd-v3
+TP-Link Tl Wr1043nd V4|ath79/ath79|tplink_tl-wr1043nd-v4
+TL WR1045ND|ath79/ath79|tplink_tl-wr1045nd-v2
+TL WR2543N/ND|ath79/ath79|tplink_tl-wr2543-v1
+TL WR703N|ath79/ath79|tplink_tl-wr703n
+TL WR710N|ath79/ath79|tplink_tl-wr710n-v1
+TL WR710N (ath79)|ath79/ath79|tplink_tl-wr710n-v2.1
+TL WR740N|ath79/ath79|tplink_tl-wr740n-v1
+TL WR740N (ath79)|ath79/ath79|tplink_tl-wr740n-v3
+TP-Link Tl Wr740n V4|ath79/ath79|tplink_tl-wr740n-v4
+TP-Link Tl Wr740n V5|ath79/ath79|tplink_tl-wr740n-v5
+TL WR741N/ND|ath79/ath79|tplink_tl-wr741-v1
+TP-Link Tl Wr741nd V4|ath79/ath79|tplink_tl-wr741nd-v4
+TL WR743ND|ath79/ath79|tplink_tl-wr743nd-v1
+TL WR802N|ath79/ath79|tplink_tl-wr802n-v1
+TL WR802N (ath79)|ath79/ath79|tplink_tl-wr802n-v2
+TP-Link Tl Wr810n V1|ath79/ath79|tplink_tl-wr810n-v1
+TP-Link Tl Wr810n V2|ath79/ath79|tplink_tl-wr810n-v2
+TL WR841N/ND (4)|ath79/ath79|tplink_tl-wr841-v10
+TL WR841N/ND (5)|ath79/ath79|tplink_tl-wr841-v11
+TL WR841N/ND (6)|ath79/ath79|tplink_tl-wr841-v12
+TL WR841N/ND|ath79/ath79|tplink_tl-wr841-v5
+TL WR841N/ND (ath79)|ath79/ath79|tplink_tl-wr841-v7
+TL WR841N/ND (2)|ath79/ath79|tplink_tl-wr841-v8
+TL WR841N/ND (3)|ath79/ath79|tplink_tl-wr841-v9
+TL WR841HP|ath79/ath79|tplink_tl-wr841hp-v2
+TP-Link Tl Wr841hp V3|ath79/ath79|tplink_tl-wr841hp-v3
+TL WR842N/ND|ath79/ath79|tplink_tl-wr842n-v1
+TL WR842N/ND (ath79)|ath79/ath79|tplink_tl-wr842n-v2
+TL WR842N|ath79/ath79|tplink_tl-wr842n-v3
+TL WR902AC|ath79/ath79|tplink_tl-wr902ac-v1
+TL WR940N|ath79/ath79|tplink_tl-wr940n-v3
+TP-Link Tl Wr940n V4|ath79/ath79|tplink_tl-wr940n-v4
+TP-Link Tl Wr940n V6|ath79/ath79|tplink_tl-wr940n-v6
+TL WR941ND|ath79/ath79|tplink_tl-wr941-v2
+TL WR941ND (ath79)|ath79/ath79|tplink_tl-wr941-v4
+TP-Link Tl Wr941hp V1|ath79/ath79|tplink_tl-wr941hp-v1
+TL WR941N|ath79/ath79|tplink_tl-wr941n-v7-cn
+TL WR941ND (2)|ath79/ath79|tplink_tl-wr941nd-v5
+TP-Link Tl Wr941nd V6|ath79/ath79|tplink_tl-wr941nd-v6
+WBS210|ath79/ath79|tplink_wbs210-v1
+WBS210 (ath79)|ath79/ath79|tplink_wbs210-v2
+WBS510|ath79/ath79|tplink_wbs510-v1
+WBS510 (ath79)|ath79/ath79|tplink_wbs510-v2
+TEW 673GRU|ath79/ath79|trendnet_tew-673gru
+TEW 823DRU|ath79/ath79|trendnet_tew-823dru
+airCube AC|ath79/ath79|ubnt_aircube-ac
+airCube ISP|ath79/ath79|ubnt_aircube-isp
+AirRouter|ath79/ath79|ubnt_airrouter
+AmpliFi Router HD|ath79/ath79|ubnt_amplifi-router-hd
+Bullet AC|ath79/ath79|ubnt_bullet-ac
+Bullet M (ath79)|ath79/ath79|ubnt_bullet-m-ar7240
+Bullet M (2)|ath79/ath79|ubnt_bullet-m-ar7241
+Bullet M|ath79/ath79|ubnt_bullet-m-xw
+EdgeSwitch 5XP|ath79/ath79|ubnt_edgeswitch-5xp
+EdgeSwitch 8XP|ath79/ath79|ubnt_edgeswitch-8xp
+LiteAP ac (LAP 120)|ath79/ath79|ubnt_lap-120
+LiteBeam AC|ath79/ath79|ubnt_litebeam-ac-gen2
+LiteBeam M5|ath79/ath79|ubnt_litebeam-m5-xw
+NanoBeam AC|ath79/ath79|ubnt_nanobeam-ac
+NanoBeam AC (ath79)|ath79/ath79|ubnt_nanobeam-ac-gen2
+NanoBeam AC (2)|ath79/ath79|ubnt_nanobeam-ac-xc
+NanoBridge M|ath79/ath79|ubnt_nanobridge-m
+Nanostation AC|ath79/ath79|ubnt_nanostation-ac
+Nanostation AC loco|ath79/ath79|ubnt_nanostation-ac-loco
+Nanostation Loco M (ath79)|ath79/ath79|ubnt_nanostation-loco-m
+Nanostation Loco M|ath79/ath79|ubnt_nanostation-loco-m-xw
+Nanostation M (ath79)|ath79/ath79|ubnt_nanostation-m
+Nanostation M|ath79/ath79|ubnt_nanostation-m-xw
+Picostation M|ath79/ath79|ubnt_picostation-m
+PowerBeam 5AC|ath79/ath79|ubnt_powerbeam-5ac-500
+PowerBeam 5AC (ath79)|ath79/ath79|ubnt_powerbeam-5ac-gen2
+PowerBeam M2|ath79/ath79|ubnt_powerbeam-m2-xw
+PowerBeam M5|ath79/ath79|ubnt_powerbeam-m5-xw
+PowerBridge M|ath79/ath79|ubnt_powerbridge-m
+Rocket 5AC|ath79/ath79|ubnt_rocket-5ac-lite
+Rocket M|ath79/ath79|ubnt_rocket-m
+RouterStation|ath79/ath79|ubnt_routerstation
+RouterStation Pro|ath79/ath79|ubnt_routerstation-pro
+UniFi Swiss Army Knife Ultra|ath79/ath79|ubnt_uk-ultra
+UniFi AP|ath79/ath79|ubnt_unifi-ap
+UniFi AP (ath79)|ath79/ath79|ubnt_unifi-ap-lr
+UniFi AP Outdoor+|ath79/ath79|ubnt_unifi-ap-outdoor-plus
+UniFi AP Pro|ath79/ath79|ubnt_unifi-ap-pro
+UniFi AC Lite|ath79/ath79|ubnt_unifiac-lite
+UniFi AC LR|ath79/ath79|ubnt_unifiac-lr
+UniFi AC Mesh|ath79/ath79|ubnt_unifiac-mesh
+UniFi AC Mesh Pro|ath79/ath79|ubnt_unifiac-mesh-pro
+UniFi AC Pro|ath79/ath79|ubnt_unifiac-pro
+DR531|ath79/ath79|wallys_dr531
+AP100 (ath79)|ath79/ath79|watchguard_ap100
+AP200|ath79/ath79|watchguard_ap200
+AP300|ath79/ath79|watchguard_ap300
+My Net N600|ath79/ath79|wd_mynet-n600
+My Net N750|ath79/ath79|wd_mynet-n750
+My Net Wi Fi Range Extender|ath79/ath79|wd_mynet-wifi-rangeextender
+WB2000|ath79/ath79|winchannel_wb2000
+AIoT AC2350|ath79/ath79|xiaomi_aiot-ac2350
+小米 Mi Router 4q|ath79/ath79|xiaomi_mi-router-4q
+A770|ath79/ath79|yuncore_a770
+A782|ath79/ath79|yuncore_a782
+A930|ath79/ath79|yuncore_a930
+CPE830(D)|ath79/ath79|yuncore_cpe830
+XD3200|ath79/ath79|yuncore_xd3200
+XD4200|ath79/ath79|yuncore_xd4200
+WD323|ath79/ath79|zbtlink_zbt-wd323
+CPE46B|ath79/ath79|ziking_cpe46b
+E8820|ath79/ath79|zte_e8820
+MF281|ath79/ath79|zte_mf281
+MF282|ath79/ath79|zte_mf282
+MF286|ath79/ath79|zte_mf286
+MF286A|ath79/ath79|zte_mf286a
+MF286C|ath79/ath79|zte_mf286c
+MF286R|ath79/ath79|zte_mf286r
+EMG2926 Q10A|ath79/ath79|zyxel_emg2926_q10a
+NBG6616|ath79/ath79|zyxel_nbg6616
+NBG6716|ath79/ath79|zyxel_nbg6716
+NWA1100|ath79/ath79|zyxel_nwa1100-nh
+NWA1121|ath79/ath79|zyxel_nwa1121-ni
+NWA1123|ath79/ath79|zyxel_nwa1123-ac
+NWA1123 (ath79)|ath79/ath79|zyxel_nwa1123-ni
+A/A+/B/B+/CM/Zero/ZeroW|bcm27xx/bcm27xx|rpi
+2B/2B 1.2|bcm27xx/bcm27xx|rpi-2
+3A+/3B/3B+/CM3/Zero2/Zero2W|bcm27xx/bcm27xx|rpi-3
+树莓派 4|bcm27xx/bcm27xx|rpi-4
+5/500/CM5|bcm27xx/bcm27xx|rpi-5
+RT AC53U|bcm47xx/bcm47xx|asus_rt-ac53u
+RT AC66U|bcm47xx/bcm47xx|asus_rt-ac66u
+RT N10|bcm47xx/bcm47xx|asus_rt-n10
+RT N10P (bcm47xx)|bcm47xx/bcm47xx|asus_rt-n10p
+RT N10P (2)|bcm47xx/bcm47xx|asus_rt-n10p-v2
+RT N10U|bcm47xx/bcm47xx|asus_rt-n10u
+RT N10U (bcm47xx)|bcm47xx/bcm47xx|asus_rt-n10u-b
+RT N12|bcm47xx/bcm47xx|asus_rt-n12
+RT N12 (bcm47xx)|bcm47xx/bcm47xx|asus_rt-n12-b1
+RT N12 (2)|bcm47xx/bcm47xx|asus_rt-n12-c1
+RT N12 (3)|bcm47xx/bcm47xx|asus_rt-n12-d1
+RT N12HP|bcm47xx/bcm47xx|asus_rt-n12hp
+RT N14UHP|bcm47xx/bcm47xx|asus_rt-n14uhp
+RT N15U|bcm47xx/bcm47xx|asus_rt-n15u
+RT N16|bcm47xx/bcm47xx|asus_rt-n16
+RT N53|bcm47xx/bcm47xx|asus_rt-n53
+RT N66U|bcm47xx/bcm47xx|asus_rt-n66u
+RT N66W|bcm47xx/bcm47xx|asus_rt-n66w
+WL 300g|bcm47xx/bcm47xx|asus_wl-300g
+WL 320gP|bcm47xx/bcm47xx|asus_wl-320gp
+WL 330gE|bcm47xx/bcm47xx|asus_wl-330ge
+WL 500g Deluxe|bcm47xx/bcm47xx|asus_wl-500gd
+WL 500gP|bcm47xx/bcm47xx|asus_wl-500gp-v1
+WL 500gP (bcm47xx)|bcm47xx/bcm47xx|asus_wl-500gp-v2
+WL 500W|bcm47xx/bcm47xx|asus_wl-500w
+WL 520gU|bcm47xx/bcm47xx|asus_wl-520gu
+WL 550gE|bcm47xx/bcm47xx|asus_wl-550ge
+WL HDD25|bcm47xx/bcm47xx|asus_wl-hdd25
+DWL 3150|bcm47xx/bcm47xx|dlink_dwl-3150
+PS 1208MFg|bcm47xx/bcm47xx|edimax_ps1208-mfg
+E970|bcm47xx/bcm47xx|huawei_e970
+E1000|bcm47xx/bcm47xx|linksys_e1000
+E1200|bcm47xx/bcm47xx|linksys_e1200-v1
+E1200 (bcm47xx)|bcm47xx/bcm47xx|linksys_e1200-v2
+E1500|bcm47xx/bcm47xx|linksys_e1500-v1
+E1550|bcm47xx/bcm47xx|linksys_e1550-v1
+E2000|bcm47xx/bcm47xx|linksys_e2000-v1
+E2500|bcm47xx/bcm47xx|linksys_e2500-v1
+E2500 (bcm47xx)|bcm47xx/bcm47xx|linksys_e2500-v2
+E2500 (2)|bcm47xx/bcm47xx|linksys_e2500-v2.1
+E2500 (3)|bcm47xx/bcm47xx|linksys_e2500-v3
+E3000|bcm47xx/bcm47xx|linksys_e3000-v1
+E3200|bcm47xx/bcm47xx|linksys_e3200-v1
+E4200|bcm47xx/bcm47xx|linksys_e4200-v1
+E900|bcm47xx/bcm47xx|linksys_e900-v1
+WRT150N|bcm47xx/bcm47xx|linksys_wrt150n
+WRT160N (bcm47xx)|bcm47xx/bcm47xx|linksys_wrt160n-v1
+WRT160N|bcm47xx/bcm47xx|linksys_wrt160n-v3
+WRT300N (bcm47xx)|bcm47xx/bcm47xx|linksys_wrt300n-v1
+WRT300N|bcm47xx/bcm47xx|linksys_wrt300n-v1.1
+WRT310N|bcm47xx/bcm47xx|linksys_wrt310n-v1
+WRT310N (bcm47xx)|bcm47xx/bcm47xx|linksys_wrt310n-v2
+WRT320N|bcm47xx/bcm47xx|linksys_wrt320n-v1
+WRT350N|bcm47xx/bcm47xx|linksys_wrt350n-v1
+WRT54G|bcm47xx/bcm47xx|linksys_wrt54g
+WRT54G3G|bcm47xx/bcm47xx|linksys_wrt54g3g
+WRT54G3G EM|bcm47xx/bcm47xx|linksys_wrt54g3g-em
+WRT54G3GV2 VF|bcm47xx/bcm47xx|linksys_wrt54g3gv2-vf
+WRT54GS|bcm47xx/bcm47xx|linksys_wrt54gs
+WRT54GS (bcm47xx)|bcm47xx/bcm47xx|linksys_wrt54gs-v4
+WRT610N|bcm47xx/bcm47xx|linksys_wrt610n-v1
+WRT610N (bcm47xx)|bcm47xx/bcm47xx|linksys_wrt610n-v2
+WRTSL54GS|bcm47xx/bcm47xx|linksys_wrtsl54gs
+WA840G|bcm47xx/bcm47xx|motorola_wa840g
+WE800G|bcm47xx/bcm47xx|motorola_we800g
+WR850G|bcm47xx/bcm47xx|motorola_wr850g
+R6200|bcm47xx/bcm47xx|netgear_r6200-v1
+WGR614 (bcm47xx)|bcm47xx/bcm47xx|netgear_wgr614-v10
+WGR614|bcm47xx/bcm47xx|netgear_wgr614-v10-na
+WGR614 (2)|bcm47xx/bcm47xx|netgear_wgr614-v8
+WGT634U|bcm47xx/bcm47xx|netgear_wgt634u
+WN2500RP|bcm47xx/bcm47xx|netgear_wn2500rp-v1
+WN3000RP (bcm47xx)|bcm47xx/bcm47xx|netgear_wn3000rp
+WNDR3300|bcm47xx/bcm47xx|netgear_wndr3300-v1
+WNDR3400|bcm47xx/bcm47xx|netgear_wndr3400-v1
+WNDR3400 (bcm47xx)|bcm47xx/bcm47xx|netgear_wndr3400-v2
+WNDR3400 (2)|bcm47xx/bcm47xx|netgear_wndr3400-v3
+WNDR3400 (3)|bcm47xx/bcm47xx|netgear_wndr3400-vcna
+WNDR3700 (bcm47xx)|bcm47xx/bcm47xx|netgear_wndr3700-v3
+WNDR4000|bcm47xx/bcm47xx|netgear_wndr4000
+WNR1000 (bcm47xx)|bcm47xx/bcm47xx|netgear_wnr1000-v3
+WNR2000 (bcm47xx)|bcm47xx/bcm47xx|netgear_wnr2000v2
+WNR3500|bcm47xx/bcm47xx|netgear_wnr3500-v2
+WNR3500 (bcm47xx)|bcm47xx/bcm47xx|netgear_wnr3500-v2-vc
+WNR3500L (bcm47xx)|bcm47xx/bcm47xx|netgear_wnr3500l-v1
+WNR3500L|bcm47xx/bcm47xx|netgear_wnr3500l-v1-na
+WNR3500L (2)|bcm47xx/bcm47xx|netgear_wnr3500l-v2
+WNR3500U|bcm47xx/bcm47xx|netgear_wnr3500u
+WNR834B|bcm47xx/bcm47xx|netgear_wnr834b-v2
+Image with LZMA loader and LZMA compressed kernel|bcm47xx/bcm47xx|standard
+USR5461|bcm47xx/bcm47xx|usrobotics_usr5461
+GT AC5300|bcm4908/bcm4908|asus_gt-ac5300
+GT AX6000|bcm4908/bcm4908|asus_gt-ax6000
+R8000P|bcm4908/bcm4908|netgear_r8000p
+RAXE500|bcm4908/bcm4908|netgear_raxe500
+Archer C2300|bcm4908/bcm4908|tplink_archer-c2300-v1
+RT AC3100|bcm53xx/bcm53xx|asus_rt-ac3100
+RT AC3200|bcm53xx/bcm53xx|asus_rt-ac3200
+RT AC5300|bcm53xx/bcm53xx|asus_rt-ac5300
+RT AC56U|bcm53xx/bcm53xx|asus_rt-ac56u
+RT AC68U|bcm53xx/bcm53xx|asus_rt-ac68u
+RT AC87U|bcm53xx/bcm53xx|asus_rt-ac87u
+RT AC88U|bcm53xx/bcm53xx|asus_rt-ac88u
+RT N18U|bcm53xx/bcm53xx|asus_rt-n18u
+WXR 1900DHP|bcm53xx/bcm53xx|buffalo_wxr-1900dhp
+WZR 1750DHP|bcm53xx/bcm53xx|buffalo_wzr-1750dhp
+WZR 600DHP2|bcm53xx/bcm53xx|buffalo_wzr-600dhp2
+WZR 900DHP|bcm53xx/bcm53xx|buffalo_wzr-900dhp
+DIR 885L|bcm53xx/bcm53xx|dlink_dir-885l
+DIR 890L|bcm53xx/bcm53xx|dlink_dir-890l
+DWL 8610AP|bcm53xx/bcm53xx|dlink_dwl-8610ap
+EA6300|bcm53xx/bcm53xx|linksys_ea6300-v1
+EA6500|bcm53xx/bcm53xx|linksys_ea6500-v2
+EA9200|bcm53xx/bcm53xx|linksys_ea9200
+EA9500|bcm53xx/bcm53xx|linksys_ea9500
+ABR 4500|bcm53xx/bcm53xx|luxul_abr-4500-v1
+XAP 1610|bcm53xx/bcm53xx|luxul_xap-1610-v1
+XBR 4500|bcm53xx/bcm53xx|luxul_xbr-4500-v1
+XWR 3150|bcm53xx/bcm53xx|luxul_xwr-3150-v1
+MR26|bcm53xx/bcm53xx|meraki_mr26
+MR32|bcm53xx/bcm53xx|meraki_mr32
+MX64|bcm53xx/bcm53xx|meraki_mx64
+meraki mx64 a0|bcm53xx/bcm53xx|meraki_mx64-a0
+MX65|bcm53xx/bcm53xx|meraki_mx65
+R6250|bcm53xx/bcm53xx|netgear_r6250-v1
+R6300|bcm53xx/bcm53xx|netgear_r6300-v2
+R7000|bcm53xx/bcm53xx|netgear_r7000
+R7900|bcm53xx/bcm53xx|netgear_r7900
+R8000|bcm53xx/bcm53xx|netgear_r8000
+R8500|bcm53xx/bcm53xx|netgear_r8500
+K3|bcm53xx/bcm53xx|phicomm_k3
+SR400ac|bcm53xx/bcm53xx|smartrg_sr400ac
+AC9|bcm53xx/bcm53xx|tenda_ac9
+Archer C5 (bcm53xx)|bcm53xx/bcm53xx|tplink_archer-c5-v2
+Archer C9|bcm53xx/bcm53xx|tplink_archer-c9-v1
+R1000H|bmips/bmips|actiontec_r1000h
+T1200H|bmips/bmips|actiontec_t1200h
+AR7516|bmips/bmips|arcadyan_ar7516
+AR 5315u|bmips/bmips|comtrend_ar-5315u
+AR 5381u|bmips/bmips|comtrend_ar-5381u
+AR 5387un|bmips/bmips|comtrend_ar-5387un
+VG 8050|bmips/bmips|comtrend_vg-8050
+VR 3025u|bmips/bmips|comtrend_vr-3025u
+VR 3025un|bmips/bmips|comtrend_vr-3025un
+VR 3032u|bmips/bmips|comtrend_vr-3032u
+WAP 5813n|bmips/bmips|comtrend_wap-5813n
+DSL 2750B|bmips/bmips|dlink_dsl-2750b-b1
+HG253s|bmips/bmips|huawei_hg253s-v2
+EchoLife HG553|bmips/bmips|huawei_hg553
+EchoLife HG556a|bmips/bmips|huawei_hg556a-a
+EchoLife HG556a (bmips)|bmips/bmips|huawei_hg556a-b
+EchoLife HG556a (2)|bmips/bmips|huawei_hg556a-c
+W3400V6|bmips/bmips|innacomm_w3400v6
+XG6846|bmips/bmips|inteno_xg6846
+DGND3700 (bmips)|bmips/bmips|netgear_dgnd3700-v1
+DGND3700|bmips/bmips|netgear_dgnd3700-v2
+DGND3800B|bmips/bmips|netgear_dgnd3800b
+EVG2000|bmips/bmips|netgear_evg2000
+R5010UNv2|bmips/bmips|nucom_r5010unv2
+VH4032N|bmips/bmips|observa_vh4032n
+F@ST 3864|bmips/bmips|sagem_fast-3864-op
+SR505n|bmips/bmips|smartrg_sr505n
+TD W8968|bmips/bmips|tp-link_td-w8968-v3
+Nezha STU devkit|d1/d1|100ask_dongshan-nezha-stu
+D1|d1/d1|allwinner_d1-nezha
+LicheePi RV (dock)|d1/d1|sipeed_lichee-rv-dock
+MQ Pro|d1/d1|widora_mangopi-mq-pro
+Initramfs Image|econet/econet|en751221_generic
+G 240G E|econet/econet|nokia_g240g-e
+XP8421 B|econet/econet|smartfiber_xp8421-b
+Archer vr1200v|econet/econet|tplink_archer-vr1200v-v2
+PMG5617GA|econet/econet|zyxel_pmg5617ga
+DIR 685 Xtreme N Storage Router|gemini/gemini|dlink_dir-685
+DNS 313 1 Bay Network Storage Enclosure|gemini/gemini|dlink_dns-313
+Square One SQ201|gemini/gemini|itian_sq201
+NAS IB 4220 B|gemini/gemini|raidsonic_ib-4220-b
+SL93512r|gemini/gemini|storlink_sl93512r
+i.MX8M Venice|imx/imx|gateworks_venice
+Ventana family|imx/imx|gateworks_ventana
+gateworks ventana large|imx/imx|gateworks_ventana-large
+i.MX8M|imx/imx|imx8m
+CuBox i|imx/imx|solidrun_cubox-i
+PICO PI IMX7D|imx/imx|technexion_imx7d-pico-pi
+Apalis family|imx/imx|toradex_apalis
+Dual|imx/imx|wandboard_dual
+8Devices Habanero Dvk|ipq40xx/ipq40xx|8dev_habanero-dvk
+8Devices Jalapeno|ipq40xx/ipq40xx|8dev_jalapeno
+阿尔法 Ap120c Ac|ipq40xx/ipq40xx|alfa-network_ap120c-ac
+Aruba Ap 303|ipq40xx/ipq40xx|aruba_ap-303
+Aruba Ap 303h|ipq40xx/ipq40xx|aruba_ap-303h
+Aruba Ap 365|ipq40xx/ipq40xx|aruba_ap-365
+Lyra Mini (MAP AC1300)|ipq40xx/ipq40xx|asus_map-ac1300
+华硕 Map Ac2200|ipq40xx/ipq40xx|asus_map-ac2200
+华硕 Rt Ac42u|ipq40xx/ipq40xx|asus_rt-ac42u
+华硕 Rt Ac58u|ipq40xx/ipq40xx|asus_rt-ac58u
+AVM Fritzbox 4040|ipq40xx/ipq40xx|avm_fritzbox-4040
+AVM Fritzbox 7530|ipq40xx/ipq40xx|avm_fritzbox-7530
+AVM Fritzrepeater 1200|ipq40xx/ipq40xx|avm_fritzrepeater-1200
+AVM Fritzrepeater 3000|ipq40xx/ipq40xx|avm_fritzrepeater-3000
+巴法络 Wtr M2133hp|ipq40xx/ipq40xx|buffalo_wtr-m2133hp
+CellC Rtl30vw|ipq40xx/ipq40xx|cellc_rtl30vw
+MeshPoint.One|ipq40xx/ipq40xx|cilab_meshpoint-one
+WPJ419|ipq40xx/ipq40xx|compex_wpj419
+WPJ428|ipq40xx/ipq40xx|compex_wpj428
+Magic 2 WiFi next|ipq40xx/ipq40xx|devolo_magic-2-wifi-next
+Dlink Dap 2610|ipq40xx/ipq40xx|dlink_dap-2610
+智邦 Ecw5211|ipq40xx/ipq40xx|edgecore_ecw5211
+OAP100|ipq40xx/ipq40xx|edgecore_oap100
+EnGenius Eap1300|ipq40xx/ipq40xx|engenius_eap1300
+EAP2200|ipq40xx/ipq40xx|engenius_eap2200
+EMD1|ipq40xx/ipq40xx|engenius_emd1
+EMR3500|ipq40xx/ipq40xx|engenius_emr3500
+ENS620EXT|ipq40xx/ipq40xx|engenius_ens620ext
+Extreme Ws Ap3915i|ipq40xx/ipq40xx|extreme-networks_ws-ap3915i
+WS AP391x|ipq40xx/ipq40xx|extreme-networks_ws-ap391x
+萤石 Cs W3 Wd1200g Eup|ipq40xx/ipq40xx|ezviz_cs-w3-wd1200g-eup
+GL.iNet Gl A1300|ipq40xx/ipq40xx|glinet_gl-a1300
+GL.iNet Gl Ap1300|ipq40xx/ipq40xx|glinet_gl-ap1300
+GL.iNet Gl B1300|ipq40xx/ipq40xx|glinet_gl-b1300
+GL.iNet Gl B2200|ipq40xx/ipq40xx|glinet_gl-b2200
+GL.iNet S1300|ipq40xx/ipq40xx|glinet_gl-s1300
+WiFi (Gale)|ipq40xx/ipq40xx|google_wifi
+领势 Ea6350v3|ipq40xx/ipq40xx|linksys_ea6350v3
+领势 Ea8300|ipq40xx/ipq40xx|linksys_ea8300
+MR6350|ipq40xx/ipq40xx|linksys_mr6350
+领势 Mr8300|ipq40xx/ipq40xx|linksys_mr8300
+MR9000|ipq40xx/ipq40xx|linksys_mr9000
+领势 Whw01|ipq40xx/ipq40xx|linksys_whw01
+WHW03|ipq40xx/ipq40xx|linksys_whw03
+领势 Whw03v2|ipq40xx/ipq40xx|linksys_whw03v2
+Luma Wrtq 329acn|ipq40xx/ipq40xx|luma_wrtq-329acn
+GX20|ipq40xx/ipq40xx|meraki_gx20
+MR30H|ipq40xx/ipq40xx|meraki_mr30h
+Meraki Mr33|ipq40xx/ipq40xx|meraki_mr33
+Meraki Mr74|ipq40xx/ipq40xx|meraki_mr74
+Z3|ipq40xx/ipq40xx|meraki_z3
+cAP ac|ipq40xx/ipq40xx|mikrotik_cap-ac
+hAP ac2|ipq40xx/ipq40xx|mikrotik_hap-ac2
+hAP ac3|ipq40xx/ipq40xx|mikrotik_hap-ac3
+hAP ac3 LTE6 kit|ipq40xx/ipq40xx|mikrotik_hap-ac3-lte6-kit
+Wireless Wire Dish LHGG 60ad|ipq40xx/ipq40xx|mikrotik_lhgg-60ad
+SXTsq 5 ac (RBSXTsqG 5acD)|ipq40xx/ipq40xx|mikrotik_sxtsq-5-ac
+wAP ac|ipq40xx/ipq40xx|mikrotik_wap-ac
+wAP ac LTE|ipq40xx/ipq40xx|mikrotik_wap-ac-lte
+wAP R ac|ipq40xx/ipq40xx|mikrotik_wap-r-ac
+MobiPromo Cm520 79f|ipq40xx/ipq40xx|mobipromo_cm520-79f
+网件 Ex6100v2|ipq40xx/ipq40xx|netgear_ex6100v2
+网件 Ex6150v2|ipq40xx/ipq40xx|netgear_ex6150v2
+LBR20|ipq40xx/ipq40xx|netgear_lbr20
+RBR20|ipq40xx/ipq40xx|netgear_rbr20
+RBR40|ipq40xx/ipq40xx|netgear_rbr40
+网件 Rbr50|ipq40xx/ipq40xx|netgear_rbr50
+RBS20|ipq40xx/ipq40xx|netgear_rbs20
+RBS40|ipq40xx/ipq40xx|netgear_rbs40
+网件 Rbs50|ipq40xx/ipq40xx|netgear_rbs50
+网件 Srr60|ipq40xx/ipq40xx|netgear_srr60
+网件 Srs60|ipq40xx/ipq40xx|netgear_srs60
+网件 Wac510|ipq40xx/ipq40xx|netgear_wac510
+OpenMesh A42|ipq40xx/ipq40xx|openmesh_a42
+OpenMesh A62|ipq40xx/ipq40xx|openmesh_a62
+P2W R619ac 128m|ipq40xx/ipq40xx|p2w_r619ac-128m
+P2W R619ac 64m|ipq40xx/ipq40xx|p2w_r619ac-64m
+Pakedge Wr 1|ipq40xx/ipq40xx|pakedge_wr-1
+PlasmaCloud Pa1200|ipq40xx/ipq40xx|plasmacloud_pa1200
+PlasmaCloud Pa2200|ipq40xx/ipq40xx|plasmacloud_pa2200
+Qxwlan E2600ac C1|ipq40xx/ipq40xx|qxwlan_e2600ac-c1
+Qxwlan E2600ac C2|ipq40xx/ipq40xx|qxwlan_e2600ac-c2
+WIA3300 20|ipq40xx/ipq40xx|skspruce_wia3300-20
+索尼 Ncp Hg100 Cellular|ipq40xx/ipq40xx|sony_ncp-hg100-cellular
+X1 Pro|ipq40xx/ipq40xx|tel_x1pro
+RUTX10|ipq40xx/ipq40xx|teltonika_rutx10
+Teltonika Rutx50|ipq40xx/ipq40xx|teltonika_rutx50
+U4019|ipq40xx/ipq40xx|unielec_u4019-32m
+Wallys Dr40x9|ipq40xx/ipq40xx|wallys_dr40x9
+LE1|ipq40xx/ipq40xx|yyets_le1
+中兴 Mf18a|ipq40xx/ipq40xx|zte_mf18a
+MF282Plus|ipq40xx/ipq40xx|zte_mf282plus
+中兴 Mf286d|ipq40xx/ipq40xx|zte_mf286d
+中兴 Mf287|ipq40xx/ipq40xx|zte_mf287
+中兴 Mf287plus|ipq40xx/ipq40xx|zte_mf287plus
+中兴 Mf287pro|ipq40xx/ipq40xx|zte_mf287pro
+中兴 Mf289f|ipq40xx/ipq40xx|zte_mf289f
+合勤 Nbg6617|ipq40xx/ipq40xx|zyxel_nbg6617
+WRE6606|ipq40xx/ipq40xx|zyxel_wre6606
+TR4400|ipq806x/ipq806x|arris_tr4400-v2
+RT4230W|ipq806x/ipq806x|askey_rt4230w-rev6
+G10|ipq806x/ipq806x|asrock_g10
+OnHub SRT AC1900|ipq806x/ipq806x|asus_onhub
+WXR 2533DHP|ipq806x/ipq806x|buffalo_wxr-2533dhp
+WPQ864|ipq806x/ipq806x|compex_wpq864
+ECW5410|ipq806x/ipq806x|edgecore_ecw5410
+AP3935|ipq806x/ipq806x|extreme_ap3935
+FAP 421E|ipq806x/ipq806x|fortinet_fap-421e
+SunSpot AC Wave2|ipq806x/ipq806x|ignitenet_ss-w2-ac2600
+E8350|ipq806x/ipq806x|linksys_e8350-v1
+EA7500 (ipq806x)|ipq806x/ipq806x|linksys_ea7500-v1
+EA8500|ipq806x/ipq806x|linksys_ea8500
+MR42|ipq806x/ipq806x|meraki_mr42
+MR52|ipq806x/ipq806x|meraki_mr52
+Aterm WG2600HP|ipq806x/ipq806x|nec_wg2600hp
+Aterm WG2600HP3|ipq806x/ipq806x|nec_wg2600hp3
+Nighthawk X4 D7800|ipq806x/ipq806x|netgear_d7800
+Nighthawk X4 R7500|ipq806x/ipq806x|netgear_r7500
+Nighthawk X4 R7500 (ipq806x)|ipq806x/ipq806x|netgear_r7500v2
+Nighthawk X4S R7800|ipq806x/ipq806x|netgear_r7800
+Nighthawk XR450|ipq806x/ipq806x|netgear_xr450
+Nighthawk XR500|ipq806x/ipq806x|netgear_xr500
+AC400i|ipq806x/ipq806x|nokia_ac400i
+AP148|ipq806x/ipq806x|qcom_ipq8064-ap148
+AP148 (ipq806x)|ipq806x/ipq806x|qcom_ipq8064-ap148-legacy
+AP161|ipq806x/ipq806x|qcom_ipq8064-ap161
+DB149|ipq806x/ipq806x|qcom_ipq8064-db149
+RG MTFi M520|ipq806x/ipq806x|ruijie_rg-mtfi-m520
+AD7200|ipq806x/ipq806x|tplink_ad7200
+Archer C2600|ipq806x/ipq806x|tplink_c2600
+OnHub AC1900 Cloud Router|ipq806x/ipq806x|tplink_onhub
+Archer VR2600v|ipq806x/ipq806x|tplink_vr2600v
+UniFi AC HD|ipq806x/ipq806x|ubnt_unifi-ac-hd
+小米 Router HD|ipq806x/ipq806x|xiaomi_mi-router-hd
+NBG6817|ipq806x/ipq806x|zyxel_nbg6817
+MI424WR rev A/C|ixp4xx/ixp4xx|actiontec_mi424wr_ac
+MI424WR rev D|ixp4xx/ixp4xx|actiontec_mi424wr_d
+DSM G600 A|ixp4xx/ixp4xx|dlink_dsm_g600_a
+FSG 3|ixp4xx/ixp4xx|freecom_fsg_3
+Avila GW2348 4|ixp4xx/ixp4xx|gateworks_avila
+Cambria GW2358 4|ixp4xx/ixp4xx|gateworks_cambria
+NAS100d|ixp4xx/ixp4xx|iomega_nas100d
+NSLU2|ixp4xx/ixp4xx|linksys_nslu2
+WG302 v1|ixp4xx/ixp4xx|netgear_wg302v1
+USR8200|ixp4xx/ixp4xx|usrobotics_usr8200
+L 50|kirkwood/kirkwood|checkpoint_l-50
+ON100|kirkwood/kirkwood|cisco_on100
+Pogoplug E02|kirkwood/kirkwood|cloudengines_pogoe02
+Pogoplug V4|kirkwood/kirkwood|cloudengines_pogoplugv4
+C200 (kirkwood)|kirkwood/kirkwood|ctera_c200-v1
+DNS 325|kirkwood/kirkwood|dlink_dns-325-a1
+DNS 320L|kirkwood/kirkwood|dlink_dns320l
+4i Edge 200|kirkwood/kirkwood|endian_4i-edge-200
+Sheevaplug|kirkwood/kirkwood|globalscale_sheevaplug
+Iconnect|kirkwood/kirkwood|iom_iconnect-1.1
+StorCenter ix2 200|kirkwood/kirkwood|iom_ix2-200
+StorCenter ix4 200d|kirkwood/kirkwood|iom_ix4-200d
+NAS1|kirkwood/kirkwood|iptime_nas1
+E4200 (kirkwood)|kirkwood/kirkwood|linksys_e4200-v2
+EA3500|kirkwood/kirkwood|linksys_ea3500
+EA4500 (kirkwood)|kirkwood/kirkwood|linksys_ea4500
+ReadyNAS Duo|kirkwood/kirkwood|netgear_readynas-duo-v2
+Stora (MS2000/2110)|kirkwood/kirkwood|netgear_stora
+ICY BOX IB NAS62x0|kirkwood/kirkwood|raidsonic_ib-nas62x0
+Blackarmor NAS220|kirkwood/kirkwood|seagate_blackarmor-nas220
+FreeAgent Dockstar|kirkwood/kirkwood|seagate_dockstar
+GoFlexHome|kirkwood/kirkwood|seagate_goflexhome
+GoFlexNet|kirkwood/kirkwood|seagate_goflexnet
+NSA310b|kirkwood/kirkwood|zyxel_nsa310b
+NSA310S|kirkwood/kirkwood|zyxel_nsa310s
+NSA325|kirkwood/kirkwood|zyxel_nsa325
+ALL0333CJ|lantiq/lantiq|allnet_all0333cj
+ASL56026|lantiq/lantiq|alphanetworks_asl56026
+ARV4510PW|lantiq/lantiq|arcadyan_arv4510pw
+ARV4518PWR01|lantiq/lantiq|arcadyan_arv4518pwr01
+ARV4518PWR01A|lantiq/lantiq|arcadyan_arv4518pwr01a
+ARV4519PW|lantiq/lantiq|arcadyan_arv4519pw
+ARV4520PW|lantiq/lantiq|arcadyan_arv4520pw
+ARV4525PW|lantiq/lantiq|arcadyan_arv4525pw
+ARV452CQW|lantiq/lantiq|arcadyan_arv452cqw
+ARV7506PW11|lantiq/lantiq|arcadyan_arv7506pw11
+ARV7510PW22|lantiq/lantiq|arcadyan_arv7510pw22
+ARV7518PW|lantiq/lantiq|arcadyan_arv7518pw
+ARV7519PW|lantiq/lantiq|arcadyan_arv7519pw
+ARV7519RW22|lantiq/lantiq|arcadyan_arv7519rw22
+ARV7525PW|lantiq/lantiq|arcadyan_arv7525pw
+ARV752DPW|lantiq/lantiq|arcadyan_arv752dpw
+ARV752DPW22|lantiq/lantiq|arcadyan_arv752dpw22
+ARV8539PW22|lantiq/lantiq|arcadyan_arv8539pw22
+ECI VDSL Modem V 2FUb/R|lantiq/lantiq|arcadyan_vg3503j
+VGV7510KW22|lantiq/lantiq|arcadyan_vgv7510kw22-brn
+VGV7510KW22 (lantiq)|lantiq/lantiq|arcadyan_vgv7510kw22-nor
+VGV7519|lantiq/lantiq|arcadyan_vgv7519-brn
+VGV7519 (lantiq)|lantiq/lantiq|arcadyan_vgv7519-nor
+VRV9510KWAC23|lantiq/lantiq|arcadyan_vrv9510kwac23
+MediaPack MP 252|lantiq/lantiq|audiocodes_mp-252
+FRITZ!Box 3370|lantiq/lantiq|avm_fritz3370-rev2-hynix
+FRITZ!Box 3370 (lantiq)|lantiq/lantiq|avm_fritz3370-rev2-micron
+FRITZ!Box 3390|lantiq/lantiq|avm_fritz3390
+FRITZ!Box 3490|lantiq/lantiq|avm_fritz3490
+FRITZ!Box 3490 (lantiq)|lantiq/lantiq|avm_fritz3490-micron
+FRITZ!Box 5490|lantiq/lantiq|avm_fritz5490
+FRITZ!Box 5490 (lantiq)|lantiq/lantiq|avm_fritz5490-micron
+FRITZ!Box 7312|lantiq/lantiq|avm_fritz7312
+FRITZ!Box 7320|lantiq/lantiq|avm_fritz7320
+FRITZ!Box 7360|lantiq/lantiq|avm_fritz7360-v2
+FRITZ!Box 7360 SL|lantiq/lantiq|avm_fritz7360sl
+FRITZ!Box 7362 SL|lantiq/lantiq|avm_fritz7362sl
+FRITZ!Box 7412|lantiq/lantiq|avm_fritz7412
+FRITZ!Box 7430|lantiq/lantiq|avm_fritz7430
+FRITZ!Box 7490|lantiq/lantiq|avm_fritz7490
+FRITZ!Box 7490 (lantiq)|lantiq/lantiq|avm_fritz7490-micron
+Home Hub 2|lantiq/lantiq|bt_homehub-v2b
+Home Hub 3|lantiq/lantiq|bt_homehub-v3a
+Home Hub 5|lantiq/lantiq|bt_homehub-v5a
+WBMR 300HPD|lantiq/lantiq|buffalo_wbmr-300hpd
+WBMR HP G300H|lantiq/lantiq|buffalo_wbmr-hp-g300h-a
+WBMR HP G300H (lantiq)|lantiq/lantiq|buffalo_wbmr-hp-g300h-b
+DGN1000B|lantiq/lantiq|netgear_dgn1000b
+DGN3500|lantiq/lantiq|netgear_dgn3500
+DGN3500B|lantiq/lantiq|netgear_dgn3500b
+DM200|lantiq/lantiq|netgear_dm200
+Gigaset sx76x|lantiq/lantiq|siemens_gigaset-sx76x
+TD W8970|lantiq/lantiq|tplink_tdw8970
+TD W8980|lantiq/lantiq|tplink_tdw8980
+Archer VR200|lantiq/lantiq|tplink_vr200
+Archer VR200v|lantiq/lantiq|tplink_vr200v
+H201L|lantiq/lantiq|zte_h201l
+P 2601HN|lantiq/lantiq|zyxel_p-2601hn
+P 2812HNU|lantiq/lantiq|zyxel_p-2812hnu-f1
+P 2812HNU (lantiq)|lantiq/lantiq|zyxel_p-2812hnu-f3
+FRDM LS1012A|layerscape/layerscape|fsl_ls1012a-frdm
+LS1012A RDB|layerscape/layerscape|fsl_ls1012a-rdb
+TWR LS1021A|layerscape/layerscape|fsl_ls1021a-twr
+LS1028A RDB|layerscape/layerscape|fsl_ls1028a-rdb
+LS1043A RDB|layerscape/layerscape|fsl_ls1043a-rdb
+FRWY LS1046A|layerscape/layerscape|fsl_ls1046a-frwy
+LS1046A RDB|layerscape/layerscape|fsl_ls1046a-rdb
+LS1088A RDB|layerscape/layerscape|fsl_ls1088a-rdb
+LS2088ARDB|layerscape/layerscape|fsl_ls2088a-rdb
+LX2160A RDB|layerscape/layerscape|fsl_lx2160a-rdb
+Ten64 (NAND boot)|layerscape/layerscape|traverse_ten64_mtd
+ABT Asr3000|mediatek/mediatek|abt_asr3000
+Acelink Ew 7886cax|mediatek/mediatek|acelink_ew-7886cax
+宏碁 Predator W6|mediatek/mediatek|acer_predator-w6
+宏碁 Predator W6d|mediatek/mediatek|acer_predator-w6d
+宏碁 Predator W6x Stock|mediatek/mediatek|acer_predator-w6x-stock
+宏碁 Predator W6x Ubootmod|mediatek/mediatek|acer_predator-w6x-ubootmod
+宏碁 Vero W6m|mediatek/mediatek|acer_vero-w6m
+AirPi Ap3000m|mediatek/mediatek|airpi_ap3000m
+智易 Mozart|mediatek/mediatek|arcadyan_mozart
+AP7622 WH1|mediatek/mediatek|asiarf_ap7622-wh1
+AsiaRF Ap7986 003|mediatek/mediatek|asiarf_ap7986-003
+华硕 Rt Ax52|mediatek/mediatek|asus_rt-ax52
+华硕 Rt Ax57m|mediatek/mediatek|asus_rt-ax57m
+华硕 Rt Ax59u|mediatek/mediatek|asus_rt-ax59u
+华硕 Tuf Ax4200|mediatek/mediatek|asus_tuf-ax4200
+华硕 Tuf Ax4200q|mediatek/mediatek|asus_tuf-ax4200q
+华硕 Tuf Ax6000|mediatek/mediatek|asus_tuf-ax6000
+华硕 Zenwifi Bt8|mediatek/mediatek|asus_zenwifi-bt8
+华硕 Zenwifi Bt8 Ubootmod|mediatek/mediatek|asus_zenwifi-bt8-ubootmod
+香蕉派 R2|mediatek/mediatek|bananapi_bpi-r2
+香蕉派 Bpi R3|mediatek/mediatek|bananapi_bpi-r3
+香蕉派 Bpi R3 Mini|mediatek/mediatek|bananapi_bpi-r3-mini
+香蕉派 Bpi R4|mediatek/mediatek|bananapi_bpi-r4
+香蕉派 Bpi R4 Lite|mediatek/mediatek|bananapi_bpi-r4-lite
+香蕉派 Bpi R4 Poe|mediatek/mediatek|bananapi_bpi-r4-poe
+香蕉派 Bpi R64|mediatek/mediatek|bananapi_bpi-r64
+Bazis Ax3000wm|mediatek/mediatek|bazis_ax3000wm
+巴法络 Wsr 2533dhp2|mediatek/mediatek|buffalo_wsr-2533dhp2
+巴法络 Wsr 3200ax4s|mediatek/mediatek|buffalo_wsr-3200ax4s
+巴法络 Wsr 6000ax8|mediatek/mediatek|buffalo_wsr-6000ax8
+Cetron Ct3003|mediatek/mediatek|cetron_ct3003
+Cetron Ct3003 Ubootmod|mediatek/mediatek|cetron_ct3003-ubootmod
+中国移动 A10 Stock|mediatek/mediatek|cmcc_a10-stock
+中国移动 A10 Ubootmod|mediatek/mediatek|cmcc_a10-ubootmod
+中国移动 Rax3000m|mediatek/mediatek|cmcc_rax3000m
+中国移动 Rax3000me|mediatek/mediatek|cmcc_rax3000me
+Comfast Cf E393ax|mediatek/mediatek|comfast_cf-e393ax
+Comfast Cf Wr632ax|mediatek/mediatek|comfast_cf-wr632ax
+Comfast Cf Wr632ax Ubootmod|mediatek/mediatek|comfast_cf-wr632ax-ubootmod
+ConfiaBits Mt7981|mediatek/mediatek|confiabits_mt7981
+CreatLan Clt R30b1|mediatek/mediatek|creatlentem_clt-r30b1
+CreatLan Clt R30b1 112m|mediatek/mediatek|creatlentem_clt-r30b1-112m
+CreatLan Clt R30b1 Ubi|mediatek/mediatek|creatlentem_clt-r30b1-ubi
+Cudy Ap3000 V1|mediatek/mediatek|cudy_ap3000-v1
+Cudy Ap3000outdoor V1|mediatek/mediatek|cudy_ap3000outdoor-v1
+Cudy Ap3000wall V1|mediatek/mediatek|cudy_ap3000wall-v1
+Cudy M3000 V1|mediatek/mediatek|cudy_m3000-v1
+Cudy M3000 V2 Yt8821|mediatek/mediatek|cudy_m3000-v2-yt8821
+Cudy Re3000 V1|mediatek/mediatek|cudy_re3000-v1
+Cudy Tr3000 256mb V1|mediatek/mediatek|cudy_tr3000-256mb-v1
+Cudy Tr3000 V1|mediatek/mediatek|cudy_tr3000-v1
+Cudy Tr3000 V1 Ubootmod|mediatek/mediatek|cudy_tr3000-v1-ubootmod
+Cudy Wbr3000uax V1|mediatek/mediatek|cudy_wbr3000uax-v1
+Cudy Wbr3000uax V1 Ubootmod|mediatek/mediatek|cudy_wbr3000uax-v1-ubootmod
+Cudy Wr3000 V1|mediatek/mediatek|cudy_wr3000-v1
+Cudy Wr3000e V1|mediatek/mediatek|cudy_wr3000e-v1
+Cudy Wr3000e V1 Ubootmod|mediatek/mediatek|cudy_wr3000e-v1-ubootmod
+Cudy Wr3000h V1|mediatek/mediatek|cudy_wr3000h-v1
+Cudy Wr3000h V1 Ubootmod|mediatek/mediatek|cudy_wr3000h-v1-ubootmod
+Cudy Wr3000p V1|mediatek/mediatek|cudy_wr3000p-v1
+Cudy Wr3000p V1 Ubootmod|mediatek/mediatek|cudy_wr3000p-v1-ubootmod
+Cudy Wr3000s V1|mediatek/mediatek|cudy_wr3000s-v1
+Cudy Wr3000s V1 Ubootmod|mediatek/mediatek|cudy_wr3000s-v1-ubootmod
+Dlink Aquila Pro Ai E30 A1|mediatek/mediatek|dlink_aquila-pro-ai-e30-a1
+Dlink Aquila Pro Ai M30 A1|mediatek/mediatek|dlink_aquila-pro-ai-m30-a1
+Dlink Aquila Pro Ai M60 A1|mediatek/mediatek|dlink_aquila-pro-ai-m60-a1
+Dlink Eagle Pro Ai M32 A1|mediatek/mediatek|dlink_eagle-pro-ai-m32-a1
+Dlink Eagle Pro Ai R32 A1|mediatek/mediatek|dlink_eagle-pro-ai-r32-a1
+智邦 Eap111|mediatek/mediatek|edgecore_eap111
+日电 Wrc 2533gent|mediatek/mediatek|elecom_wrc-2533gent
+日电 Wrc X3000gs3|mediatek/mediatek|elecom_wrc-x3000gs3
+日电 Wrc X3200gst3|mediatek/mediatek|elecom_wrc-x3200gst3
+Gato Gdsp|mediatek/mediatek|gatonetworks_gdsp
+GL.iNet Gl Mt2500|mediatek/mediatek|glinet_gl-mt2500
+GL.iNet Gl Mt2500 Airoha|mediatek/mediatek|glinet_gl-mt2500-airoha
+GL.iNet Gl Mt3000|mediatek/mediatek|glinet_gl-mt3000
+GL.iNet Gl Mt3600be|mediatek/mediatek|glinet_gl-mt3600be
+GL.iNet Gl Mt6000|mediatek/mediatek|glinet_gl-mt6000
+GL.iNet Gl X3000|mediatek/mediatek|glinet_gl-x3000
+GL.iNet Gl Xe3000|mediatek/mediatek|glinet_gl-xe3000
+华三 Magic Nx30 Pro|mediatek/mediatek|h3c_magic-nx30-pro
+Huasifei Wh3000 Emmc|mediatek/mediatek|huasifei_wh3000-emmc
+Huasifei Wh3000 Pro Emmc|mediatek/mediatek|huasifei_wh3000-pro-emmc
+Huasifei Wh3000 Pro Nand|mediatek/mediatek|huasifei_wh3000-pro-nand
+Huasifei Wh3000r Nand|mediatek/mediatek|huasifei_wh3000r-nand
+乐橙 Hx21|mediatek/mediatek|imou_hx21
+A6004MX|mediatek/mediatek|iptime_a6004mx
+ipTIME Ax3000m|mediatek/mediatek|iptime_ax3000m
+ipTIME Ax3000q|mediatek/mediatek|iptime_ax3000q
+ipTIME Ax3000se|mediatek/mediatek|iptime_ax3000se
+ipTIME Ax3000sm|mediatek/mediatek|iptime_ax3000sm
+ipTIME Ax7800m 6e|mediatek/mediatek|iptime_ax7800m-6e
+JCG Q30 Pro|mediatek/mediatek|jcg_q30-pro
+京东云 Re Cp 03|mediatek/mediatek|jdcloud_re-cp-03
+Jio Ax6000 Jidu6101|mediatek/mediatek|jiorouter_ax6000-jidu6101
+KebiduMei Ax3000 U22|mediatek/mediatek|kebidumei_ax3000-u22
+Keenetic Kap 630|mediatek/mediatek|keenetic_kap-630
+Keenetic Kn 1812|mediatek/mediatek|keenetic_kn-1812
+Keenetic Kn 3711|mediatek/mediatek|keenetic_kn-3711
+Keenetic Kn 3811|mediatek/mediatek|keenetic_kn-3811
+Keenetic Kn 3911|mediatek/mediatek|keenetic_kn-3911
+康佳 Komi A31|mediatek/mediatek|konka_komi-a31
+领势 E8450|mediatek/mediatek|linksys_e8450
+领势 E8450 Ubi|mediatek/mediatek|linksys_e8450-ubi
+EA7500|mediatek/mediatek|linksys_ea7500-v3
+Livinet Li320|mediatek/mediatek|livinet_li320
+Livinet Zr 3020|mediatek/mediatek|livinet_zr-3020
+Livinet Zr 3020 Ubootmod|mediatek/mediatek|livinet_zr-3020-ubootmod
+联发科 Mt7622 Rfb1|mediatek/mediatek|mediatek_mt7622-rfb1
+联发科 Mt7622 Rfb1 Ubi|mediatek/mediatek|mediatek_mt7622-rfb1-ubi
+MT7629 rfb AP|mediatek/mediatek|mediatek_mt7629-rfb
+联发科 Mt7981 Rfb|mediatek/mediatek|mediatek_mt7981-rfb
+联发科 Mt7986a Rfb Nand|mediatek/mediatek|mediatek_mt7986a-rfb-nand
+联发科 Mt7986b Rfb|mediatek/mediatek|mediatek_mt7986b-rfb
+联发科 Mt7987a Rfb|mediatek/mediatek|mediatek_mt7987a-rfb
+联发科 Mt7988a Rfb|mediatek/mediatek|mediatek_mt7988a-rfb
+MERCUSYS Mr80x V3|mediatek/mediatek|mercusys_mr80x-v3
+MERCUSYS Mr85x|mediatek/mediatek|mercusys_mr85x
+MERCUSYS Mr90x V1|mediatek/mediatek|mercusys_mr90x-v1
+MERCUSYS Mr90x V1 Ubi|mediatek/mediatek|mercusys_mr90x-v1-ubi
+磊科 N60|mediatek/mediatek|netcore_n60
+N60 Pro|mediatek/mediatek|netcore_n60-pro
+NAP 630|mediatek/mediatek|netcraze_nap-630
+NC 1812|mediatek/mediatek|netcraze_nc-1812
+EAX17|mediatek/mediatek|netgear_eax17
+EX6250|mediatek/mediatek|netgear_ex6250-v2
+网件 Wax206|mediatek/mediatek|netgear_wax206
+网件 Wax220|mediatek/mediatek|netgear_wax220
+EAP930 V1|mediatek/mediatek|netis_eap930-v1
+NX30|mediatek/mediatek|netis_nx30v2
+NX31|mediatek/mediatek|netis_nx31
+NX32U|mediatek/mediatek|netis_nx32u
+EA0326GMP|mediatek/mediatek|nokia_ea0326gmp
+C8 668GL|mediatek/mediatek|nradio_c8-668gl
+SOM7981|mediatek/mediatek|openembed_som7981
+6C|mediatek/mediatek|openfi_6c
+One|mediatek/mediatek|openwrt_one
+360 360t7|mediatek/mediatek|qihoo_360t7
+360T7 (UBI)|mediatek/mediatek|qihoo_360t7-ubi
+Reyee Ax3200 E5|mediatek/mediatek|reyee_ax3200-e5
+Routerich Ax3000|mediatek/mediatek|routerich_ax3000
+AX3000 (OpenWrt U Boot layout)|mediatek/mediatek|routerich_ax3000-ubootmod
+AX3000|mediatek/mediatek|routerich_ax3000-v1
+BE7200|mediatek/mediatek|routerich_be7200
+锐捷 Rg Ew3200gx Pro|mediatek/mediatek|ruijie_rg-ew3200gx-pro
+RG X60|mediatek/mediatek|ruijie_rg-x60
+RG X60 Pro|mediatek/mediatek|ruijie_rg-x60-pro
+SDG 841 t6|mediatek/mediatek|smartrg_sdg-841-t6
+SmartRG Sdg 8612|mediatek/mediatek|smartrg_sdg-8612
+SmartRG Sdg 8614|mediatek/mediatek|smartrg_sdg-8614
+SmartRG Sdg 8622|mediatek/mediatek|smartrg_sdg-8622
+SmartRG Sdg 8632|mediatek/mediatek|smartrg_sdg-8632
+SDG 8733|mediatek/mediatek|smartrg_sdg-8733
+SDG 8733A|mediatek/mediatek|smartrg_sdg-8733a
+SDG 8734|mediatek/mediatek|smartrg_sdg-8734
+SNR CPE AX2|mediatek/mediatek|snr_snr-cpe-ax2
+RUTC50|mediatek/mediatek|teltonika_rutc50
+WR3000K|mediatek/mediatek|tenbay_wr3000k
+TOTOLINK A8000ru|mediatek/mediatek|totolink_a8000ru
+X6000R|mediatek/mediatek|totolink_x6000r
+Archer AX80|mediatek/mediatek|tplink_archer-ax80-v1
+Archer AX80 (mediatek)|mediatek/mediatek|tplink_archer-ax80-v1-eu
+BE450|mediatek/mediatek|tplink_be450
+EAP225|mediatek/mediatek|tplink_eap225-v5
+EAP683 LR|mediatek/mediatek|tplink_eap683-lr
+F65|mediatek/mediatek|tplink_f65-v1
+FR365|mediatek/mediatek|tplink_fr365-v1
+RE6000XD|mediatek/mediatek|tplink_re6000xd
+TL 7DR7230|mediatek/mediatek|tplink_tl-7dr7230-v1
+TL 7DR7230 (mediatek)|mediatek/mediatek|tplink_tl-7dr7230-v2
+TL 7DR7250|mediatek/mediatek|tplink_tl-7dr7250-v1
+TL XDR3230|mediatek/mediatek|tplink_tl-xdr3230-v1
+TL XDR3250|mediatek/mediatek|tplink_tl-xdr3250-v1
+TP-Link Tl Xdr4288|mediatek/mediatek|tplink_tl-xdr4288
+TP-Link Tl Xdr6086|mediatek/mediatek|tplink_tl-xdr6086
+TP-Link Tl Xdr6088|mediatek/mediatek|tplink_tl-xdr6088
+TL XTR8488|mediatek/mediatek|tplink_tl-xtr8488
+Ubiquiti Unifi 6 Lr V1|mediatek/mediatek|ubnt_unifi-6-lr-v1
+Ubiquiti Unifi 6 Lr V1 Ubootmod|mediatek/mediatek|ubnt_unifi-6-lr-v1-ubootmod
+Ubiquiti Unifi 6 Lr V2|mediatek/mediatek|ubnt_unifi-6-lr-v2
+Ubiquiti Unifi 6 Lr V2 Ubootmod|mediatek/mediatek|ubnt_unifi-6-lr-v2-ubootmod
+Ubiquiti Unifi 6 Lr V3|mediatek/mediatek|ubnt_unifi-6-lr-v3
+Ubiquiti Unifi 6 Lr V3 Ubootmod|mediatek/mediatek|ubnt_unifi-6-lr-v3-ubootmod
+Ubiquiti Unifi 6 Plus|mediatek/mediatek|ubnt_unifi-6-plus
+U7623 02|mediatek/mediatek|unielec_u7623-02
+U7623 02 (mediatek)|mediatek/mediatek|unielec_u7623-02-emmc-512m-legacy
+UniElec U7981 01 Emmc|mediatek/mediatek|unielec_u7981-01-emmc
+UniElec U7981 01 Nand|mediatek/mediatek|unielec_u7981-01-nand
+WL WN536AX6|mediatek/mediatek|wavlink_wl-wn536ax6-a
+WL WN551X3|mediatek/mediatek|wavlink_wl-wn551x3
+WL WN573HX3|mediatek/mediatek|wavlink_wl-wn573hx3
+WL WN586X3|mediatek/mediatek|wavlink_wl-wn586x3
+WL WN586X3B|mediatek/mediatek|wavlink_wl-wn586x3b
+WAP430X|mediatek/mediatek|widelantech_wap430x
+小米 Mi Router Ax3000t|mediatek/mediatek|xiaomi_mi-router-ax3000t
+小米 Mi Router Ax3000t Ubootmod|mediatek/mediatek|xiaomi_mi-router-ax3000t-ubootmod
+小米 Mi Router Wr30u Stock|mediatek/mediatek|xiaomi_mi-router-wr30u-stock
+小米 Mi Router Wr30u Ubootmod|mediatek/mediatek|xiaomi_mi-router-wr30u-ubootmod
+小米 Redmi Router Ax6000 Stock|mediatek/mediatek|xiaomi_redmi-router-ax6000-stock
+小米 Redmi Router Ax6000 Ubootmod|mediatek/mediatek|xiaomi_redmi-router-ax6000-ubootmod
+小米 Redmi Router Ax6s|mediatek/mediatek|xiaomi_redmi-router-ax6s
+云核 Ax835|mediatek/mediatek|yuncore_ax835
+ZBT Zbt Z8102ax|mediatek/mediatek|zbtlink_zbt-z8102ax
+ZBT Z8102AX V2|mediatek/mediatek|zbtlink_zbt-z8102ax-v2
+ZBT Zbt Z8103ax|mediatek/mediatek|zbtlink_zbt-z8103ax
+ZBT Z8103AX C|mediatek/mediatek|zbtlink_zbt-z8103ax-c
+ZBT Z8106AX S|mediatek/mediatek|zbtlink_zbt-z8106ax-s
+ZBT Z8106AX T|mediatek/mediatek|zbtlink_zbt-z8106ax-t
+合勤 Ex5601 T0 Stock|mediatek/mediatek|zyxel_ex5601-t0-stock
+合勤 Ex5601 T0 Ubootmod|mediatek/mediatek|zyxel_ex5601-t0-ubootmod
+合勤 Ex5700 Telenor|mediatek/mediatek|zyxel_ex5700-telenor
+合勤 Nwa50ax Pro|mediatek/mediatek|zyxel_nwa50ax-pro
+WX5600 T0|mediatek/mediatek|zyxel_wx5600-t0-ubootmod
+EV23X71A|microchipsw/microchipsw|microchip_ev23x71a
+Tactical 1000|microchipsw/microchipsw|novarq_tactical-1000
+BR200 WP|mpc85xx/mpc85xx|aerohive_br200-wp
+HiveAP 330|mpc85xx/mpc85xx|aerohive_hiveap-330
+WS AP3710i|mpc85xx/mpc85xx|enterasys_ws-ap3710i
+WS AP3715i|mpc85xx/mpc85xx|enterasys_ws-ap3715i
+WS AP3825i|mpc85xx/mpc85xx|extreme-networks_ws-ap3825i
+P2020RDB|mpc85xx/mpc85xx|freescale_p2020rdb
+MSM460|mpc85xx/mpc85xx|hpe_msm460
+Panda|mpc85xx/mpc85xx|ocedo_panda
+RED 15w|mpc85xx/mpc85xx|sophos_red-15w-rev1
+TL WDR4900|mpc85xx/mpc85xx|tplink_tl-wdr4900-v1
+Firebox T10|mpc85xx/mpc85xx|watchguard_firebox-t10
+Firebox T15|mpc85xx/mpc85xx|watchguard_firebox-t15
+XTM 330|mpc85xx/mpc85xx|watchguard_xtm330
+LinkStation LS220DE|mvebu/mvebu|buffalo_ls220de
+LinkStation LS421DE|mvebu/mvebu|buffalo_ls421de
+V 80|mvebu/mvebu|checkpoint_v-80
+V 81|mvebu/mvebu|checkpoint_v-81
+C200|mvebu/mvebu|ctera_c200-v2
+Turris MOX|mvebu/mvebu|cznic_turris-mox
+Turris Omnia|mvebu/mvebu|cznic_turris-omnia
+FortiGate 30E|mvebu/mvebu|fortinet_fg-30e
+FortiGate 50E|mvebu/mvebu|fortinet_fg-50e
+FortiGate 51E|mvebu/mvebu|fortinet_fg-51e
+FortiGate 52E|mvebu/mvebu|fortinet_fg-52e
+FortiWiFi 30E|mvebu/mvebu|fortinet_fwf-30e
+FortiWiFi 50E 2R|mvebu/mvebu|fortinet_fwf-50e-2r
+FortiWiFi 51E|mvebu/mvebu|fortinet_fwf-51e
+GL.iNet MV1000|mvebu/mvebu|glinet_gl-mv1000
+ESPRESSObin|mvebu/mvebu|globalscale_espressobin
+ESPRESSObin (mvebu)|mvebu/mvebu|globalscale_espressobin-emmc
+ESPRESSObin (2)|mvebu/mvebu|globalscale_espressobin-ultra
+ESPRESSObin (3)|mvebu/mvebu|globalscale_espressobin-v7
+ESPRESSObin (4)|mvebu/mvebu|globalscale_espressobin-v7-emmc
+Mirabox|mvebu/mvebu|globalscale_mirabox
+MOCHAbin|mvebu/mvebu|globalscale_mochabin
+Puzzle M901|mvebu/mvebu|iei_puzzle-m901
+Puzzle M902|mvebu/mvebu|iei_puzzle-m902
+SA W2|mvebu/mvebu|iij_sa-w2
+NAS1dual|mvebu/mvebu|iptime_nas1dual
+Helios4|mvebu/mvebu|kobol_helios4
+WRT1200AC|mvebu/mvebu|linksys_wrt1200ac
+WRT1900AC|mvebu/mvebu|linksys_wrt1900ac-v1
+WRT1900AC (mvebu)|mvebu/mvebu|linksys_wrt1900ac-v2
+WRT1900ACS|mvebu/mvebu|linksys_wrt1900acs
+WRT3200ACM|mvebu/mvebu|linksys_wrt3200acm
+WRT32X|mvebu/mvebu|linksys_wrt32x
+Armada 370 Development Board (DB 88F6710 BP DDR3)|mvebu/mvebu|marvell_a370-db
+Armada 370 RD (RD 88F6710 A1)|mvebu/mvebu|marvell_a370-rd
+Armada 385 Development Board AP (DB 88F6820 AP)|mvebu/mvebu|marvell_a385-db-ap
+Armada 388 RD (RD 88F6820 AP)|mvebu/mvebu|marvell_a388-rd
+Armada 3720 Development Board (DB 88F3720 DDR3)|mvebu/mvebu|marvell_armada-3720-db
+Armada 7040 Development Board|mvebu/mvebu|marvell_armada7040-db
+Armada 8040 Development Board|mvebu/mvebu|marvell_armada8040-db
+Armada XP Development Board (DB 78460 BP)|mvebu/mvebu|marvell_axp-db
+Armada Armada XP GP (DB MV784MP GP)|mvebu/mvebu|marvell_axp-gp
+Clearfog|mvebu/mvebu|marvell_clearfog-gt-8k
+MACCHIATObin|mvebu/mvebu|marvell_macchiatobin-doubleshot
+MACCHIATObin (mvebu)|mvebu/mvebu|marvell_macchiatobin-singleshot
+RB5009|mvebu/mvebu|mikrotik_rb5009
+OpenBlocks AX3|mvebu/mvebu|plathome_openblocks-ax3-4
+Atlas v5|mvebu/mvebu|ripe_atlas-v5
+ClearFog Base|mvebu/mvebu|solidrun_clearfog-base-a1
+ClearFog Pro|mvebu/mvebu|solidrun_clearfog-pro
+ClearFog Pro (mvebu)|mvebu/mvebu|solidrun_clearfog-pro-a1
+DS213j|mvebu/mvebu|synology_ds213j
+MyCloud EX2 Ultra|mvebu/mvebu|wd_cloud-ex2-ultra
+MyCloud Mirror Gen 2 (BWVZ/Grand Teton)|mvebu/mvebu|wd_cloud-mirror-gen2
+NAS326|mvebu/mvebu|zyxel_nas326
+Duckbill|mxs/mxs|i2se_duckbill
+OLinuXino Maxi|mxs/mxs|olinuxino_maxi
+OLinuXino Micro|mxs/mxs|olinuxino_micro
+vEdge 1000|octeon/octeon|cisco_vedge1000
+Shield Router|octeon/octeon|itus_shield-router
+EdgeRouter|octeon/octeon|ubnt_edgerouter
+EdgeRouter 4|octeon/octeon|ubnt_edgerouter-4
+EdgeRouter 6P|octeon/octeon|ubnt_edgerouter-6p
+EdgeRouter Lite|octeon/octeon|ubnt_edgerouter-lite
+UniFi Security Gateway|octeon/octeon|ubnt_unifi-usg
+AM335x BeagleBone Black|omap/omap|ti_am335x-bone-black
+AM335x EVM|omap/omap|ti_am335x-evm
+OMAP3 TI beagleboard|omap/omap|ti_omap3-beagle
+OMAP4 TI pandaboard|omap/omap|ti_omap4-panda
+Creator Ci40 (VL 62899)|pistachio/pistachio|img_creator-ci40
+T4240RDB|qoriq/qoriq|fsl_T4240RDB
+Firebox M300|qoriq/qoriq|watchguard_firebox-m300
+8Devices Mango Dvk|qualcommax/qualcommax|8devices_mango-dvk
+阿尔法 Ap120c Ax|qualcommax/qualcommax|alfa-network_ap120c-ax
+阿里云 Ap8220|qualcommax/qualcommax|aliyun_ap8220
+智易 Aw1000|qualcommax/qualcommax|arcadyan_aw1000
+华硕 Rt Ax89x|qualcommax/qualcommax|asus_rt-ax89x
+巴法络 Wxr 5950ax12|qualcommax/qualcommax|buffalo_wxr-5950ax12
+Cambium Xe3 4|qualcommax/qualcommax|cambiumnetworks_xe3-4
+中国移动 Mr3000d Ci|qualcommax/qualcommax|cmcc_mr3000d-ci
+中国移动 Pz L8|qualcommax/qualcommax|cmcc_pz-l8
+中国移动 Rm2 6|qualcommax/qualcommax|cmcc_rm2-6
+Compex Wpq873|qualcommax/qualcommax|compex_wpq873
+Dynalink Dl Wrx36|qualcommax/qualcommax|dynalink_dl-wrx36
+智邦 Eap102|qualcommax/qualcommax|edgecore_eap102
+Edimax Cax1800|qualcommax/qualcommax|edimax_cax1800
+日电 Wrc X3000gs2|qualcommax/qualcommax|elecom_wrc-x3000gs2
+GL.iNet Gl Ax1800|qualcommax/qualcommax|glinet_gl-ax1800
+GL.iNet Gl Axt1800|qualcommax/qualcommax|glinet_gl-axt1800
+GL.iNet Gl B3000|qualcommax/qualcommax|glinet_gl-b3000
+I-O Data Wn Dax3000gr|qualcommax/qualcommax|iodata_wn-dax3000gr
+领势 Homewrk|qualcommax/qualcommax|linksys_homewrk
+领势 Mr5500|qualcommax/qualcommax|linksys_mr5500
+领势 Mr7350|qualcommax/qualcommax|linksys_mr7350
+领势 Mr7500|qualcommax/qualcommax|linksys_mr7500
+领势 Mx2000|qualcommax/qualcommax|linksys_mx2000
+领势 Mx4200v1|qualcommax/qualcommax|linksys_mx4200v1
+领势 Mx4200v2|qualcommax/qualcommax|linksys_mx4200v2
+领势 Mx4300|qualcommax/qualcommax|linksys_mx4300
+领势 Mx5300|qualcommax/qualcommax|linksys_mx5300
+领势 Mx5500|qualcommax/qualcommax|linksys_mx5500
+领势 Mx6200|qualcommax/qualcommax|linksys_mx6200
+领势 Mx8500|qualcommax/qualcommax|linksys_mx8500
+领势 Spnmx56|qualcommax/qualcommax|linksys_spnmx56
+网件 Rax120v2|qualcommax/qualcommax|netgear_rax120v2
+网件 Sxr80|qualcommax/qualcommax|netgear_sxr80
+网件 Sxs80|qualcommax/qualcommax|netgear_sxs80
+网件 Wax214|qualcommax/qualcommax|netgear_wax214
+网件 Wax218|qualcommax/qualcommax|netgear_wax218
+网件 Wax610|qualcommax/qualcommax|netgear_wax610
+网件 Wax610y|qualcommax/qualcommax|netgear_wax610y
+网件 Wax620|qualcommax/qualcommax|netgear_wax620
+网件 Wax630|qualcommax/qualcommax|netgear_wax630
+Prpl Haze|qualcommax/qualcommax|prpl_haze
+360 360v6|qualcommax/qualcommax|qihoo_360v6
+威联通 301w|qualcommax/qualcommax|qnap_301w
+红米 Ax6|qualcommax/qualcommax|redmi_ax6
+红米 Ax6 Stock|qualcommax/qualcommax|redmi_ax6-stock
+Spectrum Sax1v1k|qualcommax/qualcommax|spectrum_sax1v1k
+TP-Link Deco X80 5g|qualcommax/qualcommax|tplink_deco-x80-5g
+TP-Link Eap610 Outdoor|qualcommax/qualcommax|tplink_eap610-outdoor
+EAP620 HD|qualcommax/qualcommax|tplink_eap620hd-v1
+EAP623 Outdoor HD|qualcommax/qualcommax|tplink_eap623od-hd-v1
+TP-Link Eap625 Outdoor Hd V1|qualcommax/qualcommax|tplink_eap625-outdoor-hd-v1
+EAP660 HD|qualcommax/qualcommax|tplink_eap660hd-v1
+小米 Ax3600|qualcommax/qualcommax|xiaomi_ax3600
+小米 Ax3600 Stock|qualcommax/qualcommax|xiaomi_ax3600-stock
+小米 Ax6000|qualcommax/qualcommax|xiaomi_ax6000
+小米 Ax9000|qualcommax/qualcommax|xiaomi_ax9000
+小米 Ax9000 Stock|qualcommax/qualcommax|xiaomi_ax9000-stock
+云核 Ax830|qualcommax/qualcommax|yuncore_ax830
+云核 Ax850|qualcommax/qualcommax|yuncore_ax850
+云核 Ax880|qualcommax/qualcommax|yuncore_ax880
+云核 Fap650|qualcommax/qualcommax|yuncore_fap650
+ZBT Zbt Z800ax|qualcommax/qualcommax|zbtlink_zbt-z800ax
+中兴 Mf269|qualcommax/qualcommax|zte_mf269
+中兴 Mf269 Stock|qualcommax/qualcommax|zte_mf269-stock
+合勤 Nbg7815|qualcommax/qualcommax|zyxel_nbg7815
+合勤 Nwa210ax|qualcommax/qualcommax|zyxel_nwa210ax
+合勤 Scr50axe|qualcommax/qualcommax|zyxel_scr50axe
+Kiwi DVK|qualcommbe/qualcommbe|8devices_kiwi-dvk
+RDP433|qualcommbe/qualcommbe|qcom_rdp433
+PX 4885|ramips/ramips|7links_px-4885-4m
+PX 4885 (ramips)|ramips/ramips|7links_px-4885-8m
+WLR 1230|ramips/ramips|7links_wlr-1230
+WLR 1240|ramips/ramips|7links_wlr-1240
+Carambola|ramips/ramips|8devices_carambola
+WR6202|ramips/ramips|accton_wr6202
+ADSLR G7|ramips/ramips|adslr_g7
+AFoundry Ew1200|ramips/ramips|afoundry_ew1200
+Ai BR100|ramips/ramips|aigale_ai-br100
+AR670W|ramips/ramips|airlink101_ar670w
+AR725W|ramips/ramips|airlink101_ar725w
+Air3GII|ramips/ramips|airlive_air3gii
+AC1200RM|ramips/ramips|alfa-network_ac1200rm
+阿尔法 Awusfree1|ramips/ramips|alfa-network_awusfree1
+阿尔法 Ax1800rm|ramips/ramips|alfa-network_ax1800rm
+阿尔法 Quad E4g|ramips/ramips|alfa-network_quad-e4g
+R36M E4G|ramips/ramips|alfa-network_r36m-e4g
+Tube E4G|ramips/ramips|alfa-network_tube-e4g
+Networks W502U|ramips/ramips|alfa-network_w502u
+ALL0256N|ramips/ramips|allnet_all0256n-4m
+ALL0256N (ramips)|ramips/ramips|allnet_all0256n-8m
+ALL5002|ramips/ramips|allnet_all5002
+ALL5003|ramips/ramips|allnet_all5003
+ASL26555|ramips/ramips|alphanetworks_asl26555-16m
+ASL26555 (ramips)|ramips/ramips|alphanetworks_asl26555-8m
+Amped Ally 00x19k|ramips/ramips|ampedwireless_ally-00x19k
+Amped Ally R1900k|ramips/ramips|ampedwireless_ally-r1900k
+B1200EX|ramips/ramips|ampedwireless_b1200ex
+WE410443|ramips/ramips|arcadyan_we410443
+智易 We420223 99|ramips/ramips|arcadyan_we420223-99
+FreeStation|ramips/ramips|arcwireless_freestation5
+ATP 52B|ramips/ramips|argus_atp-52b
+AsiaRF Ap7621 001|ramips/ramips|asiarf_ap7621-001
+AP7621 004|ramips/ramips|asiarf_ap7621-004-v3
+AsiaRF Ap7621 Nv1|ramips/ramips|asiarf_ap7621-nv1
+AWAPN2403|ramips/ramips|asiarf_awapn2403
+AWM002 EVB|ramips/ramips|asiarf_awm002-evb-4m
+AWM002 EVB/AWM003 EVB|ramips/ramips|asiarf_awm002-evb-8m
+4G AX56|ramips/ramips|asus_4g-ax56
+华硕 Rp Ac56|ramips/ramips|asus_rp-ac56
+华硕 Rp Ac87|ramips/ramips|asus_rp-ac87
+RP N53|ramips/ramips|asus_rp-n53
+华硕 Rt Ac1200|ramips/ramips|asus_rt-ac1200
+华硕 Rt Ac1200 V2|ramips/ramips|asus_rt-ac1200-v2
+RT AC51U|ramips/ramips|asus_rt-ac51u
+RT AC54U|ramips/ramips|asus_rt-ac54u
+华硕 Rt Ac57u V1|ramips/ramips|asus_rt-ac57u-v1
+华硕 Rt Ac65p|ramips/ramips|asus_rt-ac65p
+华硕 Rt Ac85p|ramips/ramips|asus_rt-ac85p
+华硕 Rt Ax53u|ramips/ramips|asus_rt-ax53u
+华硕 Rt Ax54|ramips/ramips|asus_rt-ax54
+RT G32|ramips/ramips|asus_rt-g32-b1
+RT N10+|ramips/ramips|asus_rt-n10-plus
+RT N10P|ramips/ramips|asus_rt-n10p-v3
+RT N11P|ramips/ramips|asus_rt-n11p-b1
+华硕 Rt N12 Vp B1|ramips/ramips|asus_rt-n12-vp-b1
+RT N11P/RT N12+/RT N12Eb1|ramips/ramips|asus_rt-n12p
+RT N13U|ramips/ramips|asus_rt-n13u
+RT N14u|ramips/ramips|asus_rt-n14u
+RT N15|ramips/ramips|asus_rt-n15
+RT N56U|ramips/ramips|asus_rt-n56u
+华硕 Rt N56u B1|ramips/ramips|asus_rt-n56u-b1
+WL 330N|ramips/ramips|asus_wl-330n
+WL 330N3G|ramips/ramips|asus_wl-330n3g
+MR 102N|ramips/ramips|aximcom_mr-102n
+HW550 3G|ramips/ramips|aztech_hw550-3g
+WAP2100 SK (ZTE ZXECS EBG3130)|ramips/ramips|bdcom_wap2100-sk
+Beeline Smartbox Flash|ramips/ramips|beeline_smartbox-flash
+Beeline Smartbox Giga|ramips/ramips|beeline_smartbox-giga
+Beeline Smartbox Pro|ramips/ramips|beeline_smartbox-pro
+Beeline Smartbox Turbo|ramips/ramips|beeline_smartbox-turbo
+Beeline Smartbox Turbo Plus|ramips/ramips|beeline_smartbox-turbo-plus
+F5D8235 (ramips)|ramips/ramips|belkin_f5d8235-v1
+F5D8235|ramips/ramips|belkin_f5d8235-v2
+F7C027|ramips/ramips|belkin_f7c027
+F9K1109|ramips/ramips|belkin_f9k1109v1
+Belkin Rt1800|ramips/ramips|belkin_rt1800
+Bolt Arion|ramips/ramips|bolt_arion
+BL100|ramips/ramips|bolt_bl100
+BL201|ramips/ramips|bolt_bl201
+巴法络 Wcr 1166ds|ramips/ramips|buffalo_wcr-1166ds
+WHR 1166D|ramips/ramips|buffalo_whr-1166d
+WHR 300HP2|ramips/ramips|buffalo_whr-300hp2
+WHR 600D|ramips/ramips|buffalo_whr-600d
+WHR G300N|ramips/ramips|buffalo_whr-g300n
+WLI TX4 AG300N|ramips/ramips|buffalo_wli-tx4-ag300n
+WMR 300|ramips/ramips|buffalo_wmr-300
+巴法络 Wsr 1166dhp|ramips/ramips|buffalo_wsr-1166dhp
+巴法络 Wsr 2533dhpl|ramips/ramips|buffalo_wsr-2533dhpl
+WSR 2533DHPL2|ramips/ramips|buffalo_wsr-2533dhpl2
+WSR 2533DHPLS|ramips/ramips|buffalo_wsr-2533dhpls
+巴法络 Wsr 600dhp|ramips/ramips|buffalo_wsr-600dhp
+WZR AGL300NH|ramips/ramips|buffalo_wzr-agl300nh
+XG1|ramips/ramips|c-life_xg1
+Comfast Cf E390ax|ramips/ramips|comfast_cf-e390ax
+Comfast Cf Ew72 V2|ramips/ramips|comfast_cf-ew72-v2
+Comfast Cf Wr617ac|ramips/ramips|comfast_cf-wr617ac
+Comfast Cf Wr758ac V1|ramips/ramips|comfast_cf-wr758ac-v1
+Comfast Cf Wr758ac V2|ramips/ramips|comfast_cf-wr758ac-v2
+CF WR800N|ramips/ramips|comfast_cf-wr800n
+MT7621|ramips/ramips|confiabits_mt7621-v1
+WB 01|ramips/ramips|creality_wb-01
+AP1300 Outdoor|ramips/ramips|cudy_ap1300-outdoor-v1
+C200P|ramips/ramips|cudy_c200p
+LT300|ramips/ramips|cudy_lt300-v3
+M1200|ramips/ramips|cudy_m1200-v1
+M1300|ramips/ramips|cudy_m1300-v2
+Cudy M1800|ramips/ramips|cudy_m1800
+R700|ramips/ramips|cudy_r700
+RE1200 Outdoor|ramips/ramips|cudy_re1200-outdoor-v1
+Cudy Tr1200 V1|ramips/ramips|cudy_tr1200-v1
+Cudy Wr1000|ramips/ramips|cudy_wr1000
+Cudy Wr1300 V1|ramips/ramips|cudy_wr1300-v1
+Cudy Wr1300 V2|ramips/ramips|cudy_wr1300-v2
+Cudy Wr1300 V3|ramips/ramips|cudy_wr1300-v3
+Cudy Wr2100|ramips/ramips|cudy_wr2100
+WR300|ramips/ramips|cudy_wr300-v1
+Cudy X6 V1|ramips/ramips|cudy_x6-v1
+Cudy X6 V2|ramips/ramips|cudy_x6-v2
+D-Team Newifi D2|ramips/ramips|d-team_newifi-d2
+D-Team Pbr D1|ramips/ramips|d-team_pbr-d1
+D-Team Pbr M1|ramips/ramips|d-team_pbr-m1
+WiFi Repeater ac|ramips/ramips|devolo_rac
+Dlink Covr X1860 A1|ramips/ramips|dlink_covr-x1860-a1
+Dlink Dap 1325 A1|ramips/ramips|dlink_dap-1325-a1
+DAP 1350|ramips/ramips|dlink_dap-1350
+DAP 1522|ramips/ramips|dlink_dap-1522-a1
+Dlink Dap 1620 B1|ramips/ramips|dlink_dap-1620-b1
+Dlink Dap X1860 A1|ramips/ramips|dlink_dap-x1860-a1
+DCH M225|ramips/ramips|dlink_dch-m225
+DCS 930|ramips/ramips|dlink_dcs-930
+DCS 930L|ramips/ramips|dlink_dcs-930l-b1
+DIR 1360|ramips/ramips|dlink_dir-1360-a1
+Dlink Dir 1935 A1|ramips/ramips|dlink_dir-1935-a1
+Dlink Dir 1960 A1|ramips/ramips|dlink_dir-1960-a1
+DIR 2055|ramips/ramips|dlink_dir-2055-a1
+DIR 2150|ramips/ramips|dlink_dir-2150-a1
+DIR 2150 (ramips)|ramips/ramips|dlink_dir-2150-r1
+Dlink Dir 2640 A1|ramips/ramips|dlink_dir-2640-a1
+Dlink Dir 2660 A1|ramips/ramips|dlink_dir-2660-a1
+DIR 300|ramips/ramips|dlink_dir-300-b1
+DIR 300 (ramips)|ramips/ramips|dlink_dir-300-b7
+DIR 3040|ramips/ramips|dlink_dir-3040-a1
+Dlink Dir 3060 A1|ramips/ramips|dlink_dir-3060-a1
+DIR 320|ramips/ramips|dlink_dir-320-b1
+DIR 510L|ramips/ramips|dlink_dir-510l
+DIR 600|ramips/ramips|dlink_dir-600-b1
+DIR 610|ramips/ramips|dlink_dir-610-a1
+DIR 615|ramips/ramips|dlink_dir-615-d
+DIR 615 (ramips)|ramips/ramips|dlink_dir-615-h1
+DIR 620|ramips/ramips|dlink_dir-620-a1
+DIR 620 (ramips)|ramips/ramips|dlink_dir-620-d1
+DIR 645|ramips/ramips|dlink_dir-645
+DIR 806A|ramips/ramips|dlink_dir-806a-b1
+DIR 810L|ramips/ramips|dlink_dir-810l
+Dlink Dir 853 A1|ramips/ramips|dlink_dir-853-a1
+Dlink Dir 853 A3|ramips/ramips|dlink_dir-853-a3
+Dlink Dir 853 R1|ramips/ramips|dlink_dir-853-r1
+Dlink Dir 860l B1|ramips/ramips|dlink_dir-860l-b1
+Dlink Dir 867 A1|ramips/ramips|dlink_dir-867-a1
+Dlink Dir 878 A1|ramips/ramips|dlink_dir-878-a1
+Dlink Dir 878 R1|ramips/ramips|dlink_dir-878-r1
+Dlink Dir 882 A1|ramips/ramips|dlink_dir-882-a1
+Dlink Dir 882 R1|ramips/ramips|dlink_dir-882-r1
+DIR X1860|ramips/ramips|dlink_dir-x1860-b1
+DRA 1360|ramips/ramips|dlink_dra-1360-a1
+DWR 116|ramips/ramips|dlink_dwr-116-a1
+DWR 118|ramips/ramips|dlink_dwr-118-a1
+DWR 118 (ramips)|ramips/ramips|dlink_dwr-118-a2
+DWR 512|ramips/ramips|dlink_dwr-512-b
+DWR 921|ramips/ramips|dlink_dwr-921-c1
+DWR 921 (ramips)|ramips/ramips|dlink_dwr-921-c3
+DWR 922|ramips/ramips|dlink_dwr-922-e2
+DWR 960|ramips/ramips|dlink_dwr-960
+DWR 961|ramips/ramips|dlink_dwr-961-a1
+Valokuitu Plus EX400|ramips/ramips|dna_valokuitu-plus-ex400
+DM202|ramips/ramips|domywifi_dm202
+DM203|ramips/ramips|domywifi_dm203
+DW22D|ramips/ramips|domywifi_dw22d
+Tiny AC|ramips/ramips|dovado_tiny-ac
+Dual-Q H721|ramips/ramips|dual-q_h721
+Duzun Dm06|ramips/ramips|duzun_dm06
+WIZARD 8800|ramips/ramips|easyacc_wizard-8800
+3g 6200n|ramips/ramips|edimax_3g-6200n
+3g 6200nl|ramips/ramips|edimax_3g-6200nl
+BR 6208AC|ramips/ramips|edimax_br-6208ac-v2
+BR 6475nD|ramips/ramips|edimax_br-6475nd
+BR 6478AC|ramips/ramips|edimax_br-6478ac-v2
+EW 7476RPC|ramips/ramips|edimax_ew-7476rpc
+EW 7478AC|ramips/ramips|edimax_ew-7478ac
+EW 7478APC|ramips/ramips|edimax_ew-7478apc
+Edimax Ra21s|ramips/ramips|edimax_ra21s
+Edimax Re23s|ramips/ramips|edimax_re23s
+Edimax Rg21s|ramips/ramips|edimax_rg21s
+EP RT2960S|ramips/ramips|edup_ep-rt2960s
+EP RT2983|ramips/ramips|edup_ep-rt2983
+WMC M1267GST2|ramips/ramips|elecom_wmc-m1267gst2
+WMC S1267GS2|ramips/ramips|elecom_wmc-s1267gs2
+WMC X1800GST|ramips/ramips|elecom_wmc-x1800gst
+日电 Wrc 1167fs|ramips/ramips|elecom_wrc-1167fs
+日电 Wrc 1167ghbk2 S|ramips/ramips|elecom_wrc-1167ghbk2-s
+日电 Wrc 1167gs2 B|ramips/ramips|elecom_wrc-1167gs2-b
+日电 Wrc 1167gst2|ramips/ramips|elecom_wrc-1167gst2
+日电 Wrc 1750gs|ramips/ramips|elecom_wrc-1750gs
+日电 Wrc 1750gst2|ramips/ramips|elecom_wrc-1750gst2
+日电 Wrc 1750gsv|ramips/ramips|elecom_wrc-1750gsv
+日电 Wrc 1900gst|ramips/ramips|elecom_wrc-1900gst
+日电 Wrc 2533ghbk I|ramips/ramips|elecom_wrc-2533ghbk-i
+日电 Wrc 2533ghbk2 T|ramips/ramips|elecom_wrc-2533ghbk2-t
+日电 Wrc 2533gs2|ramips/ramips|elecom_wrc-2533gs2
+日电 Wrc 2533gst|ramips/ramips|elecom_wrc-2533gst
+日电 Wrc 2533gst2|ramips/ramips|elecom_wrc-2533gst2
+WRC X1800GS|ramips/ramips|elecom_wrc-x1800gs
+WRH 300CR|ramips/ramips|elecom_wrh-300cr
+WSC X1800GS|ramips/ramips|elecom_wsc-x1800gs
+EPG600|ramips/ramips|engenius_epg600
+ESR 9753|ramips/ramips|engenius_esr-9753
+ESR600|ramips/ramips|engenius_esr600
+ESR600H|ramips/ramips|engenius_esr600h
+Etisalat S3|ramips/ramips|etisalat_s3
+Firefly Firewrt|ramips/ramips|firefly_firewrt
+FON2601|ramips/ramips|fon_fon2601
+Fonera 2.0N|ramips/ramips|fon_fonera-20n
+Gehua Ghl R 001|ramips/ramips|gehua_ghl-r-001
+WVRTM 127ACN|ramips/ramips|gemtek_wvrtm-127acn
+WVRTM 130ACN|ramips/ramips|gemtek_wvrtm-130acn
+Pulse EX400|ramips/ramips|genexis_pulse-ex400
+GL.iNet Gl Mt1300|ramips/ramips|glinet_gl-mt1300
+GL.iNet MT300A|ramips/ramips|glinet_gl-mt300a
+GL.iNet MT300N|ramips/ramips|glinet_gl-mt300n
+GL.iNet Gl Mt300n V2|ramips/ramips|glinet_gl-mt300n-v2
+GL.iNet MT750|ramips/ramips|glinet_gl-mt750
+GL.iNet Microuter N300|ramips/ramips|glinet_microuter-n300
+GL.iNet Vixmini|ramips/ramips|glinet_vixmini
+GnuBee Gb Pc1|ramips/ramips|gnubee_gb-pc1
+GnuBee Gb Pc2|ramips/ramips|gnubee_gb-pc2
+华三 Tx1800 Plus|ramips/ramips|h3c_tx1800-plus
+华三 Tx1801 Plus|ramips/ramips|h3c_tx1801-plus
+华三 Tx1806|ramips/ramips|h3c_tx1806
+海尔 Har 20s2u1|ramips/ramips|haier_har-20s2u1
+Hak5 Wifi Pineapple Mk7|ramips/ramips|hak5_wifi-pineapple-mk7
+MPR|ramips/ramips|hame_mpr-a1
+MPR (ramips)|ramips/ramips|hame_mpr-a2
+Hanyang Hyc G920|ramips/ramips|hanyang_hyc-g920
+Broadway|ramips/ramips|hauppauge_broadway
+HDRM2000|ramips/ramips|head-weblink_hdrm200
+HiLink Hlk 7621a Evb|ramips/ramips|hilink_hlk-7621a-evb
+HiLink Hlk 7628n|ramips/ramips|hilink_hlk-7628n
+HiLink Hlk 7688a|ramips/ramips|hilink_hlk-7688a
+HLK RM04|ramips/ramips|hilink_hlk-rm04
+极路由 Hc5611|ramips/ramips|hiwifi_hc5611
+HC5661|ramips/ramips|hiwifi_hc5661
+极路由 Hc5661a|ramips/ramips|hiwifi_hc5661a
+HC5761|ramips/ramips|hiwifi_hc5761
+极路由 Hc5761a|ramips/ramips|hiwifi_hc5761a
+HC5861|ramips/ramips|hiwifi_hc5861
+极路由 Hc5861b|ramips/ramips|hiwifi_hc5861b
+极路由 Hc5962|ramips/ramips|hiwifi_hc5962
+C108|ramips/ramips|hnet_c108
+H7920|ramips/ramips|hongdian_h7920-v40
+H8850|ramips/ramips|hongdian_h8850-v20
+H8922|ramips/ramips|hongdian_h8922-v30
+HT TM02|ramips/ramips|hootoo_ht-tm02
+HT TM05|ramips/ramips|hootoo_ht-tm05
+SHF283|ramips/ramips|huasifei_shf283
+Huasifei Ws1208v2|ramips/ramips|huasifei_ws1208v2
+D105|ramips/ramips|huawei_d105
+HG255D|ramips/ramips|huawei_hg255d
+HUMAX E10|ramips/ramips|humax_e10
+E2|ramips/ramips|humax_e2
+Memory 2 Move|ramips/ramips|intenso_memory2move
+WN AC1167GR|ramips/ramips|iodata_wn-ac1167gr
+WN AC733GR3|ramips/ramips|iodata_wn-ac733gr3
+I-O Data Wn Ax1167gr|ramips/ramips|iodata_wn-ax1167gr
+I-O Data Wn Ax1167gr2|ramips/ramips|iodata_wn-ax1167gr2
+I-O Data Wn Ax2033gr|ramips/ramips|iodata_wn-ax2033gr
+WN AX2033GR2|ramips/ramips|iodata_wn-ax2033gr2
+WN DEAX1800GR|ramips/ramips|iodata_wn-deax1800gr
+I-O Data Wn Dx1167r|ramips/ramips|iodata_wn-dx1167r
+I-O Data Wn Dx1200gr|ramips/ramips|iodata_wn-dx1200gr
+I-O Data Wn Dx2033gr|ramips/ramips|iodata_wn-dx2033gr
+I-O Data Wn Gx300gr|ramips/ramips|iodata_wn-gx300gr
+I-O Data Wnpr2600g|ramips/ramips|iodata_wnpr2600g
+A1004ns|ramips/ramips|iptime_a1004ns
+A104ns|ramips/ramips|iptime_a104ns
+ipTIME A3|ramips/ramips|iptime_a3
+ipTIME A3002mesh|ramips/ramips|iptime_a3002mesh
+ipTIME A3004ns Dual|ramips/ramips|iptime_a3004ns-dual
+ipTIME A3004t|ramips/ramips|iptime_a3004t
+ipTIME A6004ns M|ramips/ramips|iptime_a6004ns-m
+ipTIME A604m|ramips/ramips|iptime_a604m
+ipTIME A6ns M|ramips/ramips|iptime_a6ns-m
+ipTIME A8004t|ramips/ramips|iptime_a8004t
+AX2002MESH|ramips/ramips|iptime_ax2002m
+AX2004M|ramips/ramips|iptime_ax2004m
+T5004|ramips/ramips|iptime_t5004
+JHR AC876M|ramips/ramips|jcg_jhr-ac876m
+JHR N805R|ramips/ramips|jcg_jhr-n805r
+JHR N825R|ramips/ramips|jcg_jhr-n825r
+JHR N926R|ramips/ramips|jcg_jhr-n926r
+Q20|ramips/ramips|jcg_q20
+Y2|ramips/ramips|jcg_y2
+RE CP 02|ramips/ramips|jdcloud_re-cp-02
+RE SP 01B|ramips/ramips|jdcloud_re-sp-01b
+Jotale Js76x8 16m|ramips/ramips|jotale_js76x8-16m
+Jotale Js76x8 32m|ramips/ramips|jotale_js76x8-32m
+Jotale Js76x8 8m|ramips/ramips|jotale_js76x8-8m
+KN 1112|ramips/ramips|keenetic_kn-1112
+KN 1212|ramips/ramips|keenetic_kn-1212
+KN 1221|ramips/ramips|keenetic_kn-1221
+Keenetic Kn 1613|ramips/ramips|keenetic_kn-1613
+KN 1711|ramips/ramips|keenetic_kn-1711
+KN 1713|ramips/ramips|keenetic_kn-1713
+KN 1910|ramips/ramips|keenetic_kn-1910
+Keenetic Kn 3010|ramips/ramips|keenetic_kn-3010
+KN 3211|ramips/ramips|keenetic_kn-3211
+KN 3510|ramips/ramips|keenetic_kn-3510
+U25AWF|ramips/ramips|kimax_u25awf-h1
+U35WF|ramips/ramips|kimax_u35wf
+MLW221|ramips/ramips|kingston_mlw221
+MLWG2|ramips/ramips|kingston_mlwg2
+Kroks Kndrt31r16|ramips/ramips|kroks_kndrt31r16
+Kroks Kndrt31r19|ramips/ramips|kroks_kndrt31r19
+LR 25G001|ramips/ramips|lava_lr-25g001
+BL W1200|ramips/ramips|lb-link_bl-w1200
+Newifi D1|ramips/ramips|lenovo_newifi-d1
+Y1|ramips/ramips|lenovo_newifi-y1
+Y1S|ramips/ramips|lenovo_newifi-y1s
+E1700|ramips/ramips|linksys_e1700
+领势 E5400|ramips/ramips|linksys_e5400
+E5600|ramips/ramips|linksys_e5600
+E7350|ramips/ramips|linksys_e7350
+EA6350|ramips/ramips|linksys_ea6350-v4
+EA7300|ramips/ramips|linksys_ea7300-v1
+EA7300 (ramips)|ramips/ramips|linksys_ea7300-v2
+EA7500 (ramips)|ramips/ramips|linksys_ea7500-v2
+EA8100|ramips/ramips|linksys_ea8100-v1
+EA8100 (ramips)|ramips/ramips|linksys_ea8100-v2
+RE6500|ramips/ramips|linksys_re6500
+RE7000|ramips/ramips|linksys_re7000
+WMDR 143N|ramips/ramips|loewe_wmdr-143n
+MC 1200AC|ramips/ramips|maginon_mc-1200ac
+AP MT7621A V60 EVB|ramips/ramips|mediatek_ap-mt7621a-v60
+联发科 Linkit Smart 7688|ramips/ramips|mediatek_linkit-smart-7688
+MT7621 EVB|ramips/ramips|mediatek_mt7621-eval-board
+联发科 Mt7628an Eval Board|ramips/ramips|mediatek_mt7628an-eval-board
+SLT866|ramips/ramips|meig_slt866
+水星 Mac1200r V2|ramips/ramips|mercury_mac1200r-v2
+MB130 4G|ramips/ramips|mercusys_mb130-4g-v1
+MR70X|ramips/ramips|mercusys_mr70x-v1
+MicroWRT|ramips/ramips|microduino_microwrt
+LtAP 2HnD|ramips/ramips|mikrotik_ltap-2hnd
+RouterBOARD 750Gr3|ramips/ramips|mikrotik_routerboard-750gr3
+RouterBOARD 760iGS|ramips/ramips|mikrotik_routerboard-760igs
+RouterBOARD M11G|ramips/ramips|mikrotik_routerboard-m11g
+RouterBOARD M33G|ramips/ramips|mikrotik_routerboard-m33g
+Minew G1 C|ramips/ramips|minew_g1-c
+MOFI3500 3GN|ramips/ramips|mofinetwork_mofi3500-3gn
+MOFI5500 5GXeLTE|ramips/ramips|mofinetwork_mofi5500-5gxelte
+摩托罗拉 Mwr03|ramips/ramips|motorola_mwr03
+WiTi|ramips/ramips|mqmaker_witi
+Wireless Router WR1201|ramips/ramips|mtc_wr1201
+WG430223|ramips/ramips|mts_wg430223
+NW5212|ramips/ramips|netcore_nw5212
+NW718|ramips/ramips|netcore_nw718
+EAX12|ramips/ramips|netgear_eax12
+EX2700|ramips/ramips|netgear_ex2700
+EX3700/EX3800|ramips/ramips|netgear_ex3700
+EX6120|ramips/ramips|netgear_ex6120
+EX6130|ramips/ramips|netgear_ex6130
+网件 Ex6150|ramips/ramips|netgear_ex6150
+JWNR2010|ramips/ramips|netgear_jwnr2010-v5
+PR2000|ramips/ramips|netgear_pr2000
+网件 R6020|ramips/ramips|netgear_r6020
+网件 R6080|ramips/ramips|netgear_r6080
+网件 R6120|ramips/ramips|netgear_r6120
+网件 R6220|ramips/ramips|netgear_r6220
+网件 R6260|ramips/ramips|netgear_r6260
+网件 R6350|ramips/ramips|netgear_r6350
+R6700|ramips/ramips|netgear_r6700-v2
+网件 R6800|ramips/ramips|netgear_r6800
+网件 R6850|ramips/ramips|netgear_r6850
+R6900|ramips/ramips|netgear_r6900-v2
+网件 R7200|ramips/ramips|netgear_r7200
+网件 R7450|ramips/ramips|netgear_r7450
+WAC104|ramips/ramips|netgear_wac104
+WAC124|ramips/ramips|netgear_wac124
+WAX202|ramips/ramips|netgear_wax202
+WAX214v2|ramips/ramips|netgear_wax214v2
+WN3000RP|ramips/ramips|netgear_wn3000rp-v3
+WN3100RP|ramips/ramips|netgear_wn3100rp-v2
+WNCE2001|ramips/ramips|netgear_wnce2001
+WNDR3700|ramips/ramips|netgear_wndr3700-v5
+N6|ramips/ramips|netis_n6
+WF2770|ramips/ramips|netis_wf2770
+Netis Wf2881|ramips/ramips|netis_wf2881
+BC2|ramips/ramips|nexaira_bc2
+WT1520|ramips/ramips|nexx_wt1520-4m
+WT1520 (ramips)|ramips/ramips|nexx_wt1520-8m
+WT3020|ramips/ramips|nexx_wt3020-4m
+WT3020 (ramips)|ramips/ramips|nexx_wt3020-8m
+X1|ramips/ramips|nixcore_x1-16m
+X1 (ramips)|ramips/ramips|nixcore_x1-8m
+OY 0001|ramips/ramips|ohyeah_oy-0001
+RT5350F OLinuXino|ramips/ramips|olimex_rt5350f-olinuxino
+RT5350F OLinuXino EVB|ramips/ramips|olimex_rt5350f-olinuxino-evb
+HPM|ramips/ramips|omnima_hpm
+MiniEMBPlug|ramips/ramips|omnima_miniembplug
+MiniEMBWiFi|ramips/ramips|omnima_miniembwifi
+Onion Omega2|ramips/ramips|onion_omega2
+Onion Omega2p|ramips/ramips|onion_omega2p
+5Pro|ramips/ramips|openfi_5pro
+花生壳 X1|ramips/ramips|oraybox_x1
+X3A|ramips/ramips|oraybox_x3a
+PSR 680W Wireless 3G Router|ramips/ramips|petatel_psr-680w
+K2|ramips/ramips|phicomm_k2-v22.4
+K2 (ramips)|ramips/ramips|phicomm_k2-v22.5
+K2G|ramips/ramips|phicomm_k2g
+斐讯 K2p|ramips/ramips|phicomm_k2p
+PSG1208|ramips/ramips|phicomm_psg1208
+PSG1218|ramips/ramips|phicomm_psg1218b
+CS QR10|ramips/ramips|planex_cs-qr10
+Planex Db Wrt01|ramips/ramips|planex_db-wrt01
+MZK 750DHP|ramips/ramips|planex_mzk-750dhp
+MZK DP150N|ramips/ramips|planex_mzk-dp150n
+Planex Mzk Ex300np|ramips/ramips|planex_mzk-ex300np
+MZK EX750NP|ramips/ramips|planex_mzk-ex750np
+MZK W300NH2|ramips/ramips|planex_mzk-w300nh2
+MZK WDPR|ramips/ramips|planex_mzk-wdpr
+VR500|ramips/ramips|planex_vr500
+PAX1800 Lite|ramips/ramips|plasmacloud_pax1800-lite
+IP2202|ramips/ramips|poray_ip2202
+M3|ramips/ramips|poray_m3
+M4|ramips/ramips|poray_m4-4m
+M4 (ramips)|ramips/ramips|poray_m4-8m
+X5/X6|ramips/ramips|poray_x5
+X8|ramips/ramips|poray_x8
+PWH2004|ramips/ramips|prolink_pwh2004
+QC202|ramips/ramips|qding_qc202
+MSG1500|ramips/ramips|raisecom_msg1500-x-00
+RAK Rak633|ramips/ramips|rakwireless_rak633
+MT7620a EVB|ramips/ramips|ralink_mt7620a-evb
+MT7620a + MT7530 EVB|ramips/ramips|ralink_mt7620a-mt7530-evb
+MT7620a + MT7610e EVB|ramips/ramips|ralink_mt7620a-mt7610e-evb
+MT7620a V22SG|ramips/ramips|ralink_mt7620a-v22sg-evb
+V11ST FE|ramips/ramips|ralink_v11st-fe
+AP RT3052 V22RW 2X2|ramips/ramips|ralink_v22rw-2x2
+RAVPower Rp Wd009|ramips/ramips|ravpower_rp-wd009
+RP WD03|ramips/ramips|ravpower_rp-wd03
+WS WN530HP3 A|ramips/ramips|renkforce_ws-wn530hp3-a
+RT FE 1A|ramips/ramips|rostelecom_rt-fe-1a
+RT FL 1|ramips/ramips|rostelecom_rt-fl-1
+RT SF 1|ramips/ramips|rostelecom_rt-sf-1
+S1010|ramips/ramips|rostelecom_s1010
+RG EW1200G PRO|ramips/ramips|ruijie_rg-ew1200g-pro-v1.1
+Whitebox 8|ramips/ramips|samknows_whitebox-v8
+三星 Cy Swr1100|ramips/ramips|samsung_cy-swr1100
+D240|ramips/ramips|sanlinking_d240
+SIMAX1800T|ramips/ramips|sim_simax1800t
+SIMAX1800U|ramips/ramips|sim_simax1800u
+WL 351 v1|ramips/ramips|sitecom_wl-351
+WLR 4100|ramips/ramips|sitecom_wlr-4100-v1-002
+WLR 6000|ramips/ramips|sitecom_wlr-6000
+SkyLab Skw92a|ramips/ramips|skylab_skw92a
+SL R7205 Wireless 3G Router|ramips/ramips|skyline_sl-r7205
+CPE W4N|ramips/ramips|snr_cpe-w4n-mt
+SNR CPE ME1|ramips/ramips|snr_snr-cpe-me1
+SNR CPE ME2 Lite|ramips/ramips|snr_snr-cpe-me2-lite
+SNR CPE ME2 SFP|ramips/ramips|snr_snr-cpe-me2-sfp
+WCR 150GN|ramips/ramips|sparklan_wcr-150gn
+SAP G3200U3|ramips/ramips|storylink_sap-g3200u3
+Tama W06|ramips/ramips|tama_w06
+X1 (2)|ramips/ramips|telco-electronics_x1
+RUT200|ramips/ramips|teltonika_rut200
+RUT241|ramips/ramips|teltonika_rut241
+RUT5XX|ramips/ramips|teltonika_rut5xx
+RUT976|ramips/ramips|teltonika_rut976
+RUT951|ramips/ramips|teltonika_rut9x1
+RUT956|ramips/ramips|teltonika_rut9x6
+T MB5EU V01|ramips/ramips|tenbay_t-mb5eu-v01
+腾达 3g150b|ramips/ramips|tenda_3g150b
+腾达 3g300m|ramips/ramips|tenda_3g300m
+腾达 W150m|ramips/ramips|tenda_w150m
+W306R|ramips/ramips|tenda_w306r-v2
+Timecloud|ramips/ramips|thunder_timecloud
+TOTOLINK A3|ramips/ramips|totolink_a3
+TOTOLINK A7000r|ramips/ramips|totolink_a7000r
+TOTOLINK Lr1200|ramips/ramips|totolink_lr1200
+TOTOLINK X5000r|ramips/ramips|totolink_x5000r
+ZLT S12 PRO|ramips/ramips|tozed_zlt-s12-pro
+TP-Link Archer A6 V3|ramips/ramips|tplink_archer-a6-v3
+Archer AX21|ramips/ramips|tplink_archer-ax21-v4
+Archer AX23|ramips/ramips|tplink_archer-ax23-v1
+Archer C2|ramips/ramips|tplink_archer-c2-v1
+Archer C20|ramips/ramips|tplink_archer-c20-v1
+TP-Link Archer C20 V4|ramips/ramips|tplink_archer-c20-v4
+TP-Link Archer C20 V5|ramips/ramips|tplink_archer-c20-v5
+Archer C20i|ramips/ramips|tplink_archer-c20i
+Archer C5|ramips/ramips|tplink_archer-c5-v4
+Archer C50 (ramips)|ramips/ramips|tplink_archer-c50-v1
+TP-Link Archer C50 V3|ramips/ramips|tplink_archer-c50-v3
+TP-Link Archer C50 V4|ramips/ramips|tplink_archer-c50-v4
+Archer C50|ramips/ramips|tplink_archer-c50-v6
+TP-Link Archer C6 V3|ramips/ramips|tplink_archer-c6-v3
+TP-Link Archer C6u V1|ramips/ramips|tplink_archer-c6u-v1
+Archer MR200 (ramips)|ramips/ramips|tplink_archer-mr200
+TP-Link Archer Mr200 V5|ramips/ramips|tplink_archer-mr200-v5
+Archer MR200|ramips/ramips|tplink_archer-mr200-v6
+Deco M4R|ramips/ramips|tplink_deco-m4r-v4
+EAP235 Wall|ramips/ramips|tplink_eap235-wall-v1
+EAP613|ramips/ramips|tplink_eap613-v1
+EAP615 Wall|ramips/ramips|tplink_eap615-wall-v1
+EC220 G5|ramips/ramips|tplink_ec220-g5-v2
+TP-Link Ec330 G5u V1|ramips/ramips|tplink_ec330-g5u-v1
+ER605|ramips/ramips|tplink_er605-v2
+EX220|ramips/ramips|tplink_ex220-v1
+EX220 (ramips)|ramips/ramips|tplink_ex220-v2
+MR600|ramips/ramips|tplink_mr600-v2-eu
+RE200|ramips/ramips|tplink_re200-v1
+TP-Link Re200 V2|ramips/ramips|tplink_re200-v2
+TP-Link Re200 V3|ramips/ramips|tplink_re200-v3
+TP-Link Re200 V4|ramips/ramips|tplink_re200-v4
+RE205|ramips/ramips|tplink_re205-v3
+RE210|ramips/ramips|tplink_re210-v1
+TP-Link Re220 V2|ramips/ramips|tplink_re220-v2
+TP-Link Re305 V1|ramips/ramips|tplink_re305-v1
+TP-Link Re305 V3|ramips/ramips|tplink_re305-v3
+RE350|ramips/ramips|tplink_re350-v1
+TP-Link Re365 V1|ramips/ramips|tplink_re365-v1
+TP-Link Re500 V1|ramips/ramips|tplink_re500-v1
+RE650|ramips/ramips|tplink_re650-v1
+RE650 (ramips)|ramips/ramips|tplink_re650-v2
+TP-Link Tl Mr3020 V3|ramips/ramips|tplink_tl-mr3020-v3
+TP-Link Tl Mr3420 V5|ramips/ramips|tplink_tl-mr3420-v5
+TP-Link Tl Mr6400 V4|ramips/ramips|tplink_tl-mr6400-v4
+TP-Link Tl Mr6400 V5|ramips/ramips|tplink_tl-mr6400-v5
+TP-Link Tl Wa801nd V5|ramips/ramips|tplink_tl-wa801nd-v5
+TL WPA8631P|ramips/ramips|tplink_tl-wpa8631p-v3
+TP-Link Tl Wr802n V4|ramips/ramips|tplink_tl-wr802n-v4
+TP-Link Tl Wr840n V4|ramips/ramips|tplink_tl-wr840n-v4
+TP-Link Tl Wr840n V5|ramips/ramips|tplink_tl-wr840n-v5
+TP-Link Tl Wr841n V13|ramips/ramips|tplink_tl-wr841n-v13
+TP-Link Tl Wr841n V14|ramips/ramips|tplink_tl-wr841n-v14
+TP-Link Tl Wr842n V5|ramips/ramips|tplink_tl-wr842n-v5
+TP-Link Tl Wr850n V2|ramips/ramips|tplink_tl-wr850n-v2
+TP-Link Tl Wr902ac V3|ramips/ramips|tplink_tl-wr902ac-v3
+TP-Link Tl Wr902ac V4|ramips/ramips|tplink_tl-wr902ac-v4
+TEW 638APB|ramips/ramips|trendnet_tew-638apb-v2
+TEW 691GR|ramips/ramips|trendnet_tew-691gr
+TEW 692GR|ramips/ramips|trendnet_tew-692gr
+TEW 714TRU|ramips/ramips|trendnet_tew-714tru
+TEW 810DR|ramips/ramips|trendnet_tew-810dr
+THA 103AC|ramips/ramips|trendnet_tha103ac
+EdgeRouter X|ramips/ramips|ubnt_edgerouter-x
+EdgeRouter X SFP|ramips/ramips|ubnt_edgerouter-x-sfp
+UniFi U6 Lite|ramips/ramips|ubnt_unifi-6-lite
+UniFi FlexHD|ramips/ramips|ubnt_unifi-flexhd
+Ubiquiti Unifi Nanohd|ramips/ramips|ubnt_unifi-nanohd
+UniFi Switch Flex|ramips/ramips|ubnt_usw-flex
+A5 V11|ramips/ramips|unbranded_a5-v11
+WR512 3GN|ramips/ramips|unbranded_wr512-3gn-4m
+WR512 3GN (ramips)|ramips/ramips|unbranded_wr512-3gn-8m
+XDX RN502J|ramips/ramips|unbranded_xdx-rn502j
+U7621 01|ramips/ramips|unielec_u7621-01-16m
+UniElec U7621 06 16m|ramips/ramips|unielec_u7621-06-16m
+UniElec U7621 06 32m|ramips/ramips|unielec_u7621-06-32m
+U7621 06|ramips/ramips|unielec_u7621-06-64m
+UniElec U7628 01 16m|ramips/ramips|unielec_u7628-01-16m
+UR 326N4G|ramips/ramips|upvel_ur-326n4g
+UR 336UN|ramips/ramips|upvel_ur-336un
+VoCore|ramips/ramips|vocore_vocore-16m
+VoCore (ramips)|ramips/ramips|vocore_vocore-8m
+VoCore Vocore2|ramips/ramips|vocore_vocore2
+VoCore Vocore2 Lite|ramips/ramips|vocore_vocore2-lite
+VAR11N 300|ramips/ramips|vonets_var11n-300
+NCS601W|ramips/ramips|wansview_ncs601w
+Wavlink Wl Wn530hg4|ramips/ramips|wavlink_wl-wn530hg4
+Wavlink Wl Wn531a3|ramips/ramips|wavlink_wl-wn531a3
+WL WN531A6|ramips/ramips|wavlink_wl-wn531a6
+WL WN531G3|ramips/ramips|wavlink_wl-wn531g3
+WL WN531G3 A2|ramips/ramips|wavlink_wl-wn531g3-a2
+WL WN533A8|ramips/ramips|wavlink_wl-wn533a8
+WL WN535K1|ramips/ramips|wavlink_wl-wn535k1
+Wavlink Wl Wn570ha1|ramips/ramips|wavlink_wl-wn570ha1
+WL WN570HA2|ramips/ramips|wavlink_wl-wn570ha2
+WL WN573HX1|ramips/ramips|wavlink_wl-wn573hx1
+Wavlink Wl Wn575a3|ramips/ramips|wavlink_wl-wn575a3
+Wavlink Wl Wn576a2|ramips/ramips|wavlink_wl-wn576a2
+Wavlink Wl Wn577a2|ramips/ramips|wavlink_wl-wn577a2
+Wavlink Wl Wn578a2|ramips/ramips|wavlink_wl-wn578a2
+WL WN579X3|ramips/ramips|wavlink_wl-wn579x3
+WS WN572HP3|ramips/ramips|wavlink_ws-wn572hp3-4g
+WeVO 11acnas|ramips/ramips|wevo_11acnas
+AIR DUO|ramips/ramips|wevo_air-duo
+W2914NS|ramips/ramips|wevo_w2914ns-v2
+Widora Neo 16m|ramips/ramips|widora_neo-16m
+Widora Neo 32m|ramips/ramips|widora_neo-32m
+S1500.NBN|ramips/ramips|wifire_s1500-nbn
+WS WN536P3|ramips/ramips|winstars_ws-wn536p3
+WS WN583A6|ramips/ramips|winstars_ws-wn583a6
+WizFi630A|ramips/ramips|wiznet_wizfi630a
+Wiznet Wizfi630s|ramips/ramips|wiznet_wizfi630s
+WD R1208U|ramips/ramips|wodesys_wd-r1208u
+WD R1802U|ramips/ramips|wodesys_wd-r1802u
+WRTNode|ramips/ramips|wrtnode_wrtnode
+WRTnode Wrtnode2p|ramips/ramips|wrtnode_wrtnode2p
+WRTnode Wrtnode2r|ramips/ramips|wrtnode_wrtnode2r
+小米 Mi Ra75|ramips/ramips|xiaomi_mi-ra75
+小米 Mi Router 3 Pro|ramips/ramips|xiaomi_mi-router-3-pro
+小米 Mi Router 3g|ramips/ramips|xiaomi_mi-router-3g
+小米 Mi Router 3g V2|ramips/ramips|xiaomi_mi-router-3g-v2
+小米 Mi Router 4|ramips/ramips|xiaomi_mi-router-4
+小米 Mi Router 4a 100m|ramips/ramips|xiaomi_mi-router-4a-100m
+小米 Mi Router 4a 100m Intl|ramips/ramips|xiaomi_mi-router-4a-100m-intl
+小米 Router 4A|ramips/ramips|xiaomi_mi-router-4a-100m-intl-v2
+小米 Mi Router 4a Gigabit|ramips/ramips|xiaomi_mi-router-4a-gigabit
+小米 Router 4A (ramips)|ramips/ramips|xiaomi_mi-router-4a-gigabit-v2
+小米 Mi Router 4c|ramips/ramips|xiaomi_mi-router-4c
+小米 Router AC2100|ramips/ramips|xiaomi_mi-router-ac2100
+小米 Router CR6606|ramips/ramips|xiaomi_mi-router-cr6606
+小米 Router CR6608|ramips/ramips|xiaomi_mi-router-cr6608
+小米 Router CR6609|ramips/ramips|xiaomi_mi-router-cr6609
+MiWiFi 3A|ramips/ramips|xiaomi_miwifi-3a
+小米 Miwifi 3c|ramips/ramips|xiaomi_miwifi-3c
+MiWiFi Mini|ramips/ramips|xiaomi_miwifi-mini
+小米 Miwifi Nano|ramips/ramips|xiaomi_miwifi-nano
+小米 Redmi Router Ac2100|ramips/ramips|xiaomi_redmi-router-ac2100
+XY C5|ramips/ramips|xiaoyu_xy-c5
+v1|ramips/ramips|xzwifi_creativebox-v1
+Youhua Wr1200js|ramips/ramips|youhua_wr1200js
+X2|ramips/ramips|youku_x2
+YK L1|ramips/ramips|youku_yk-l1
+YK L1c|ramips/ramips|youku_yk-l1c
+优酷 Yk L2|ramips/ramips|youku_yk-l2
+BOCCO|ramips/ramips|yukai_bocco
+云核 Ax820|ramips/ramips|yuncore_ax820
+CPE200|ramips/ramips|yuncore_cpe200
+云核 Fap640|ramips/ramips|yuncore_fap640
+FAP690|ramips/ramips|yuncore_fap690
+云核 G720|ramips/ramips|yuncore_g720
+M300|ramips/ramips|yuncore_m300
+ZR 2660|ramips/ramips|z-router_zr-2660
+ZBT APE522II|ramips/ramips|zbtlink_zbt-ape522ii
+ZBT CPE102|ramips/ramips|zbtlink_zbt-cpe102
+ZBT WA05|ramips/ramips|zbtlink_zbt-wa05
+ZBT WE1026 5G|ramips/ramips|zbtlink_zbt-we1026-5g-16m
+ZBT WE1026 H|ramips/ramips|zbtlink_zbt-we1026-h-32m
+ZBT Zbt We1226|ramips/ramips|zbtlink_zbt-we1226
+ZBT WE1326|ramips/ramips|zbtlink_zbt-we1326
+ZBT WE2026|ramips/ramips|zbtlink_zbt-we2026
+ZBT WE2426 B|ramips/ramips|zbtlink_zbt-we2426-b
+ZBT WE3526|ramips/ramips|zbtlink_zbt-we3526
+ZBT WE826|ramips/ramips|zbtlink_zbt-we826-16m
+ZBT WE826 (ramips)|ramips/ramips|zbtlink_zbt-we826-32m
+ZBT WE826 E|ramips/ramips|zbtlink_zbt-we826-e
+ZBT WG108|ramips/ramips|zbtlink_zbt-wg108
+ZBT WG1602|ramips/ramips|zbtlink_zbt-wg1602-16m
+ZBT WG1602 V04|ramips/ramips|zbtlink_zbt-wg1602-v04-16m
+ZBT WG1602 V04 (ramips)|ramips/ramips|zbtlink_zbt-wg1602-v04-32m
+ZBT WG1608|ramips/ramips|zbtlink_zbt-wg1608-16m
+ZBT WG1608 (ramips)|ramips/ramips|zbtlink_zbt-wg1608-32m
+ZBT WG2626|ramips/ramips|zbtlink_zbt-wg2626
+ZBT WG3526|ramips/ramips|zbtlink_zbt-wg3526-16m
+ZBT WG3526 (ramips)|ramips/ramips|zbtlink_zbt-wg3526-32m
+ZBT WR8305RT|ramips/ramips|zbtlink_zbt-wr8305rt
+FREEZIO|ramips/ramips|zio_freezio
+ZL5900V2|ramips/ramips|zorlik_zl5900v2
+E8820S|ramips/ramips|zte_e8820s
+MF283+|ramips/ramips|zte_mf283plus
+Q7|ramips/ramips|zte_q7
+Keenetic|ramips/ramips|zyxel_keenetic
+Keenetic 4G|ramips/ramips|zyxel_keenetic-4g-b
+合勤 Keenetic Extra Ii|ramips/ramips|zyxel_keenetic-extra-ii
+Keenetic Lite|ramips/ramips|zyxel_keenetic-lite-b
+Keenetic Lite III|ramips/ramips|zyxel_keenetic-lite-iii-a
+Keenetic Omni|ramips/ramips|zyxel_keenetic-omni
+Keenetic Omni II|ramips/ramips|zyxel_keenetic-omni-ii
+Keenetic Start|ramips/ramips|zyxel_keenetic-start
+Keenetic Viva|ramips/ramips|zyxel_keenetic-viva
+LTE3301 PLUS|ramips/ramips|zyxel_lte3301-plus
+LTE5398 M904|ramips/ramips|zyxel_lte5398-m904
+LTE7490 M904|ramips/ramips|zyxel_lte7490-m904
+NBG 419N|ramips/ramips|zyxel_nbg-419n
+NBG 419N (ramips)|ramips/ramips|zyxel_nbg-419n-v2
+NR7101|ramips/ramips|zyxel_nr7101
+NWA50AX|ramips/ramips|zyxel_nwa50ax
+NWA55AXE|ramips/ramips|zyxel_nwa55axe
+WAP6805|ramips/ramips|zyxel_wap6805
+WSM20|ramips/ramips|zyxel_wsm20
+ALL SG8208M|realtek/realtek|allnet_all-sg8208m
+ApresiaLightGS120GT SS|realtek/realtek|apresia_aplgs120gtss
+DGS 1210 10MP|realtek/realtek|d-link_dgs-1210-10mp-f
+DGS 1210 10P|realtek/realtek|d-link_dgs-1210-10p
+DGS 1210 16|realtek/realtek|d-link_dgs-1210-16
+DGS 1210 20|realtek/realtek|d-link_dgs-1210-20
+DGS 1210 26|realtek/realtek|d-link_dgs-1210-26
+DGS 1210 28|realtek/realtek|d-link_dgs-1210-28
+DGS 1210 28MP|realtek/realtek|d-link_dgs-1210-28mp-f
+DGS 1210 28P|realtek/realtek|d-link_dgs-1210-28p-f
+DGS 1210 52|realtek/realtek|d-link_dgs-1210-52
+EWS2910P|realtek/realtek|engenius_ews2910p-v1
+EWS2910P (realtek)|realtek/realtek|engenius_ews2910p-v3
+S1100W 8XGT SE|realtek/realtek|hasivo_s1100w-8xgt-se
+1920 16G (JG923A)|realtek/realtek|hpe_1920-16g
+1920 24G (JG924A)|realtek/realtek|hpe_1920-24g
+1920 24G PoE+ 180W (JG925A)|realtek/realtek|hpe_1920-24g-poe-180w
+1920 24G PoE+ 370W (JG926A)|realtek/realtek|hpe_1920-24g-poe-370w
+1920 48G (JG927A)|realtek/realtek|hpe_1920-48g
+1920 48G PoE (JG928A)|realtek/realtek|hpe_1920-48g-poe
+1920 8G (JG920A)|realtek/realtek|hpe_1920-8g
+1920 8G PoE+ 180W (JG922A)|realtek/realtek|hpe_1920-8g-poe-180w
+1920 8G PoE+ 65W (JG921A)|realtek/realtek|hpe_1920-8g-poe-65w
+Abaniact AML2 17GP|realtek/realtek|inaba_aml2-17gp
+BSH G24MB|realtek/realtek|iodata_bsh-g24mb
+LGS310C|realtek/realtek|linksys_lgs310c
+LGS328C|realtek/realtek|linksys_lgs328c
+LGS352C|realtek/realtek|linksys_lgs352c
+GS108T|realtek/realtek|netgear_gs108t-v3
+GS110TPP|realtek/realtek|netgear_gs110tpp-v1
+GS110TUP|realtek/realtek|netgear_gs110tup-v1
+GS308T|realtek/realtek|netgear_gs308t-v1
+GS310TP|realtek/realtek|netgear_gs310tp-v1
+GS750E|realtek/realtek|netgear_gs750e
+Switch M16eG|realtek/realtek|panasonic_m16eg-pn28160k
+Switch M24eG|realtek/realtek|panasonic_m24eg-pn28240k
+Switch M48eG|realtek/realtek|panasonic_m48eg-pn28480k
+Switch M8eG|realtek/realtek|panasonic_m8eg-pn28080k
+ESX28|realtek/realtek|plasmacloud_esx28
+MCX3|realtek/realtek|plasmacloud_mcx3
+PSX10|realtek/realtek|plasmacloud_psx10
+PSX28|realtek/realtek|plasmacloud_psx28
+PSX8|realtek/realtek|plasmacloud_psx8
+SG2008P|realtek/realtek|tplink_sg2008p-v1
+SG2210P|realtek/realtek|tplink_sg2210p-v3
+SG2452P|realtek/realtek|tplink_sg2452p-v4
+T1600G 28TS|realtek/realtek|tplink_t1600g-28ts-v3
+TL ST1008F|realtek/realtek|tplink_tl-st1008f-v2
+VM S100 0800MS|realtek/realtek|vimin_vm-s100-0800ms
+SKS8300 8X|realtek/realtek|xikestor_sks8300-8x
+SKS8310 8X|realtek/realtek|xikestor_sks8310-8x
+GS1900 10HP|realtek/realtek|zyxel_gs1900-10hp-a1
+GS1900 16|realtek/realtek|zyxel_gs1900-16-a1
+GS1900 24|realtek/realtek|zyxel_gs1900-24-a1
+GS1900 24E|realtek/realtek|zyxel_gs1900-24e-a1
+GS1900 24EP|realtek/realtek|zyxel_gs1900-24ep-a1
+GS1900 24HP|realtek/realtek|zyxel_gs1900-24hp-a1
+GS1900 24HP (realtek)|realtek/realtek|zyxel_gs1900-24hp-b1
+GS1900 48|realtek/realtek|zyxel_gs1900-48-a1
+GS1900 8|realtek/realtek|zyxel_gs1900-8-a1
+GS1900 8 (realtek)|realtek/realtek|zyxel_gs1900-8-b1
+GS1900 8HP|realtek/realtek|zyxel_gs1900-8hp-a1
+GS1900 8HP (realtek)|realtek/realtek|zyxel_gs1900-8hp-b1
+XGS1010 12|realtek/realtek|zyxel_xgs1010-12-a1
+合勤 xgs1210 12 a1|realtek/realtek|zyxel_xgs1210-12-a1
+合勤 xgs1210 12 b1|realtek/realtek|zyxel_xgs1210-12-b1
+合勤 xgs1250 12 a1|realtek/realtek|zyxel_xgs1250-12-a1
+合勤 xgs1250 12 b1|realtek/realtek|zyxel_xgs1250-12-b1
+9Tripod X3568 V4|rockchip/rockchip|9tripod_x3568-v4
+AriaBoard Photonicat|rockchip/rockchip|ariaboard_photonicat
+AriaBoard Photonicat2|rockchip/rockchip|ariaboard_photonicat2
+ArmSoM Sige3|rockchip/rockchip|armsom_sige3
+ArmSoM Sige7|rockchip/rockchip|armsom_sige7
+Cyber Cyber3588 Aib|rockchip/rockchip|cyber_cyber3588-aib
+EZPro Mrkaio M68s|rockchip/rockchip|ezpro_mrkaio-m68s
+Firefly Roc Rk3328 Cc|rockchip/rockchip|firefly_roc-rk3328-cc
+Firefly Roc Rk3568 Pc|rockchip/rockchip|firefly_roc-rk3568-pc
+友善 Nanopc T4|rockchip/rockchip|friendlyarm_nanopc-t4
+友善 Nanopc T6|rockchip/rockchip|friendlyarm_nanopc-t6
+友善 Nanopi R2c|rockchip/rockchip|friendlyarm_nanopi-r2c
+友善 Nanopi R2c Plus|rockchip/rockchip|friendlyarm_nanopi-r2c-plus
+友善 Nanopi R2s|rockchip/rockchip|friendlyarm_nanopi-r2s
+友善 Nanopi R2s Plus|rockchip/rockchip|friendlyarm_nanopi-r2s-plus
+友善 Nanopi R3s|rockchip/rockchip|friendlyarm_nanopi-r3s
+友善 Nanopi R4s|rockchip/rockchip|friendlyarm_nanopi-r4s
+友善 Nanopi R4s Enterprise|rockchip/rockchip|friendlyarm_nanopi-r4s-enterprise
+友善 Nanopi R4se|rockchip/rockchip|friendlyarm_nanopi-r4se
+友善 Nanopi R5c|rockchip/rockchip|friendlyarm_nanopi-r5c
+友善 Nanopi R5s|rockchip/rockchip|friendlyarm_nanopi-r5s
+友善 Nanopi R6c|rockchip/rockchip|friendlyarm_nanopi-r6c
+友善 Nanopi R6s|rockchip/rockchip|friendlyarm_nanopi-r6s
+友善 Nanopi R76s|rockchip/rockchip|friendlyarm_nanopi-r76s
+Huake Guangmiao G4c|rockchip/rockchip|huake_guangmiao-g4c
+LinkEase Easepi R1|rockchip/rockchip|linkease_easepi-r1
+Lunzn Fastrhino R66s|rockchip/rockchip|lunzn_fastrhino-r66s
+Lunzn Fastrhino R68s|rockchip/rockchip|lunzn_fastrhino-r68s
+LYT T68m|rockchip/rockchip|lyt_t68m
+MMBOX Anas3035|rockchip/rockchip|mmbox_anas3035
+NLnet Xiguapi V3|rockchip/rockchip|nlnet_xiguapi-v3
+Pine64 Rock64|rockchip/rockchip|pine64_rock64
+Pine64 Rockpro64|rockchip/rockchip|pine64_rockpro64
+瑞莎 Cm3 Io|rockchip/rockchip|radxa_cm3-io
+瑞莎 E20c|rockchip/rockchip|radxa_e20c
+瑞莎 E25|rockchip/rockchip|radxa_e25
+瑞莎 E52c|rockchip/rockchip|radxa_e52c
+瑞莎 Rock 2a|rockchip/rockchip|radxa_rock-2a
+瑞莎 Rock 2f|rockchip/rockchip|radxa_rock-2f
+瑞莎 Rock 3a|rockchip/rockchip|radxa_rock-3a
+瑞莎 Rock 3b|rockchip/rockchip|radxa_rock-3b
+瑞莎 Rock 3c|rockchip/rockchip|radxa_rock-3c
+瑞莎 Rock 4c Plus|rockchip/rockchip|radxa_rock-4c-plus
+瑞莎 Rock 4d|rockchip/rockchip|radxa_rock-4d
+瑞莎 Rock 4se|rockchip/rockchip|radxa_rock-4se
+瑞莎 Rock 5 Itx|rockchip/rockchip|radxa_rock-5-itx
+瑞莎 Rock 5a|rockchip/rockchip|radxa_rock-5a
+瑞莎 Rock 5b|rockchip/rockchip|radxa_rock-5b
+瑞莎 Rock 5b Plus|rockchip/rockchip|radxa_rock-5b-plus
+瑞莎 Rock 5c|rockchip/rockchip|radxa_rock-5c
+瑞莎 Rock 5t|rockchip/rockchip|radxa_rock-5t
+瑞莎 Rock Pi 4a|rockchip/rockchip|radxa_rock-pi-4a
+瑞莎 Rock Pi E|rockchip/rockchip|radxa_rock-pi-e
+瑞莎 Rock Pi S|rockchip/rockchip|radxa_rock-pi-s
+瑞莎 Zero 3e|rockchip/rockchip|radxa_zero-3e
+瑞莎 Zero 3w|rockchip/rockchip|radxa_zero-3w
+香蕉派 Bpi R2 Pro|rockchip/rockchip|sinovoip_bpi-r2-pro
+Widora Mangopi M28c|rockchip/rockchip|widora_mangopi-m28c
+Widora Mangopi M28k|rockchip/rockchip|widora_mangopi-m28k
+香橙派 Orangepi 5|rockchip/rockchip|xunlong_orangepi-5
+香橙派 Orangepi 5 Plus|rockchip/rockchip|xunlong_orangepi-5-plus
+香橙派 Orangepi R1 Plus|rockchip/rockchip|xunlong_orangepi-r1-plus
+香橙派 Orangepi R1 Plus Lts|rockchip/rockchip|xunlong_orangepi-r1-plus-lts
+Unleashed (FU540)|sifiveu/sifiveu|sifive_unleashed
+Unmatched (FU740)|sifiveu/sifiveu|sifive_unmatched
+香蕉派 RV2 (Booting from NAND)|siflower/siflower|bananapi_bpi-rv2-nand
+香蕉派 RV2 (Booting from NOR)|siflower/siflower|bananapi_bpi-rv2-nor
+SF19A2890 EVB|siflower/siflower|siflower_sf19a2890-evb
+Starlight|starfive/starfive|beaglev-starlight
+VisionFive v1|starfive/starfive|visionfive-v1
+VisionFive2 v1.2a|starfive/starfive|visionfive2-v1.2a
+VisionFive2 v1.3b|starfive/starfive|visionfive2-v1.3b
+STM32MP135F DK|stm32/stm32|stm32mp135f-dk
+Cubieboard|sunxi/sunxi|cubietech_a10-cubieboard
+Cubieboard2|sunxi/sunxi|cubietech_cubieboard2
+Cubietruck|sunxi/sunxi|cubietech_cubietruck
+友善 M1 Plus|sunxi/sunxi|friendlyarm_nanopi-m1-plus
+友善 NEO|sunxi/sunxi|friendlyarm_nanopi-neo
+友善 NEO Air|sunxi/sunxi|friendlyarm_nanopi-neo-air
+友善 NEO Plus2|sunxi/sunxi|friendlyarm_nanopi-neo-plus2
+友善 NEO2|sunxi/sunxi|friendlyarm_nanopi-neo2
+友善 R1|sunxi/sunxi|friendlyarm_nanopi-r1
+友善 R1S H5|sunxi/sunxi|friendlyarm_nanopi-r1s-h5
+ZeroPi|sunxi/sunxi|friendlyarm_zeropi
+MarsBoard A10|sunxi/sunxi|haoyu_a10-marsboard
+Lamobo R1|sunxi/sunxi|lamobo_lamobo-r1
+香蕉派 Pi|sunxi/sunxi|lemaker_bananapi
+香蕉派 Pro|sunxi/sunxi|lemaker_bananapro
+ALL H3 CC|sunxi/sunxi|libretech_all-h3-cc-h5
+LicheePi Nano|sunxi/sunxi|licheepi_licheepi-nano
+Zero with Dock (V3s)|sunxi/sunxi|licheepi_licheepi-zero-dock
+pcDuino|sunxi/sunxi|linksprite_a10-pcduino
+pcDuino3|sunxi/sunxi|linksprite_pcduino3
+pcDuino3 Nano|sunxi/sunxi|linksprite_pcduino3-nano
+M9|sunxi/sunxi|mele_m9
+Hummingbird|sunxi/sunxi|merrii_hummingbird
+A10 OLinuXino LIME|sunxi/sunxi|olimex_a10-olinuxino-lime
+A13 OLinuXino|sunxi/sunxi|olimex_a13-olinuxino
+A20 OLinuXino LIME|sunxi/sunxi|olimex_a20-olinuxino-lime
+A20 OLinuXino LIME2|sunxi/sunxi|olimex_a20-olinuxino-lime2
+A20 OLinuXino LIME2 (sunxi)|sunxi/sunxi|olimex_a20-olinuxino-lime2-emmc
+A20 OLinuXino MICRO|sunxi/sunxi|olimex_a20-olinuxino-micro
+A64 Olinuxino|sunxi/sunxi|olimex_a64-olinuxino
+A64 Olinuxino (sunxi)|sunxi/sunxi|olimex_a64-olinuxino-emmc
+Pine64+|sunxi/sunxi|pine64_pine64-plus
+SoPine|sunxi/sunxi|pine64_sopine-baseboard
+Beelink X2|sunxi/sunxi|roofull_beelink-x2
+香蕉派 Pi M2 Berry|sunxi/sunxi|sinovoip_bpi-m2-berry
+香蕉派 Pi M2+|sunxi/sunxi|sinovoip_bpi-m2-plus
+香蕉派 Pi M2 Ultra|sunxi/sunxi|sinovoip_bpi-m2-ultra
+香蕉派 Pi M3|sunxi/sunxi|sinovoip_bpi-m3
+香蕉派 Pi P2 Zero|sunxi/sunxi|sinovoip_bpi-p2-zero
+PopStick|sunxi/sunxi|sourceparts_popstick-v1.1
+Orange Pi 2|sunxi/sunxi|xunlong_orangepi-2
+Orange Pi One|sunxi/sunxi|xunlong_orangepi-one
+Orange Pi One Plus|sunxi/sunxi|xunlong_orangepi-one-plus
+Orange Pi PC|sunxi/sunxi|xunlong_orangepi-pc
+Orange Pi PC Plus|sunxi/sunxi|xunlong_orangepi-pc-plus
+Orange Pi PC 2|sunxi/sunxi|xunlong_orangepi-pc2
+Orange Pi Plus|sunxi/sunxi|xunlong_orangepi-plus
+Orange Pi R1|sunxi/sunxi|xunlong_orangepi-r1
+Orange Pi Zero|sunxi/sunxi|xunlong_orangepi-zero
+Orange Pi Zero Plus|sunxi/sunxi|xunlong_orangepi-zero-plus
+Orange Pi Zero 2|sunxi/sunxi|xunlong_orangepi-zero2
+Orange Pi Zero 2W|sunxi/sunxi|xunlong_orangepi-zero2w
+Orange Pi Zero 3|sunxi/sunxi|xunlong_orangepi-zero3
+TrimSlice|tegra/tegra|compulab_trimslice
+X86 软路由|x86/x86|generic
+Geos|x86/x86|geos
+ZedBoard|zynq/zynq|avnet_zynq-zed
+Zybo|zynq/zynq|digilent_zynq-zybo
+Zybo Z7|zynq/zynq|digilent_zynq-zybo-z7
+ZC702|zynq/zynq|xlnx_zynq-zc702
