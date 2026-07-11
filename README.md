@@ -54,17 +54,19 @@ OpenWrt 的内核版本是**由分支决定**的（例如 `openwrt-24.10` 对应
 - 想在同一分支上用**更高的测试内核** → `kernel` 选「测试版内核」。
 
 ### 关于"设备型号"下拉
-`device` 下拉内置**精选机型（约 610 项）**，覆盖 x86、树莓派、Rockchip、高通 NSS 全系，以及 MT798x / MT7621 / MT76x8 / ATH79 / IPQ40xx / MT7622 中的主流型号，直接选即可。
+`device` 下拉**内置全部 877 个机型**（仓库支持的所有平台），直接选即可，无需手敲。下拉值是
+`target/subtarget|profile` 形式（例如 `mediatek/filogic|cmcc_rax3000m`），工作流会自动拆出平台、子平台与设备。
 
-> ⚠️ **为什么不是"全部机型"？** GitHub 对 `workflow_dispatch` 单个输入的字符总量有 **65535 字符上限**，而全量机型（877 个）的下拉定义超过 9 万字符，会被 GitHub 直接判为配置无效（表现为没有"Run workflow"按钮、推送时运行 0 任务失败）。因此下拉只放精选热门机型。
+下拉最底部有 **「custom」**：选它后在 `custom_device` 里填 `target/subtarget|profile`
+（例如 `mediatek/filogic|xiaomi_redmi-router-ax6000`），即可编译列表内/外的任意设备。
 
-下拉里没找到你的机型，或想编译列表之外的设备 → 选最底部的 **「⚙ 自定义」**，并在 `custom_device`
-里填 `target/subtarget|profile`，例如 `mediatek/filogic|xiaomi_redmi-router-ax6000`。
-**全部 877 个机型的精确字符串已放在仓库根目录 `devices.txt`**，按平台分组，复制对应那一行粘贴即可。工作流会自动拆出平台、子平台和设备 profile。
+> ⚠️ **实现要点**：`workflow_dispatch` 的 `options` **只支持纯字符串列表**，不支持 `name`/`value`
+> 对象格式（用对象会导致整个输入被 GitHub 判为无效、所有值被拒、没有 Run 按钮）。因此下拉直接显示
+> `target/subtarget|profile` 原始串。完整机型清单见仓库根目录 `devices.txt`（按平台分组，复制任一行即可）。
 
 > 机型列表取自 ImmortalWrt / OpenWrt 源码里真实的 `define Device/<profile>`：MT798x / Rockchip / 高通 NSS 系列取自
 > VIKINGYFY `main` 与 23.05 发布版，其余平台（MT7621 / MT76x8 / MT7622 / ATH79 / IPQ40xx / 树莓派）取自 23.05.5 发布版的 `profiles.json`。
-> 不同分支的个别 profile 名可能有差异（如 `-stock` / `-ubootmod` 后缀），列表里没找到或编不出 → 选「自定义」填对应分支的确切名即可。
+> 不同分支的个别 profile 名可能有差异（如 `-stock` / `-ubootmod` 后缀），列表里没找到或编不出 → 选「custom」填对应分支的确切名即可。
 
 常见 profile 示例（下拉里直接搜，或在 `devices.txt` 里找）：
 - x86_64：`generic`
