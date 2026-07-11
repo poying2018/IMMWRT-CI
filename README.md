@@ -4,7 +4,8 @@
 **只编译你选中的那一个设备**，所有源码都在 workflow 运行时才拉取。
 
 > 参考：[芋头小皮蛋的博客](https://www.cnblogs.com/virgil-zu/articles/19241688)、
-> [rocks311/IMMWRT](https://github.com/rocks311/IMMWRT) 的定制思路。
+> [rocks311/IMMWRT](https://github.com/rocks311/IMMWRT) 的定制思路，
+> 以及 [hzyitc/openwrt-redmi-ax3000](https://github.com/hzyitc/openwrt-redmi-ax3000) 的分段编译（tools/install → toolchain/install → make）方式。
 
 ---
 
@@ -13,7 +14,6 @@
 ```
 .github/workflows/
   Build.yml        # 主工作流：手动选参数 → 只编译单设备
-  Auto-Clean.yml   # 手动清理旧运行记录 / Release
 device-map.txt   # 中文设备名 ↔ target/subtarget|profile 映射（工作流运行时反查用）
 devices.txt      # 全部 877 个机型原始 profile 清单（自定义时复制用）
 README.md
@@ -40,8 +40,8 @@ README.md
 | --- | --- | --- |
 | **source 源码仓库** | 下拉 | `immortalwrt/immortalwrt`(官方) / `VIKINGYFY/immortalwrt`(高通满血NSS) / `openwrt/openwrt`(原版) / `custom` |
 | **custom_repo** | 输入 | 选 `custom` 时填 `owner/repo` |
-| **branch 系统版本/分支** | 输入 | 决定"系统版本"。如 `openwrt-24.10`、`openwrt-23.05`、`master`、或某个 tag `v24.10.4` |
-| **kernel 内核版本** | 下拉 | `默认（跟随分支）` / `4.xx` / `5.xx` / `6.xx`：按所选分支**实际支持**的内核，自动匹配该大版本下**最高的可用内核**；不支持时回退默认并提示 |
+| **branch 系统版本/分支** | 下拉 | 真实分支：`openwrt-24.10` / `openwrt-23.05` / `openwrt-22.03` / `master`；clone 前用 `git ls-remote` 校验该分支/tag 是否真实存在于所选源码仓库，不存在则列出可用分支并中断 |
+| **kernel 内核版本** | 下拉 | `自动（源码默认）` / `5.15` / `6.1` / `6.6` / `6.12`：**运行时读取所选目标源码实际支持的内核列表**，选具体版本则校验该目标是否支持，不支持回退默认并 `::warning`；选「自动」用分支自带内核 |
 | **device 设备型号** | 下拉 | **全部 877 个机型，以「中文名」显示**（如 `小米 AX6000`、`网件 RAX120`、`X86 软路由`）；列表外的机型选「⚙ 自定义」后在 `custom_device` 填写 |
 | **custom_device** | 输入 | 选「自定义」时填，格式 `target/subtarget\|profile`，如 `mediatek/filogic\|xiaomi_redmi-router-ax6000` |
 | **theme 主题** | 下拉 | `argon` / `bootstrap` / `material` / `design` |
@@ -49,13 +49,21 @@ README.md
 | **lan_ip 管理IP** | 输入 | 默认 `192.168.1.1` |
 | **ssid WiFi名** | 输入 | 默认 `ImmortalWrt` |
 
-### 关于"内核版本 / 系统版本 / 分支"
-OpenWrt 的内核版本是**由分支决定**的（例如 `openwrt-24.10` 对应内核 6.6，`master` 对应 6.12），
-不同分支各自只支持有限的几个内核大版本。所以：
-- 想换**系统大版本** → 改 `branch`（如 `openwrt-23.05` ⇄ `openwrt-24.10`）；
-- 想在同一分支上**指定内核大版本** → `kernel` 选 `4.xx` / `5.xx` / `6.xx` 之一，
-  工作流会读取该分支目标平台**实际支持**的内核版本，自动挑出该大版本下**最高的可用内核**
-  （例如选 `6.xx` 且分支支持 6.6/6.12，则取 6.12）；若所选大版本该平台不支持，会回退默认并在日志里提示。
+### 关于"内核版本 / 系统版本 / 分支 / 插件"（全部按源码实际支持情况处理）
+工作流的**内核、分支、插件、设备都以所选源码实际支持情况为准**，不是写死的例子：
+
+- **系统版本（branch）**：下拉是真实分支名；clone 前用 `git ls-remote` 校验该分支/tag 是否真的存在于所选 `source` 仓库，
+  不存在就列出可用分支并中断，避免编到一个不存在的分支。
+- **内核（kernel）**：下拉给出的是真实内核版本（5.15 / 6.1 / 6.6 / 6.12，现代 ImmortalWrt/OpenWrt 已无 4.x）。
+  编译时工作流读取该目标 `target/linux/<plat>/Makefile` 的 `KERNEL_PATCHVER` / `KERNEL_TESTING_PATCHVER`
+  以及 `linux-*` 目录，**得出该目标源码实际支持的内核列表**：
+  - 选「自动（源码默认）」→ 直接用分支自带内核；
+  - 选具体版本（如 `6.6`）→ 若在该目标支持列表里，就改写 Makefile 切过去（测试版内核额外加 `CONFIG_TESTING_KERNEL=y`）；
+    若不支持，则回退默认并在日志 `::warning` 提示。
+- **设备（device）**：中文名下拉里的每一项都对应源码里真实的 `define Device/<profile>`；
+  编译前会校验该设备是否真的存在于所选源码目标，不存在则 `::error` 中断。
+- **插件（plugins）**：编译时会校验每个插件是否真实存在于源码/feeds（`tmp/.config-package.in`），
+  不存在的会 `::warning` 并跳过，不会导致失败。
 
 ### 关于"设备型号"下拉
 `device` 下拉**内置全部 877 个机型**，但显示为**中文名**（品牌 + 型号，如 `小米 AX6000`、`网件 RAX120`、
@@ -92,7 +100,7 @@ luci-app-openclash
 - 以下常用第三方插件写上名字会**自动从对应源拉取**：
   `luci-app-openclash`、`luci-app-passwall`、`luci-app-passwall2`、
   `luci-app-homeproxy`、`luci-app-nikki`；
-- 写错 / 不存在的包会被 `make defconfig` 自动忽略，不会导致失败。
+- 写错 / 不存在的包：编译时工作流会校验每个插件是否真实存在于源码/feeds（`tmp/.config-package.in`），不存在的会 `::warning` 并跳过，不会导致失败。
 
 ---
 

@@ -30,20 +30,26 @@ on:
         type: string
         default: ''
       branch:
-        description: '系统版本 / 分支 / tag（如 openwrt-24.10、openwrt-23.05、master、v24.10.4）'
-        required: true
-        type: string
-        default: openwrt-24.10
-      kernel:
-        description: '内核大版本（4.xx / 5.xx / 6.xx；工作流按分支实际支持的版本，自动匹配该大版本下最高的可用内核）'
+        description: '系统版本 / 分支 / tag（运行时校验是否真实存在于所选源码仓库；常用 openwrt-24.10 / openwrt-23.05 / openwrt-22.03 / master）'
         required: true
         type: choice
-        default: 默认（跟随分支）
+        default: openwrt-24.10
         options:
-          - 默认（跟随分支）
-          - 4.xx
-          - 5.xx
-          - 6.xx
+          - openwrt-24.10
+          - openwrt-23.05
+          - openwrt-22.03
+          - master
+      kernel:
+        description: '内核版本（运行时按所选目标源码实际支持的内核选取：选具体版本则校验该目标是否支持，不支持回退默认并 warning；选「自动（源码默认）」用分支自带内核）'
+        required: true
+        type: choice
+        default: 自动（源码默认）
+        options:
+          - 自动（源码默认）
+          - "5.15"
+          - "6.1"
+          - "6.6"
+          - "6.12"
       device:
         description: '设备型号（下拉为「中文名」形式，如「小米 AX3600」；选「⚙ 自定义」后在 custom_device 填写 target/subtarget|profile）'
         required: true
@@ -1026,6 +1032,14 @@ jobs:
 
       - name: 拉取源码（运行时克隆）
         run: |
+          # 校验分支/tag 是否真实存在于源码仓库（根据源代码支持情况）
+          if ! git ls-remote --heads --tags "$REPO_URL" | grep -qE "refs/(heads|tags)/${{ inputs.branch }}$"; then
+            echo "::error::分支/标签「${{ inputs.branch }}」在 $REPO_URL 中不存在"
+            echo "::group::该仓库可用的分支（前 30）"
+            git ls-remote --heads "$REPO_URL" | sed 's#.*refs/heads/##' | head -n 30
+            echo "::endgroup::"
+            exit 1
+          fi
           git clone --depth=1 --single-branch --branch "${{ inputs.branch }}" "$REPO_URL" openwrt
           cd openwrt
           echo "HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
@@ -1077,6 +1091,12 @@ jobs:
         run: |
           CFG=.config
           : > $CFG
+          # 校验设备是否真实存在于源码（根据源代码支持情况）
+          if ! grep -rq "define Device/${DEV}" "target/linux/${PLAT}/${SUB}/" 2>/dev/null && \
+             ! grep -rq "define Device/${DEV}" "target/linux/${PLAT}/" 2>/dev/null; then
+            echo "::error::设备 ${DEV} 在源码目标 ${PLAT}/${SUB} 中不存在，请换设备或检查 custom_device"
+            exit 1
+          fi
           # 目标平台 + 单一设备（MULTI_PROFILE=y 且只开一个 DEVICE => 只出这一个镜像）
           echo "CONFIG_TARGET_${PLAT}=y"               >> $CFG
           echo "CONFIG_TARGET_${PLAT}_${SUB}=y"        >> $CFG
@@ -1084,35 +1104,34 @@ jobs:
           echo "CONFIG_TARGET_PER_DEVICE_ROOTFS=y"     >> $CFG
           echo "CONFIG_TARGET_DEVICE_${PLAT}_${SUB}_DEVICE_${DEV}=y" >> $CFG
 
-          # 内核大版本（4.xx / 5.xx / 6.xx）：按分支实际支持版本，自动匹配该大版本下最高的可用内核
-          KFAM="${{ inputs.kernel }}"
-          if [ "$KFAM" != "默认（跟随分支）" ]; then
+          # 内核版本：根据源代码实际支持情况选取（运行时从源码读取该目标可用的内核）
+          KSEL="${{ inputs.kernel }}"
+          if [ "$KSEL" != "自动（源码默认）" ]; then
             MK="target/linux/${PLAT}/Makefile"
             [ -f "$MK" ] || MK="target/linux/${PLAT}/${SUB}/Makefile"
             if [ -f "$MK" ]; then
-              DEF_KV="$(grep -m1 '^KERNEL_PATCHVER' "$MK" | cut -d:= -f2 | tr -d ' ')"
-              TST_KV="$(grep -m1 '^KERNEL_TESTING_PATCHVER' "$MK" | cut -d:= -f2 | tr -d ' ')"
+              DEF_KV="$(grep -m1 '^KERNEL_PATCHVER' "$MK" | cut -d= -f2 | tr -d ' ')"
+              TST_KV="$(grep -m1 '^KERNEL_TESTING_PATCHVER' "$MK" | cut -d= -f2 | tr -d ' ')"
               VERS="$DEF_KV $TST_KV"
               for d in target/linux/${PLAT}/linux-*; do [ -d "$d" ] && VERS="$VERS ${d##*linux-}"; done
-              MAJOR="${KFAM:0:1}"
-              PICK=""
-              for v in $(echo "$VERS" | tr ' ' '\n' | sort -V -r | grep -v '^$'); do
-                if [ "${v:0:1}" = "$MAJOR" ]; then PICK="$v"; break; fi
-              done
-              if [ -n "$PICK" ]; then
-                if [ "$PICK" = "$TST_KV" ] && [ -n "$TST_KV" ]; then
-                  sed -i "s/^KERNEL_TESTING_PATCHVER:=.*/KERNEL_TESTING_PATCHVER:=$PICK/" "$MK"
+              AVAIL="$(echo "$VERS" | tr ' ' '\n' | grep -v '^$' | sort -V -u)"
+              echo "该目标 $PLAT/$SUB 源码支持的内核版本：$AVAIL（默认 $DEF_KV，测试版 $TST_KV）"
+              if echo "$AVAIL" | grep -qx "$KSEL"; then
+                if [ "$KSEL" = "$TST_KV" ] && [ -n "$TST_KV" ]; then
+                  sed -i "s/^KERNEL_TESTING_PATCHVER:=.*/KERNEL_TESTING_PATCHVER:=$KSEL/" "$MK"
                   echo "CONFIG_TESTING_KERNEL=y"               >> $CFG
                 else
-                  sed -i "s/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=$PICK/" "$MK"
+                  sed -i "s/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=$KSEL/" "$MK"
                 fi
-                echo "内核已切换为 $PICK（分支默认 $DEF_KV，测试 $TST_KV）"
+                echo "内核已切换为 $KSEL"
               else
-                echo "::warning::该目标 $PLAT 不支持 $KFAM 内核，保持默认 $DEF_KV"
+                echo "::warning::该目标 $PLAT/$SUB 不支持内核 $KSEL（可用：$AVAIL），保持源码默认 $DEF_KV"
               fi
             else
-              echo "::warning::未找到 $MK，保持默认内核"
+              echo "::warning::未找到 $MK，保持源码默认内核"
             fi
+          else
+            echo "内核：使用源码默认（由分支决定）"
           fi
 
           # LuCI + 中文 + 主题
@@ -1138,6 +1157,19 @@ jobs:
           PLUGINS
 
           make defconfig
+          # 校验预装插件是否真实存在于源码/feeds（根据源代码支持情况）
+          if [ -f tmp/.config-package.in ]; then
+            while IFS= read -r line; do
+              p="$(echo "$line" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
+              [ -z "$p" ] && continue
+              if ! grep -q "CONFIG_PACKAGE_${p}" tmp/.config-package.in 2>/dev/null; then
+                echo "::warning::插件 ${p} 在源码/feeds 中不存在，已跳过"
+                sed -i "/CONFIG_PACKAGE_${p}=y/d" .config
+              fi
+            done <<'PLUGINS'
+            ${{ inputs.plugins }}
+            PLUGINS
+          fi
           echo "===== 最终 target 相关配置 ====="
           grep -E 'CONFIG_TARGET.*=y' .config | head -n 40
 
@@ -1161,6 +1193,8 @@ jobs:
         working-directory: openwrt
         run: |
           echo "开始编译：$PLAT/$SUB 设备 $DEV"
+          make -j$(nproc) tools/install || make -j1 V=s tools/install
+          make -j$(nproc) toolchain/install || make -j1 V=s toolchain/install
           make -j$(nproc) || make -j1 V=s
 
       - name: 整理产物
