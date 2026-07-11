@@ -14,6 +14,8 @@
 .github/workflows/
   Build.yml        # 主工作流：手动选参数 → 只编译单设备
   Auto-Clean.yml   # 手动清理旧运行记录 / Release
+device-map.txt   # 中文设备名 ↔ target/subtarget|profile 映射（工作流运行时反查用）
+devices.txt      # 全部 877 个机型原始 profile 清单（自定义时复制用）
 README.md
 ```
 
@@ -39,8 +41,8 @@ README.md
 | **source 源码仓库** | 下拉 | `immortalwrt/immortalwrt`(官方) / `VIKINGYFY/immortalwrt`(高通满血NSS) / `openwrt/openwrt`(原版) / `custom` |
 | **custom_repo** | 输入 | 选 `custom` 时填 `owner/repo` |
 | **branch 系统版本/分支** | 输入 | 决定"系统版本"。如 `openwrt-24.10`、`openwrt-23.05`、`master`、或某个 tag `v24.10.4` |
-| **kernel 内核版本** | 下拉 | `默认内核`（跟随分支）/ `测试版内核`（启用 `CONFIG_TESTING_KERNEL`，部分平台有更高版本内核） |
-| **device 设备型号** | 下拉 | **精选热门机型（约 300 项）**；其余机型选「⚙ 自定义」后在 `custom_device` 填写 |
+| **kernel 内核版本** | 下拉 | `默认（跟随分支）` / `4.xx` / `5.xx` / `6.xx`：按所选分支**实际支持**的内核，自动匹配该大版本下**最高的可用内核**；不支持时回退默认并提示 |
+| **device 设备型号** | 下拉 | **全部 877 个机型，以「中文名」显示**（如 `小米 AX6000`、`网件 RAX120`、`X86 软路由`）；列表外的机型选「⚙ 自定义」后在 `custom_device` 填写 |
 | **custom_device** | 输入 | 选「自定义」时填，格式 `target/subtarget\|profile`，如 `mediatek/filogic\|xiaomi_redmi-router-ax6000` |
 | **theme 主题** | 下拉 | `argon` / `bootstrap` / `material` / `design` |
 | **plugins 预装插件** | 多行输入 | 每行一个包名，见下方 |
@@ -48,25 +50,29 @@ README.md
 | **ssid WiFi名** | 输入 | 默认 `ImmortalWrt` |
 
 ### 关于"内核版本 / 系统版本 / 分支"
-OpenWrt 的内核版本是**由分支决定**的（例如 `openwrt-24.10` 对应内核 6.6，`master` 对应 6.12）。
-所以：
+OpenWrt 的内核版本是**由分支决定**的（例如 `openwrt-24.10` 对应内核 6.6，`master` 对应 6.12），
+不同分支各自只支持有限的几个内核大版本。所以：
 - 想换**系统大版本** → 改 `branch`（如 `openwrt-23.05` ⇄ `openwrt-24.10`）；
-- 想在同一分支上用**更高的测试内核** → `kernel` 选「测试版内核」。
+- 想在同一分支上**指定内核大版本** → `kernel` 选 `4.xx` / `5.xx` / `6.xx` 之一，
+  工作流会读取该分支目标平台**实际支持**的内核版本，自动挑出该大版本下**最高的可用内核**
+  （例如选 `6.xx` 且分支支持 6.6/6.12，则取 6.12）；若所选大版本该平台不支持，会回退默认并在日志里提示。
 
 ### 关于"设备型号"下拉
-`device` 下拉**内置全部 877 个机型**（仓库支持的所有平台），直接选即可，无需手敲。下拉值是
-`target/subtarget|profile` 形式（例如 `mediatek/filogic|cmcc_rax3000m`），工作流会自动拆出平台、子平台与设备。
+`device` 下拉**内置全部 877 个机型**，但显示为**中文名**（品牌 + 型号，如 `小米 AX6000`、`网件 RAX120`、
+`X86 软路由`、`瑞莎 Rock 5B`、`香橙派 Orangepi 5`），比原来的 `target/subtarget|profile` 原始串更直观、更短。
 
-下拉最底部有 **「custom」**：选它后在 `custom_device` 里填 `target/subtarget|profile`
+下拉最底部有 **「⚙ 自定义」**：选它后在 `custom_device` 里填 `target/subtarget|profile`
 （例如 `mediatek/filogic|xiaomi_redmi-router-ax6000`），即可编译列表内/外的任意设备。
 
 > ⚠️ **实现要点**：`workflow_dispatch` 的 `options` **只支持纯字符串列表**，不支持 `name`/`value`
-> 对象格式（用对象会导致整个输入被 GitHub 判为无效、所有值被拒、没有 Run 按钮）。因此下拉直接显示
-> `target/subtarget|profile` 原始串。完整机型清单见仓库根目录 `devices.txt`（按平台分组，复制任一行即可）。
+> 对象格式（用对象会导致整个输入被 GitHub 判为无效、所有值被拒、没有 Run 按钮）。
+> 中文名与真实 `target/subtarget|profile` 的对应关系，保存在仓库根目录 **`device-map.txt`**
+> （每行 `中文名|target/subtarget|profile`），工作流运行时用 `awk` 精确反查，你无需记忆任何代码。
+> 完整清单也可直接看 `device-map.txt`。
 
 > 机型列表取自 ImmortalWrt / OpenWrt 源码里真实的 `define Device/<profile>`：MT798x / Rockchip / 高通 NSS 系列取自
 > VIKINGYFY `main` 与 23.05 发布版，其余平台（MT7621 / MT76x8 / MT7622 / ATH79 / IPQ40xx / 树莓派）取自 23.05.5 发布版的 `profiles.json`。
-> 不同分支的个别 profile 名可能有差异（如 `-stock` / `-ubootmod` 后缀），列表里没找到或编不出 → 选「custom」填对应分支的确切名即可。
+> 不同分支的个别 profile 名可能有差异（如 `-stock` / `-ubootmod` 后缀），列表里没找到或编不出 → 选「⚙ 自定义」填对应分支的确切名即可。
 
 常见 profile 示例（下拉里直接搜，或在 `devices.txt` 里找）：
 - x86_64：`generic`
