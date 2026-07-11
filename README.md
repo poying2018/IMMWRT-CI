@@ -40,7 +40,7 @@ README.md
 | **custom_repo** | 输入 | 选 `custom` 时填 `owner/repo` |
 | **branch 系统版本/分支** | 输入 | 决定"系统版本"。如 `openwrt-24.10`、`openwrt-23.05`、`master`、或某个 tag `v24.10.4` |
 | **kernel 内核版本** | 下拉 | `默认内核`（跟随分支）/ `测试版内核`（启用 `CONFIG_TESTING_KERNEL`，部分平台有更高版本内核） |
-| **device 设备型号** | 下拉 | **内置仓库支持的全部机型**（见下）。选「自定义」后在 `custom_device` 填写 |
+| **device 设备型号** | 下拉 | **精选热门机型（约 300 项）**；其余机型选「⚙ 自定义」后在 `custom_device` 填写 |
 | **custom_device** | 输入 | 选「自定义」时填，格式 `target/subtarget\|profile`，如 `mediatek/filogic\|xiaomi_redmi-router-ax6000` |
 | **theme 主题** | 下拉 | `argon` / `bootstrap` / `material` / `design` |
 | **plugins 预装插件** | 多行输入 | 每行一个包名，见下方 |
@@ -54,32 +54,19 @@ OpenWrt 的内核版本是**由分支决定**的（例如 `openwrt-24.10` 对应
 - 想在同一分支上用**更高的测试内核** → `kernel` 选「测试版内核」。
 
 ### 关于"设备型号"下拉
-`device` 下拉已经**内置仓库支持的全部机型**，直接选就行，无需手敲：
+`device` 下拉内置**精选热门机型（约 300 项）**，覆盖 x86、树莓派、Rockchip、高通 NSS 全系，以及 MT798x / MT7621 / MT76x8 / ATH79 / IPQ40xx 中的主流型号，直接选即可。
 
-| 平台 | 下拉标注 | 机型数 |
-| --- | --- | --- |
-| MT798x（Filogic） | `MT798x Filogic · <profile>` | 139 |
-| Rockchip ARMv8 | `Rockchip ARMv8 · <profile>` | 64 |
-| IPQ50xx (NSS) | `IPQ50xx (NSS) · <profile>` | 16 |
-| IPQ60xx (NSS) | `IPQ60xx (NSS) · <profile>` | 32 |
-| IPQ807x (NSS) | `IPQ807x (NSS) · <profile>` | 51 |
-| MT7622（Filogic） | `MT7622 · <profile>` | 22 |
-| MT7621（RAMIPS） | `MT7621 · <profile>` | 302 |
-| MT76x8（RAMIPS） | `MT76x8 · <profile>` | 93 |
-| ATH79（Generic） | `ATH79 · <profile>` | 97 |
-| IPQ40xx（Generic） | `IPQ40xx · <profile>` | 59 |
-| Raspberry Pi 4 | `Raspberry Pi 4 · rpi-4` | 1 |
-| x86_64 | `x86_64 · generic` | 1 |
+> ⚠️ **为什么不是"全部机型"？** GitHub 对 `workflow_dispatch` 单个输入的字符总量有 **65535 字符上限**，而全量机型（877 个）的下拉定义超过 9 万字符，会被 GitHub 直接判为配置无效（表现为没有"Run workflow"按钮、推送时运行 0 任务失败）。因此下拉只放精选热门机型。
 
 下拉里没找到你的机型，或想编译列表之外的设备 → 选最底部的 **「⚙ 自定义」**，并在 `custom_device`
 里填 `target/subtarget|profile`，例如 `mediatek/filogic|xiaomi_redmi-router-ax6000`。
-工作流会自动拆出平台、子平台和设备 profile。
+**全部 877 个机型的精确字符串已放在仓库根目录 `devices.txt`**，按平台分组，复制对应那一行粘贴即可。工作流会自动拆出平台、子平台和设备 profile。
 
 > 机型列表取自 ImmortalWrt / OpenWrt 源码里真实的 `define Device/<profile>`：MT798x / Rockchip / 高通 NSS 系列取自
 > VIKINGYFY `main` 与 23.05 发布版，其余平台（MT7621 / MT76x8 / MT7622 / ATH79 / IPQ40xx / 树莓派）取自 23.05.5 发布版的 `profiles.json`。
 > 不同分支的个别 profile 名可能有差异（如 `-stock` / `-ubootmod` 后缀），列表里没找到或编不出 → 选「自定义」填对应分支的确切名即可。
 
-常见 profile 示例（直接在下拉里搜）：
+常见 profile 示例（下拉里直接搜，或在 `devices.txt` 里找）：
 - x86_64：`generic`
 - 红米 AX6000（uboot）：`xiaomi_redmi-router-ax6000-ubootmod`
 - 小米 AX3000T：`xiaomi_mi-router-ax3000t`
