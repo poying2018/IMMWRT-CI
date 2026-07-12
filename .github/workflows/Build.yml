@@ -2353,7 +2353,7 @@ jobs:
             echo "CONFIG_PACKAGE_${name}=y" >> $CFG
           done
 
-          make defconfig
+          env -u PLAT make defconfig
           # 校验预装插件是否真实存在于源码/feeds（根据源代码支持情况）
           if [ -f tmp/.config-package.in ]; then
             for raw in $PLUGINS_RAW; do
@@ -2382,12 +2382,18 @@ jobs:
 
       - name: 下载依赖包
         working-directory: openwrt
-        run: make download -j$(nproc) V=s
+        # 不要把这个 PLAT(mediatek 等目标平台名)泄漏给 openwrt 的 make 子进程
+        run: env -u PLAT make download -j$(nproc) V=s
 
       - name: 编译固件（仅此设备）
         working-directory: openwrt
         run: |
           echo "开始编译：$PLAT/$SUB 设备 $DEV"
+          # 关键修复：本工作流把目标平台名(如 mediatek)写进了 $GITHUB_ENV 的 PLAT 变量，
+          # 会被 make 作为环境变量泄漏给 openwrt 子进程；而 ATF 的 fiptool 把 PLAT 当成
+          # “ATF 平台(mt7981 等)”解析，遇到未知的 mediatek 会报 Invalid platform 导致编译失败。
+          # 因此编译阶段必须清空该环境变量（fiptool 是通用工具，不需要 PLAT）。
+          unset PLAT
           make -j$(nproc) tools/install || make -j1 V=s tools/install
           make -j$(nproc) toolchain/install || make -j1 V=s toolchain/install
           make -j$(nproc) || make -j1 V=s
