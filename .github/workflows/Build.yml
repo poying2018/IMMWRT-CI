@@ -2359,7 +2359,8 @@ jobs:
             for raw in $PLUGINS_RAW; do
               p="$(echo "$raw" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
               [ -z "$p" ] && continue
-              if ! grep -q "CONFIG_PACKAGE_${p}" tmp/.config-package.in 2>/dev/null; then
+              # tmp/.config-package.in 是 kconfig 文件，符号名为 "config PACKAGE_xxx"（无 CONFIG_ 前缀）
+              if ! grep -Eq "^config PACKAGE_${p}\$" tmp/.config-package.in 2>/dev/null; then
                 echo "::warning::插件 ${p} 在源码/feeds 中不存在，已跳过"
                 sed -i "/CONFIG_PACKAGE_${p}=y/d" .config
               fi
