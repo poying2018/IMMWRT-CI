@@ -436,5 +436,23 @@ def main():
     print("健全性检查通过 ✅")
 
 
+    # ---- YAML safety: fix merged option lines with next key ----
+    raw = build_path.read_text(encoding="utf-8")
+    fixed = re.sub(
+        r'(          - [^\n]*?)(      [a-z_]+:)',
+        r'\1\n\2',
+        raw,
+    )
+    if fixed != raw:
+        # Second pass for safety
+        fixed2 = re.sub(
+            r'(          - [^\n]*?)(      [a-z_]+:)',
+            r'\1\n\2',
+            fixed,
+        )
+        if fixed2 != fixed:
+            fixed = fixed2
+        print("::notice::YAML safety: fixed merged option line(s) with next key")
+        build_path.write_text(fixed, encoding="utf-8")
 if __name__ == "__main__":
     main()
