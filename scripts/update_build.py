@@ -375,7 +375,7 @@ def main():
     ordered = old_in_new + new_only
 
     # 下拉字符上限（GitHub 单输入 ~65535，留安全余量）
-    MAX = 60000
+    MAX = 48000
     dropdown = []
     cum = 0
     for p in ordered:
