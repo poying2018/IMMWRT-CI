@@ -20,8 +20,8 @@ on:
           - immortalwrt/immortalwrt        # 瀹樻柟 ImmortalWrt
           - VIKINGYFY/immortalwrt          # 楂橀€氭弧琛€ NSS 涓撶敤锛堝缓璁€?main 鍒嗘敮锛?          - openwrt/openwrt                # 鍘熺増 OpenWrt
           - custom                         # 鑷畾涔夛紙鍦ㄤ笅闈?custom_repo 濉啓锛? 
-     
-custom_repo:
+
+      custom_repo:
         description: '鑷畾涔変粨搴?source 閫?custom 鏃剁敓鏁堬紝鏍煎紡 owner/repo)'
         required: false
         type: string
