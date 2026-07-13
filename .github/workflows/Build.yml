@@ -1,14 +1,10 @@
-# 手动定制单设备编译
-#
-# 特点：
-#   - 纯手动触发（workflow_dispatch），不定时、不自动
-#   - 所有选项（含设备）以下拉框 / 输入框形式在「Run workflow」界面选择
-#   - 设备下拉内置大量机型（受 GitHub 单输入 65535 字符上限约束，放不下的用「⚙ 自定义」）；
-#     中文名 ↔ target/subtarget|profile 的映射见仓库根目录 device-map.txt
-#   - 下拉选项（系统版本 / 内核 / 设备）由 Update.yml 工作流从「官方最新发布渠道」自动同步，
-#     运行一次 Update 即可把三者刷新为所选源码真实支持的最新内容（详见 README）
-#   - 只编译你选中的那一个设备，速度快、产物小
-#   - 所有源码都在 workflow 运行时才 git clone 拉取
+﻿# 鎵嬪姩瀹氬埗鍗曡澶囩紪璇?#
+# 鐗圭偣锛?#   - 绾墜鍔ㄨЕ鍙戯紙workflow_dispatch锛夛紝涓嶅畾鏃躲€佷笉鑷姩
+#   - 鎵€鏈夐€夐」锛堝惈璁惧锛変互涓嬫媺妗?/ 杈撳叆妗嗗舰寮忓湪銆孯un workflow銆嶇晫闈㈤€夋嫨
+#   - 璁惧涓嬫媺鍐呯疆澶ч噺鏈哄瀷锛堝彈 GitHub 鍗曡緭鍏?65535 瀛楃涓婇檺绾︽潫锛屾斁涓嶄笅鐨勭敤銆屸殭 鑷畾涔夈€嶏級锛?#     涓枃鍚?鈫?target/subtarget|profile 鐨勬槧灏勮浠撳簱鏍圭洰褰?device-map.txt
+#   - 涓嬫媺閫夐」锛堢郴缁熺増鏈?/ 鍐呮牳 / 璁惧锛夌敱 Update.yml 宸ヤ綔娴佷粠銆屽畼鏂规渶鏂板彂甯冩笭閬撱€嶈嚜鍔ㄥ悓姝ワ紝
+#     杩愯涓€娆?Update 鍗冲彲鎶婁笁鑰呭埛鏂颁负鎵€閫夋簮鐮佺湡瀹炴敮鎸佺殑鏈€鏂板唴瀹癸紙璇﹁ README锛?#   - 鍙紪璇戜綘閫変腑鐨勯偅涓€涓澶囷紝閫熷害蹇€佷骇鐗╁皬
+#   - 鎵€鏈夋簮鐮侀兘鍦?workflow 杩愯鏃舵墠 git clone 鎷夊彇
 #
 name: Build
 
@@ -16,22 +12,20 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: '源码仓库'
+        description: '婧愮爜浠撳簱'
         required: true
         type: choice
         default: immortalwrt/immortalwrt
         options:
-          - immortalwrt/immortalwrt        # 官方 ImmortalWrt
-          - VIKINGYFY/immortalwrt          # 高通满血 NSS 专用（建议选 main 分支）
-          - openwrt/openwrt                # 原版 OpenWrt
-          - custom                         # 自定义（在下面 custom_repo 填写）
-      custom_repo:
-        description: '自定义仓库(source 选 custom 时生效，格式 owner/repo)'
+          - immortalwrt/immortalwrt        # 瀹樻柟 ImmortalWrt
+          - VIKINGYFY/immortalwrt          # 楂橀€氭弧琛€ NSS 涓撶敤锛堝缓璁€?main 鍒嗘敮锛?          - openwrt/openwrt                # 鍘熺増 OpenWrt
+          - custom                         # 鑷畾涔夛紙鍦ㄤ笅闈?custom_repo 濉啓锛?      custom_repo:
+        description: '鑷畾涔変粨搴?source 閫?custom 鏃剁敓鏁堬紝鏍煎紡 owner/repo)'
         required: false
         type: string
         default: ''
       branch:
-        description: '系统版本 / 分支 / tag（运行时校验是否真实存在于所选源码仓库；常用 openwrt-24.10 / openwrt-23.05 / openwrt-22.03 / master）'
+        description: '绯荤粺鐗堟湰 / 鍒嗘敮 / tag锛堣繍琛屾椂鏍￠獙鏄惁鐪熷疄瀛樺湪浜庢墍閫夋簮鐮佷粨搴擄紱甯哥敤 openwrt-24.10 / openwrt-23.05 / openwrt-22.03 / master锛?
         required: true
         type: choice
         default: openwrt-24.10
@@ -44,18 +38,18 @@ on:
           - "openwrt-18.06-k5.4"
           - "master"
       kernel:
-        description: '内核版本（运行时按所选目标源码实际支持的内核选取：选具体版本则校验该目标是否支持，不支持回退默认并 warning；选「自动（源码默认）」用分支自带内核）'
+        description: '鍐呮牳鐗堟湰锛堣繍琛屾椂鎸夋墍閫夌洰鏍囨簮鐮佸疄闄呮敮鎸佺殑鍐呮牳閫夊彇锛氶€夊叿浣撶増鏈垯鏍￠獙璇ョ洰鏍囨槸鍚︽敮鎸侊紝涓嶆敮鎸佸洖閫€榛樿骞?warning锛涢€夈€岃嚜鍔紙婧愮爜榛樿锛夈€嶇敤鍒嗘敮鑷甫鍐呮牳锛?
         required: true
         type: choice
-        default: 自动（源码默认）
+        default: 鑷姩锛堟簮鐮侀粯璁わ級
         options:
-          - "自动（源码默认）"
+          - "鑷姩锛堟簮鐮侀粯璁わ級"
           - "6.12"
       device:
-        description: '设备型号（下拉为「中文名」形式，如「小米 AX3600」；选「⚙ 自定义」后在 custom_device 填写 target/subtarget|profile）'
+        description: '璁惧鍨嬪彿锛堜笅鎷変负銆屼腑鏂囧悕銆嶅舰寮忥紝濡傘€屽皬绫?AX3600銆嶏紱閫夈€屸殭 鑷畾涔夈€嶅悗鍦?custom_device 濉啓 target/subtarget|profile锛?
         required: true
         type: choice
-        default: 中国移动 Rax3000m
+        default: 涓浗绉诲姩 Rax3000m
         options:
           - "AN7581 Evaluation Board (SNAND)"
           - "AN7581 Evaluation Board (EMMC)"
@@ -105,14 +99,14 @@ on:
           - "Adtran Bsap1840"
           - "HiveAP 121"
           - "Airtight C 75"
-          - "阿尔卡特 Hh40v"
-          - "阿尔法 Ap121f"
-          - "阿尔法 Ap121fe"
-          - "阿尔法 N2q"
-          - "阿尔法 N5q"
-          - "阿尔法 Pi Wifi4"
-          - "阿尔法 R36a"
-          - "阿尔法 Tube 2hq"
+          - "闃垮皵鍗＄壒 Hh40v"
+          - "闃垮皵娉?Ap121f"
+          - "闃垮皵娉?Ap121fe"
+          - "闃垮皵娉?N2q"
+          - "闃垮皵娉?N5q"
+          - "闃垮皵娉?Pi Wifi4"
+          - "闃垮皵娉?R36a"
+          - "闃垮皵娉?Tube 2hq"
           - "WiFi CampPro Nano Duo"
           - "Allnet All Wap02860ac"
           - "Araknis An 300 Ap I N"
@@ -122,9 +116,9 @@ on:
           - "Aruba Ap 105"
           - "Aruba Ap 115"
           - "Aruba Ap 175"
-          - "华硕 Pl Ac56"
-          - "华硕 Rp Ac51"
-          - "华硕 Rp Ac66"
+          - "鍗庣 Pl Ac56"
+          - "鍗庣 Rp Ac51"
+          - "鍗庣 Rp Ac66"
           - "RT AC59U"
           - "RT AC59U (ath79)"
           - "ZenWiFi CD6N"
@@ -137,16 +131,16 @@ on:
           - "AVM Fritzdvbc"
           - "Belkin F9j1108 V2"
           - "Belkin F9k1115 V2"
-          - "巴法络 Bhr 4grv"
-          - "巴法络 Bhr 4grv2"
+          - "宸存硶缁?Bhr 4grv"
+          - "宸存硶缁?Bhr 4grv2"
           - "WHR G301N"
           - "WZR 450HP2"
-          - "巴法络 Wzr 600dhp"
-          - "巴法络 Wzr Hp Ag300h"
-          - "巴法络 Wzr Hp G300nh Rb"
-          - "巴法络 Wzr Hp G300nh S"
-          - "巴法络 Wzr Hp G302h A1a0"
-          - "巴法络 Wzr Hp G450h"
+          - "宸存硶缁?Wzr 600dhp"
+          - "宸存硶缁?Wzr Hp Ag300h"
+          - "宸存硶缁?Wzr Hp G300nh Rb"
+          - "宸存硶缁?Wzr Hp G300nh S"
+          - "宸存硶缁?Wzr Hp G302h A1a0"
+          - "宸存硶缁?Wzr Hp G450h"
           - "Comfast Cf E110n V2"
           - "Comfast Cf E120a V3"
           - "Comfast Cf E130n V2"
@@ -206,8 +200,8 @@ on:
           - "WAB I1750 PS"
           - "WAB S1167 PS"
           - "WAB S600 PS"
-          - "日电 Wrc 1750ghbk2 I"
-          - "日电 Wrc 300ghbk2 I"
+          - "鏃ョ數 Wrc 1750ghbk2 I"
+          - "鏃ョ數 Wrc 300ghbk2 I"
           - "Embedded Wireless Balin"
           - "Embedded Wireless Dorin"
           - "EnGenius Eap1200h"
@@ -315,7 +309,7 @@ on:
           - "Aterm WG800HP"
           - "Aterm WR8750N"
           - "Aterm WR9500N"
-          - "网件 Ex7300"
+          - "缃戜欢 Ex7300"
           - "EX7300"
           - "PGZNG1"
           - "R6100"
@@ -334,8 +328,8 @@ on:
           - "WNDRMAC (ath79)"
           - "WNR1000"
           - "WNR2000"
-          - "网件 wnr2200 16m"
-          - "网件 wnr2200 8m"
+          - "缃戜欢 wnr2200 16m"
+          - "缃戜欢 wnr2200 8m"
           - "WNR612"
           - "Koala"
           - "Raccoon"
@@ -595,7 +589,7 @@ on:
           - "My Net Wi Fi Range Extender"
           - "WB2000"
           - "AIoT AC2350"
-          - "小米 Mi Router 4q"
+          - "灏忕背 Mi Router 4q"
           - "A770"
           - "A782"
           - "A930"
@@ -621,7 +615,7 @@ on:
           - "A/A+/B/B+/CM/Zero/ZeroW"
           - "2B/2B 1.2"
           - "3A+/3B/3B+/CM3/Zero2/Zero2W"
-          - "树莓派 4"
+          - "鏍戣帗娲?4"
           - "5/500/CM5"
           - "RT AC53U"
           - "RT AC66U"
@@ -810,26 +804,26 @@ on:
           - "Dual"
           - "8Devices Habanero Dvk"
           - "8Devices Jalapeno"
-          - "阿尔法 Ap120c Ac"
+          - "闃垮皵娉?Ap120c Ac"
           - "Aruba Ap 303"
           - "Aruba Ap 303h"
           - "Aruba Ap 365"
           - "Lyra Mini (MAP AC1300)"
-          - "华硕 Map Ac2200"
-          - "华硕 Rt Ac42u"
-          - "华硕 Rt Ac58u"
+          - "鍗庣 Map Ac2200"
+          - "鍗庣 Rt Ac42u"
+          - "鍗庣 Rt Ac58u"
           - "AVM Fritzbox 4040"
           - "AVM Fritzbox 7530"
           - "AVM Fritzrepeater 1200"
           - "AVM Fritzrepeater 3000"
-          - "巴法络 Wtr M2133hp"
+          - "宸存硶缁?Wtr M2133hp"
           - "CellC Rtl30vw"
           - "MeshPoint.One"
           - "WPJ419"
           - "WPJ428"
           - "Magic 2 WiFi next"
           - "Dlink Dap 2610"
-          - "智邦 Ecw5211"
+          - "鏅洪偊 Ecw5211"
           - "OAP100"
           - "EnGenius Eap1300"
           - "EAP2200"
@@ -838,21 +832,21 @@ on:
           - "ENS620EXT"
           - "Extreme Ws Ap3915i"
           - "WS AP391x"
-          - "萤石 Cs W3 Wd1200g Eup"
+          - "钀ょ煶 Cs W3 Wd1200g Eup"
           - "GL.iNet Gl A1300"
           - "GL.iNet Gl Ap1300"
           - "GL.iNet Gl B1300"
           - "GL.iNet Gl B2200"
           - "GL.iNet S1300"
           - "WiFi (Gale)"
-          - "领势 Ea6350v3"
-          - "领势 Ea8300"
+          - "棰嗗娍 Ea6350v3"
+          - "棰嗗娍 Ea8300"
           - "MR6350"
-          - "领势 Mr8300"
+          - "棰嗗娍 Mr8300"
           - "MR9000"
-          - "领势 Whw01"
+          - "棰嗗娍 Whw01"
           - "WHW03"
-          - "领势 Whw03v2"
+          - "棰嗗娍 Whw03v2"
           - "Luma Wrtq 329acn"
           - "GX20"
           - "MR30H"
@@ -869,18 +863,18 @@ on:
           - "wAP ac LTE"
           - "wAP R ac"
           - "MobiPromo Cm520 79f"
-          - "网件 Ex6100v2"
-          - "网件 Ex6150v2"
+          - "缃戜欢 Ex6100v2"
+          - "缃戜欢 Ex6150v2"
           - "LBR20"
           - "RBR20"
           - "RBR40"
-          - "网件 Rbr50"
+          - "缃戜欢 Rbr50"
           - "RBS20"
           - "RBS40"
-          - "网件 Rbs50"
-          - "网件 Srr60"
-          - "网件 Srs60"
-          - "网件 Wac510"
+          - "缃戜欢 Rbs50"
+          - "缃戜欢 Srr60"
+          - "缃戜欢 Srs60"
+          - "缃戜欢 Wac510"
           - "OpenMesh A42"
           - "OpenMesh A62"
           - "P2W R619ac 128m"
@@ -891,21 +885,21 @@ on:
           - "Qxwlan E2600ac C1"
           - "Qxwlan E2600ac C2"
           - "WIA3300 20"
-          - "索尼 Ncp Hg100 Cellular"
+          - "绱㈠凹 Ncp Hg100 Cellular"
           - "X1 Pro"
           - "RUTX10"
           - "Teltonika Rutx50"
           - "U4019"
           - "Wallys Dr40x9"
           - "LE1"
-          - "中兴 Mf18a"
+          - "涓叴 Mf18a"
           - "MF282Plus"
-          - "中兴 Mf286d"
-          - "中兴 Mf287"
-          - "中兴 Mf287plus"
-          - "中兴 Mf287pro"
-          - "中兴 Mf289f"
-          - "合勤 Nbg6617"
+          - "涓叴 Mf286d"
+          - "涓叴 Mf287"
+          - "涓叴 Mf287plus"
+          - "涓叴 Mf287pro"
+          - "涓叴 Mf289f"
+          - "鍚堝嫟 Nbg6617"
           - "WRE6606"
           - "TR4400"
           - "RT4230W"
@@ -941,7 +935,7 @@ on:
           - "OnHub AC1900 Cloud Router"
           - "Archer VR2600v"
           - "UniFi AC HD"
-          - "小米 Router HD"
+          - "灏忕背 Router HD"
           - "NBG6817"
           - "MI424WR rev A/C"
           - "MI424WR rev D"
@@ -1052,40 +1046,40 @@ on:
           - "Ten64 (NAND boot)"
           - "ABT Asr3000"
           - "Acelink Ew 7886cax"
-          - "宏碁 Predator W6"
-          - "宏碁 Predator W6d"
-          - "宏碁 Predator W6x Stock"
-          - "宏碁 Predator W6x Ubootmod"
-          - "宏碁 Vero W6m"
+          - "瀹忕 Predator W6"
+          - "瀹忕 Predator W6d"
+          - "瀹忕 Predator W6x Stock"
+          - "瀹忕 Predator W6x Ubootmod"
+          - "瀹忕 Vero W6m"
           - "AirPi Ap3000m"
-          - "智易 Mozart"
+          - "鏅烘槗 Mozart"
           - "AP7622 WH1"
           - "AsiaRF Ap7986 003"
-          - "华硕 Rt Ax52"
-          - "华硕 Rt Ax57m"
-          - "华硕 Rt Ax59u"
-          - "华硕 Tuf Ax4200"
-          - "华硕 Tuf Ax4200q"
-          - "华硕 Tuf Ax6000"
-          - "华硕 Zenwifi Bt8"
-          - "华硕 Zenwifi Bt8 Ubootmod"
-          - "香蕉派 R2"
-          - "香蕉派 Bpi R3"
-          - "香蕉派 Bpi R3 Mini"
-          - "香蕉派 Bpi R4"
-          - "香蕉派 Bpi R4 Lite"
-          - "香蕉派 Bpi R4 Poe"
-          - "香蕉派 Bpi R64"
+          - "鍗庣 Rt Ax52"
+          - "鍗庣 Rt Ax57m"
+          - "鍗庣 Rt Ax59u"
+          - "鍗庣 Tuf Ax4200"
+          - "鍗庣 Tuf Ax4200q"
+          - "鍗庣 Tuf Ax6000"
+          - "鍗庣 Zenwifi Bt8"
+          - "鍗庣 Zenwifi Bt8 Ubootmod"
+          - "棣欒晧娲?R2"
+          - "棣欒晧娲?Bpi R3"
+          - "棣欒晧娲?Bpi R3 Mini"
+          - "棣欒晧娲?Bpi R4"
+          - "棣欒晧娲?Bpi R4 Lite"
+          - "棣欒晧娲?Bpi R4 Poe"
+          - "棣欒晧娲?Bpi R64"
           - "Bazis Ax3000wm"
-          - "巴法络 Wsr 2533dhp2"
-          - "巴法络 Wsr 3200ax4s"
-          - "巴法络 Wsr 6000ax8"
+          - "宸存硶缁?Wsr 2533dhp2"
+          - "宸存硶缁?Wsr 3200ax4s"
+          - "宸存硶缁?Wsr 6000ax8"
           - "Cetron Ct3003"
           - "Cetron Ct3003 Ubootmod"
-          - "中国移动 A10 Stock"
-          - "中国移动 A10 Ubootmod"
-          - "中国移动 Rax3000m"
-          - "中国移动 Rax3000me"
+          - "涓浗绉诲姩 A10 Stock"
+          - "涓浗绉诲姩 A10 Ubootmod"
+          - "涓浗绉诲姩 Rax3000m"
+          - "涓浗绉诲姩 Rax3000me"
           - "Comfast Cf E393ax"
           - "Comfast Cf Wr632ax"
           - "Comfast Cf Wr632ax Ubootmod"
@@ -1118,10 +1112,10 @@ on:
           - "Dlink Aquila Pro Ai M60 A1"
           - "Dlink Eagle Pro Ai M32 A1"
           - "Dlink Eagle Pro Ai R32 A1"
-          - "智邦 Eap111"
-          - "日电 Wrc 2533gent"
-          - "日电 Wrc X3000gs3"
-          - "日电 Wrc X3200gst3"
+          - "鏅洪偊 Eap111"
+          - "鏃ョ數 Wrc 2533gent"
+          - "鏃ョ數 Wrc X3000gs3"
+          - "鏃ョ數 Wrc X3200gst3"
           - "Gato Gdsp"
           - "GL.iNet Gl Mt2500"
           - "GL.iNet Gl Mt2500 Airoha"
@@ -1130,12 +1124,12 @@ on:
           - "GL.iNet Gl Mt6000"
           - "GL.iNet Gl X3000"
           - "GL.iNet Gl Xe3000"
-          - "华三 Magic Nx30 Pro"
+          - "鍗庝笁 Magic Nx30 Pro"
           - "Huasifei Wh3000 Emmc"
           - "Huasifei Wh3000 Pro Emmc"
           - "Huasifei Wh3000 Pro Nand"
           - "Huasifei Wh3000r Nand"
-          - "乐橙 Hx21"
+          - "涔愭 Hx21"
           - "A6004MX"
           - "ipTIME Ax3000m"
           - "ipTIME Ax3000q"
@@ -1143,7 +1137,7 @@ on:
           - "ipTIME Ax3000sm"
           - "ipTIME Ax7800m 6e"
           - "JCG Q30 Pro"
-          - "京东云 Re Cp 03"
+          - "浜笢浜?Re Cp 03"
           - "Jio Ax6000 Jidu6101"
           - "KebiduMei Ax3000 U22"
           - "Keenetic Kap 630"
@@ -1151,33 +1145,33 @@ on:
           - "Keenetic Kn 3711"
           - "Keenetic Kn 3811"
           - "Keenetic Kn 3911"
-          - "康佳 Komi A31"
-          - "领势 E8450"
-          - "领势 E8450 Ubi"
+          - "搴蜂匠 Komi A31"
+          - "棰嗗娍 E8450"
+          - "棰嗗娍 E8450 Ubi"
           - "EA7500"
           - "Livinet Li320"
           - "Livinet Zr 3020"
           - "Livinet Zr 3020 Ubootmod"
-          - "联发科 Mt7622 Rfb1"
-          - "联发科 Mt7622 Rfb1 Ubi"
+          - "鑱斿彂绉?Mt7622 Rfb1"
+          - "鑱斿彂绉?Mt7622 Rfb1 Ubi"
           - "MT7629 rfb AP"
-          - "联发科 Mt7981 Rfb"
-          - "联发科 Mt7986a Rfb Nand"
-          - "联发科 Mt7986b Rfb"
-          - "联发科 Mt7987a Rfb"
-          - "联发科 Mt7988a Rfb"
+          - "鑱斿彂绉?Mt7981 Rfb"
+          - "鑱斿彂绉?Mt7986a Rfb Nand"
+          - "鑱斿彂绉?Mt7986b Rfb"
+          - "鑱斿彂绉?Mt7987a Rfb"
+          - "鑱斿彂绉?Mt7988a Rfb"
           - "MERCUSYS Mr80x V3"
           - "MERCUSYS Mr85x"
           - "MERCUSYS Mr90x V1"
           - "MERCUSYS Mr90x V1 Ubi"
-          - "磊科 N60"
+          - "纾婄 N60"
           - "N60 Pro"
           - "NAP 630"
           - "NC 1812"
           - "EAX17"
           - "EX6250"
-          - "网件 Wax206"
-          - "网件 Wax220"
+          - "缃戜欢 Wax206"
+          - "缃戜欢 Wax220"
           - "EAP930 V1"
           - "NX30"
           - "NX31"
@@ -1194,7 +1188,7 @@ on:
           - "AX3000 (OpenWrt U Boot layout)"
           - "AX3000"
           - "BE7200"
-          - "锐捷 Rg Ew3200gx Pro"
+          - "閿愭嵎 Rg Ew3200gx Pro"
           - "RG X60"
           - "RG X60 Pro"
           - "SDG 841 t6"
@@ -1244,24 +1238,24 @@ on:
           - "WL WN586X3"
           - "WL WN586X3B"
           - "WAP430X"
-          - "小米 Mi Router Ax3000t"
-          - "小米 Mi Router Ax3000t Ubootmod"
-          - "小米 Mi Router Wr30u Stock"
-          - "小米 Mi Router Wr30u Ubootmod"
-          - "小米 Redmi Router Ax6000 Stock"
-          - "小米 Redmi Router Ax6000 Ubootmod"
-          - "小米 Redmi Router Ax6s"
-          - "云核 Ax835"
+          - "灏忕背 Mi Router Ax3000t"
+          - "灏忕背 Mi Router Ax3000t Ubootmod"
+          - "灏忕背 Mi Router Wr30u Stock"
+          - "灏忕背 Mi Router Wr30u Ubootmod"
+          - "灏忕背 Redmi Router Ax6000 Stock"
+          - "灏忕背 Redmi Router Ax6000 Ubootmod"
+          - "灏忕背 Redmi Router Ax6s"
+          - "浜戞牳 Ax835"
           - "ZBT Zbt Z8102ax"
           - "ZBT Z8102AX V2"
           - "ZBT Zbt Z8103ax"
           - "ZBT Z8103AX C"
           - "ZBT Z8106AX S"
           - "ZBT Z8106AX T"
-          - "合勤 Ex5601 T0 Stock"
-          - "合勤 Ex5601 T0 Ubootmod"
-          - "合勤 Ex5700 Telenor"
-          - "合勤 Nwa50ax Pro"
+          - "鍚堝嫟 Ex5601 T0 Stock"
+          - "鍚堝嫟 Ex5601 T0 Ubootmod"
+          - "鍚堝嫟 Ex5700 Telenor"
+          - "鍚堝嫟 Nwa50ax Pro"
           - "WX5600 T0"
           - "EV23X71A"
           - "Tactical 1000"
@@ -1351,51 +1345,51 @@ on:
           - "T4240RDB"
           - "Firebox M300"
           - "8Devices Mango Dvk"
-          - "阿尔法 Ap120c Ax"
-          - "阿里云 Ap8220"
-          - "智易 Aw1000"
-          - "华硕 Rt Ax89x"
-          - "巴法络 Wxr 5950ax12"
+          - "闃垮皵娉?Ap120c Ax"
+          - "闃块噷浜?Ap8220"
+          - "鏅烘槗 Aw1000"
+          - "鍗庣 Rt Ax89x"
+          - "宸存硶缁?Wxr 5950ax12"
           - "Cambium Xe3 4"
-          - "中国移动 Mr3000d Ci"
-          - "中国移动 Pz L8"
-          - "中国移动 Rm2 6"
+          - "涓浗绉诲姩 Mr3000d Ci"
+          - "涓浗绉诲姩 Pz L8"
+          - "涓浗绉诲姩 Rm2 6"
           - "Compex Wpq873"
           - "Dynalink Dl Wrx36"
-          - "智邦 Eap102"
+          - "鏅洪偊 Eap102"
           - "Edimax Cax1800"
-          - "日电 Wrc X3000gs2"
+          - "鏃ョ數 Wrc X3000gs2"
           - "GL.iNet Gl Ax1800"
           - "GL.iNet Gl Axt1800"
           - "GL.iNet Gl B3000"
           - "I-O Data Wn Dax3000gr"
-          - "领势 Homewrk"
-          - "领势 Mr5500"
-          - "领势 Mr7350"
-          - "领势 Mr7500"
-          - "领势 Mx2000"
-          - "领势 Mx4200v1"
-          - "领势 Mx4200v2"
-          - "领势 Mx4300"
-          - "领势 Mx5300"
-          - "领势 Mx5500"
-          - "领势 Mx6200"
-          - "领势 Mx8500"
-          - "领势 Spnmx56"
-          - "网件 Rax120v2"
-          - "网件 Sxr80"
-          - "网件 Sxs80"
-          - "网件 Wax214"
-          - "网件 Wax218"
-          - "网件 Wax610"
-          - "网件 Wax610y"
-          - "网件 Wax620"
-          - "网件 Wax630"
+          - "棰嗗娍 Homewrk"
+          - "棰嗗娍 Mr5500"
+          - "棰嗗娍 Mr7350"
+          - "棰嗗娍 Mr7500"
+          - "棰嗗娍 Mx2000"
+          - "棰嗗娍 Mx4200v1"
+          - "棰嗗娍 Mx4200v2"
+          - "棰嗗娍 Mx4300"
+          - "棰嗗娍 Mx5300"
+          - "棰嗗娍 Mx5500"
+          - "棰嗗娍 Mx6200"
+          - "棰嗗娍 Mx8500"
+          - "棰嗗娍 Spnmx56"
+          - "缃戜欢 Rax120v2"
+          - "缃戜欢 Sxr80"
+          - "缃戜欢 Sxs80"
+          - "缃戜欢 Wax214"
+          - "缃戜欢 Wax218"
+          - "缃戜欢 Wax610"
+          - "缃戜欢 Wax610y"
+          - "缃戜欢 Wax620"
+          - "缃戜欢 Wax630"
           - "Prpl Haze"
           - "360 360v6"
-          - "威联通 301w"
-          - "红米 Ax6"
-          - "红米 Ax6 Stock"
+          - "濞佽仈閫?301w"
+          - "绾㈢背 Ax6"
+          - "绾㈢背 Ax6 Stock"
           - "Spectrum Sax1v1k"
           - "TP-Link Deco X80 5g"
           - "TP-Link Eap610 Outdoor"
@@ -1403,21 +1397,21 @@ on:
           - "EAP623 Outdoor HD"
           - "TP-Link Eap625 Outdoor Hd V1"
           - "EAP660 HD"
-          - "小米 Ax3600"
-          - "小米 Ax3600 Stock"
-          - "小米 Ax6000"
-          - "小米 Ax9000"
-          - "小米 Ax9000 Stock"
-          - "云核 Ax830"
-          - "云核 Ax850"
-          - "云核 Ax880"
-          - "云核 Fap650"
+          - "灏忕背 Ax3600"
+          - "灏忕背 Ax3600 Stock"
+          - "灏忕背 Ax6000"
+          - "灏忕背 Ax9000"
+          - "灏忕背 Ax9000 Stock"
+          - "浜戞牳 Ax830"
+          - "浜戞牳 Ax850"
+          - "浜戞牳 Ax880"
+          - "浜戞牳 Fap650"
           - "ZBT Zbt Z800ax"
-          - "中兴 Mf269"
-          - "中兴 Mf269 Stock"
-          - "合勤 Nbg7815"
-          - "合勤 Nwa210ax"
-          - "合勤 Scr50axe"
+          - "涓叴 Mf269"
+          - "涓叴 Mf269 Stock"
+          - "鍚堝嫟 Nbg7815"
+          - "鍚堝嫟 Nwa210ax"
+          - "鍚堝嫟 Scr50axe"
           - "Kiwi DVK"
           - "RDP433"
           - "PX 4885"
@@ -1433,9 +1427,9 @@ on:
           - "AR725W"
           - "Air3GII"
           - "AC1200RM"
-          - "阿尔法 Awusfree1"
-          - "阿尔法 Ax1800rm"
-          - "阿尔法 Quad E4g"
+          - "闃垮皵娉?Awusfree1"
+          - "闃垮皵娉?Ax1800rm"
+          - "闃垮皵娉?Quad E4g"
           - "R36M E4G"
           - "Tube E4G"
           - "Networks W502U"
@@ -1449,7 +1443,7 @@ on:
           - "Amped Ally R1900k"
           - "B1200EX"
           - "WE410443"
-          - "智易 We420223 99"
+          - "鏅烘槗 We420223 99"
           - "FreeStation"
           - "ATP 52B"
           - "AsiaRF Ap7621 001"
@@ -1459,29 +1453,29 @@ on:
           - "AWM002 EVB"
           - "AWM002 EVB/AWM003 EVB"
           - "4G AX56"
-          - "华硕 Rp Ac56"
-          - "华硕 Rp Ac87"
+          - "鍗庣 Rp Ac56"
+          - "鍗庣 Rp Ac87"
           - "RP N53"
-          - "华硕 Rt Ac1200"
-          - "华硕 Rt Ac1200 V2"
+          - "鍗庣 Rt Ac1200"
+          - "鍗庣 Rt Ac1200 V2"
           - "RT AC51U"
           - "RT AC54U"
-          - "华硕 Rt Ac57u V1"
-          - "华硕 Rt Ac65p"
-          - "华硕 Rt Ac85p"
-          - "华硕 Rt Ax53u"
-          - "华硕 Rt Ax54"
+          - "鍗庣 Rt Ac57u V1"
+          - "鍗庣 Rt Ac65p"
+          - "鍗庣 Rt Ac85p"
+          - "鍗庣 Rt Ax53u"
+          - "鍗庣 Rt Ax54"
           - "RT G32"
           - "RT N10+"
           - "RT N10P"
           - "RT N11P"
-          - "华硕 Rt N12 Vp B1"
+          - "鍗庣 Rt N12 Vp B1"
           - "RT N11P/RT N12+/RT N12Eb1"
           - "RT N13U"
           - "RT N14u"
           - "RT N15"
           - "RT N56U"
-          - "华硕 Rt N56u B1"
+          - "鍗庣 Rt N56u B1"
           - "WL 330N"
           - "WL 330N3G"
           - "MR 102N"
@@ -1500,18 +1494,18 @@ on:
           - "Bolt Arion"
           - "BL100"
           - "BL201"
-          - "巴法络 Wcr 1166ds"
+          - "宸存硶缁?Wcr 1166ds"
           - "WHR 1166D"
           - "WHR 300HP2"
           - "WHR 600D"
           - "WHR G300N"
           - "WLI TX4 AG300N"
           - "WMR 300"
-          - "巴法络 Wsr 1166dhp"
-          - "巴法络 Wsr 2533dhpl"
+          - "宸存硶缁?Wsr 1166dhp"
+          - "宸存硶缁?Wsr 2533dhpl"
           - "WSR 2533DHPL2"
           - "WSR 2533DHPLS"
-          - "巴法络 Wsr 600dhp"
+          - "宸存硶缁?Wsr 600dhp"
           - "WZR AGL300NH"
           - "XG1"
           - "Comfast Cf E390ax"
@@ -1619,19 +1613,19 @@ on:
           - "WMC M1267GST2"
           - "WMC S1267GS2"
           - "WMC X1800GST"
-          - "日电 Wrc 1167fs"
-          - "日电 Wrc 1167ghbk2 S"
-          - "日电 Wrc 1167gs2 B"
-          - "日电 Wrc 1167gst2"
-          - "日电 Wrc 1750gs"
-          - "日电 Wrc 1750gst2"
-          - "日电 Wrc 1750gsv"
-          - "日电 Wrc 1900gst"
-          - "日电 Wrc 2533ghbk I"
-          - "日电 Wrc 2533ghbk2 T"
-          - "日电 Wrc 2533gs2"
-          - "日电 Wrc 2533gst"
-          - "日电 Wrc 2533gst2"
+          - "鏃ョ數 Wrc 1167fs"
+          - "鏃ョ數 Wrc 1167ghbk2 S"
+          - "鏃ョ數 Wrc 1167gs2 B"
+          - "鏃ョ數 Wrc 1167gst2"
+          - "鏃ョ數 Wrc 1750gs"
+          - "鏃ョ數 Wrc 1750gst2"
+          - "鏃ョ數 Wrc 1750gsv"
+          - "鏃ョ數 Wrc 1900gst"
+          - "鏃ョ數 Wrc 2533ghbk I"
+          - "鏃ョ數 Wrc 2533ghbk2 T"
+          - "鏃ョ數 Wrc 2533gs2"
+          - "鏃ョ數 Wrc 2533gst"
+          - "鏃ョ數 Wrc 2533gst2"
           - "WRC X1800GS"
           - "WRH 300CR"
           - "WSC X1800GS"
@@ -1656,10 +1650,10 @@ on:
           - "GL.iNet Vixmini"
           - "GnuBee Gb Pc1"
           - "GnuBee Gb Pc2"
-          - "华三 Tx1800 Plus"
-          - "华三 Tx1801 Plus"
-          - "华三 Tx1806"
-          - "海尔 Har 20s2u1"
+          - "鍗庝笁 Tx1800 Plus"
+          - "鍗庝笁 Tx1801 Plus"
+          - "鍗庝笁 Tx1806"
+          - "娴峰皵 Har 20s2u1"
           - "Hak5 Wifi Pineapple Mk7"
           - "MPR"
           - "MPR (ramips)"
@@ -1670,14 +1664,14 @@ on:
           - "HiLink Hlk 7628n"
           - "HiLink Hlk 7688a"
           - "HLK RM04"
-          - "极路由 Hc5611"
+          - "鏋佽矾鐢?Hc5611"
           - "HC5661"
-          - "极路由 Hc5661a"
+          - "鏋佽矾鐢?Hc5661a"
           - "HC5761"
-          - "极路由 Hc5761a"
+          - "鏋佽矾鐢?Hc5761a"
           - "HC5861"
-          - "极路由 Hc5861b"
-          - "极路由 Hc5962"
+          - "鏋佽矾鐢?Hc5861b"
+          - "鏋佽矾鐢?Hc5962"
           - "C108"
           - "H7920"
           - "H8850"
@@ -1749,7 +1743,7 @@ on:
           - "Y1"
           - "Y1S"
           - "E1700"
-          - "领势 E5400"
+          - "棰嗗娍 E5400"
           - "E5600"
           - "E7350"
           - "EA6350"
@@ -1763,11 +1757,11 @@ on:
           - "WMDR 143N"
           - "MC 1200AC"
           - "AP MT7621A V60 EVB"
-          - "联发科 Linkit Smart 7688"
+          - "鑱斿彂绉?Linkit Smart 7688"
           - "MT7621 EVB"
-          - "联发科 Mt7628an Eval Board"
+          - "鑱斿彂绉?Mt7628an Eval Board"
           - "SLT866"
-          - "水星 Mac1200r V2"
+          - "姘存槦 Mac1200r V2"
           - "MB130 4G"
           - "MR70X"
           - "MicroWRT"
@@ -1779,7 +1773,7 @@ on:
           - "Minew G1 C"
           - "MOFI3500 3GN"
           - "MOFI5500 5GXeLTE"
-          - "摩托罗拉 Mwr03"
+          - "鎽╂墭缃楁媺 Mwr03"
           - "WiTi"
           - "Wireless Router WR1201"
           - "WG430223"
@@ -1790,21 +1784,21 @@ on:
           - "EX3700/EX3800"
           - "EX6120"
           - "EX6130"
-          - "网件 Ex6150"
+          - "缃戜欢 Ex6150"
           - "JWNR2010"
           - "PR2000"
-          - "网件 R6020"
-          - "网件 R6080"
-          - "网件 R6120"
-          - "网件 R6220"
-          - "网件 R6260"
-          - "网件 R6350"
+          - "缃戜欢 R6020"
+          - "缃戜欢 R6080"
+          - "缃戜欢 R6120"
+          - "缃戜欢 R6220"
+          - "缃戜欢 R6260"
+          - "缃戜欢 R6350"
           - "R6700"
-          - "网件 R6800"
-          - "网件 R6850"
+          - "缃戜欢 R6800"
+          - "缃戜欢 R6850"
           - "R6900"
-          - "网件 R7200"
-          - "网件 R7450"
+          - "缃戜欢 R7200"
+          - "缃戜欢 R7450"
           - "WAC104"
           - "WAC124"
           - "WAX202"
@@ -1832,13 +1826,13 @@ on:
           - "Onion Omega2"
           - "Onion Omega2p"
           - "5Pro"
-          - "花生壳 X1"
+          - "鑺辩敓澹?X1"
           - "X3A"
           - "PSR 680W Wireless 3G Router"
           - "K2"
           - "K2 (ramips)"
           - "K2G"
-          - "斐讯 K2p"
+          - "鏂愯 K2p"
           - "PSG1208"
           - "PSG1218"
           - "CS QR10"
@@ -1876,7 +1870,7 @@ on:
           - "S1010"
           - "RG EW1200G PRO"
           - "Whitebox 8"
-          - "三星 Cy Swr1100"
+          - "涓夋槦 Cy Swr1100"
           - "D240"
           - "SIMAX1800T"
           - "SIMAX1800U"
@@ -1900,9 +1894,9 @@ on:
           - "RUT951"
           - "RUT956"
           - "T MB5EU V01"
-          - "腾达 3g150b"
-          - "腾达 3g300m"
-          - "腾达 W150m"
+          - "鑵捐揪 3g150b"
+          - "鑵捐揪 3g300m"
+          - "鑵捐揪 W150m"
           - "W306R"
           - "Timecloud"
           - "TOTOLINK A3"
@@ -2027,39 +2021,39 @@ on:
           - "WRTNode"
           - "WRTnode Wrtnode2p"
           - "WRTnode Wrtnode2r"
-          - "小米 Mi Ra75"
-          - "小米 Mi Router 3 Pro"
-          - "小米 Mi Router 3g"
-          - "小米 Mi Router 3g V2"
-          - "小米 Mi Router 4"
-          - "小米 Mi Router 4a 100m"
-          - "小米 Mi Router 4a 100m Intl"
-          - "小米 Router 4A"
-          - "小米 Mi Router 4a Gigabit"
-          - "小米 Router 4A (ramips)"
-          - "小米 Mi Router 4c"
-          - "小米 Router AC2100"
-          - "小米 Router CR6606"
-          - "小米 Router CR6608"
-          - "小米 Router CR6609"
+          - "灏忕背 Mi Ra75"
+          - "灏忕背 Mi Router 3 Pro"
+          - "灏忕背 Mi Router 3g"
+          - "灏忕背 Mi Router 3g V2"
+          - "灏忕背 Mi Router 4"
+          - "灏忕背 Mi Router 4a 100m"
+          - "灏忕背 Mi Router 4a 100m Intl"
+          - "灏忕背 Router 4A"
+          - "灏忕背 Mi Router 4a Gigabit"
+          - "灏忕背 Router 4A (ramips)"
+          - "灏忕背 Mi Router 4c"
+          - "灏忕背 Router AC2100"
+          - "灏忕背 Router CR6606"
+          - "灏忕背 Router CR6608"
+          - "灏忕背 Router CR6609"
           - "MiWiFi 3A"
-          - "小米 Miwifi 3c"
+          - "灏忕背 Miwifi 3c"
           - "MiWiFi Mini"
-          - "小米 Miwifi Nano"
-          - "小米 Redmi Router Ac2100"
+          - "灏忕背 Miwifi Nano"
+          - "灏忕背 Redmi Router Ac2100"
           - "XY C5"
           - "v1"
           - "Youhua Wr1200js"
           - "X2"
           - "YK L1"
           - "YK L1c"
-          - "优酷 Yk L2"
+          - "浼橀叿 Yk L2"
           - "BOCCO"
-          - "云核 Ax820"
+          - "浜戞牳 Ax820"
           - "CPE200"
-          - "云核 Fap640"
+          - "浜戞牳 Fap640"
           - "FAP690"
-          - "云核 G720"
+          - "浜戞牳 G720"
           - "M300"
           - "ZR 2660"
           - "ZBT APE522II"
@@ -2092,7 +2086,7 @@ on:
           - "Q7"
           - "Keenetic"
           - "Keenetic 4G"
-          - "合勤 Keenetic Extra Ii"
+          - "鍚堝嫟 Keenetic Extra Ii"
           - "Keenetic Lite"
           - "Keenetic Lite III"
           - "Keenetic Omni"
@@ -2132,14 +2126,14 @@ on:
           - "1920 8G (JG920A)"
           - "1920 8G PoE+ 180W (JG922A)"
           - "1920 8G PoE+ 65W (JG921A)"
-          - "⚙ 自定义"
+          - "鈿?鑷畾涔?
       custom_device:
-        description: '选「自定义」时填写，格式 target/subtarget|profile，如 mediatek/filogic|xiaomi_redmi-router-ax6000'
+        description: '閫夈€岃嚜瀹氫箟銆嶆椂濉啓锛屾牸寮?target/subtarget|profile锛屽 mediatek/filogic|xiaomi_redmi-router-ax6000'
         required: false
         type: string
         default: ''
       theme:
-        description: 'LuCI 主题'
+        description: 'LuCI 涓婚'
         required: true
         type: choice
         default: argon
@@ -2149,19 +2143,19 @@ on:
           - material
           - design
       plugins:
-        description: '预装插件（每行一个包名，如 luci-app-openclash；支持 openclash/passwall/passwall2/homeproxy/nikki 自动拉取第三方源）'
+        description: '棰勮鎻掍欢锛堟瘡琛屼竴涓寘鍚嶏紝濡?luci-app-openclash锛涙敮鎸?openclash/passwall/passwall2/homeproxy/nikki 鑷姩鎷夊彇绗笁鏂规簮锛?
         required: false
         type: string
         default: |
           luci-app-ttyd
           luci-app-upnp
       lan_ip:
-        description: '默认管理 IP'
+        description: '榛樿绠＄悊 IP'
         required: true
         type: string
         default: 192.168.1.1
       ssid:
-        description: '默认 WiFi 名称'
+        description: '榛樿 WiFi 鍚嶇О'
         required: false
         type: string
         default: ImmortalWrt
@@ -2170,18 +2164,18 @@ permissions: write-all
 
 env:
   TZ: Asia/Shanghai
-  # 用户预装插件（多行输入，运行时按空白切分成多个包名）
+  # 鐢ㄦ埛棰勮鎻掍欢锛堝琛岃緭鍏ワ紝杩愯鏃舵寜绌虹櫧鍒囧垎鎴愬涓寘鍚嶏級
   PLUGINS_RAW: ${{ inputs.plugins }}
 
 jobs:
   build:
-    name: 构建 IMMWRT 固件镜像
+    name: 鏋勫缓 IMMWRT 鍥轰欢闀滃儚
     runs-on: ubuntu-latest
     steps:
-      - name: 检出本仓库
+      - name: 妫€鍑烘湰浠撳簱
         uses: actions/checkout@v4
 
-      - name: 释放磁盘空间
+      - name: 閲婃斁纾佺洏绌洪棿
         uses: jlumbroso/free-disk-space@main
         with:
           tool-cache: true
@@ -2191,8 +2185,7 @@ jobs:
           large-packages: true
           swap-storage: true
 
-      - name: 初始化编译环境
-        env:
+      - name: 鍒濆鍖栫紪璇戠幆澧?        env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo -E apt -yqq update
@@ -2200,27 +2193,26 @@ jobs:
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
           sudo timedatectl set-timezone "Asia/Shanghai"
 
-      - name: 解析选项
+      - name: 瑙ｆ瀽閫夐」
         id: vars
         run: |
-          # 源码仓库
+          # 婧愮爜浠撳簱
           REPO="${{ inputs.source }}"
           if [ "$REPO" = "custom" ]; then
             REPO="${{ inputs.custom_repo }}"
           fi
-          [ -z "$REPO" ] && { echo "::error::未指定源码仓库"; exit 1; }
+          [ -z "$REPO" ] && { echo "::error::鏈寚瀹氭簮鐮佷粨搴?; exit 1; }
           echo "REPO=$REPO"                     >> $GITHUB_ENV
           echo "REPO_URL=https://github.com/$REPO.git" >> $GITHUB_ENV
 
-          # 设备解析：下拉是中文名，先到 device-map.txt 反查 target/subtarget|profile
+          # 璁惧瑙ｆ瀽锛氫笅鎷夋槸涓枃鍚嶏紝鍏堝埌 device-map.txt 鍙嶆煡 target/subtarget|profile
           RAW="${{ inputs.device }}"
-          if [ "$RAW" = "⚙ 自定义" ]; then
+          if [ "$RAW" = "鈿?鑷畾涔? ]; then
             PROFILE="${{ inputs.custom_device }}"
           else
             PROFILE="$(awk -F'|' -v n="$RAW" '$1==n{print $2"|"$3; exit}' device-map.txt)"
-            [ -z "$PROFILE" ] && PROFILE="$RAW"   # 兜底：用户直接粘贴了 profile 串
-          fi
-          [ -z "$PROFILE" ] && { echo "::error::未选择设备，或在「⚙ 自定义」的 custom_device 中填写 target/subtarget|profile"; exit 1; }
+            [ -z "$PROFILE" ] && PROFILE="$RAW"   # 鍏滃簳锛氱敤鎴风洿鎺ョ矘璐翠簡 profile 涓?          fi
+          [ -z "$PROFILE" ] && { echo "::error::鏈€夋嫨璁惧锛屾垨鍦ㄣ€屸殭 鑷畾涔夈€嶇殑 custom_device 涓～鍐?target/subtarget|profile"; exit 1; }
           LEFT="${PROFILE%%|*}"
           DEV="${PROFILE##*|}"
           PLAT="${LEFT%%/*}"
@@ -2231,12 +2223,11 @@ jobs:
           echo "DATE=$(date +'%y.%m.%d-%H%M')" >> $GITHUB_ENV
           echo "SAFE_TARGET=${PLAT}-${SUB}"  >> $GITHUB_ENV
 
-      - name: 拉取源码（运行时克隆）
-        run: |
-          # 校验分支/tag 是否真实存在于源码仓库（根据源代码支持情况）
+      - name: 鎷夊彇婧愮爜锛堣繍琛屾椂鍏嬮殕锛?        run: |
+          # 鏍￠獙鍒嗘敮/tag 鏄惁鐪熷疄瀛樺湪浜庢簮鐮佷粨搴擄紙鏍规嵁婧愪唬鐮佹敮鎸佹儏鍐碉級
           if ! git ls-remote --heads --tags "$REPO_URL" | grep -qE "refs/(heads|tags)/${{ inputs.branch }}$"; then
-            echo "::error::分支/标签「${{ inputs.branch }}」在 $REPO_URL 中不存在"
-            echo "::group::该仓库可用的分支（前 30）"
+            echo "::error::鍒嗘敮/鏍囩銆?{{ inputs.branch }}銆嶅湪 $REPO_URL 涓笉瀛樺湪"
+            echo "::group::璇ヤ粨搴撳彲鐢ㄧ殑鍒嗘敮锛堝墠 30锛?
             git ls-remote --heads "$REPO_URL" | sed 's#.*refs/heads/##' | head -n 30
             echo "::endgroup::"
             exit 1
@@ -2244,19 +2235,17 @@ jobs:
           git clone --depth=1 --single-branch --branch "${{ inputs.branch }}" "$REPO_URL" openwrt
           cd openwrt
           echo "HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
-          # 去除国内下载源，避免 Action 里连不通
-          if [ -f scripts/projectsmirrors.json ]; then
+          # 鍘婚櫎鍥藉唴涓嬭浇婧愶紝閬垮厤 Action 閲岃繛涓嶉€?          if [ -f scripts/projectsmirrors.json ]; then
             sed -i '/\.cn\//d; /tencent/d; /aliyun/d' scripts/projectsmirrors.json
           fi
 
-      - name: 更新并安装 feeds
+      - name: 鏇存柊骞跺畨瑁?feeds
         working-directory: openwrt
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: 拉取第三方插件
-        working-directory: openwrt
+      - name: 鎷夊彇绗笁鏂规彃浠?        working-directory: openwrt
         run: |
           declare -A EXTRA=(
             [luci-app-openclash]="vernesong/OpenClash dev pkg"
@@ -2270,7 +2259,7 @@ jobs:
             local key="$1"; local repo br mode
             read -r repo br mode <<< "${EXTRA[$key]}"
             local name="${repo#*/}"
-            echo "==> 拉取第三方插件 $key ($repo@$br)"
+            echo "==> 鎷夊彇绗笁鏂规彃浠?$key ($repo@$br)"
             rm -rf "package/$name" "package/$key"
             git clone --depth=1 --single-branch --branch "$br" "https://github.com/$repo.git" "package/$name" || return 0
             if [ "$mode" = "pkg" ]; then
@@ -2285,27 +2274,27 @@ jobs:
             if [ -n "${EXTRA[$name]:-}" ]; then fetch "$name"; fi
           done
 
-      - name: 生成 .config（仅此设备）
+      - name: 鐢熸垚 .config锛堜粎姝よ澶囷級
         working-directory: openwrt
         run: |
           CFG=.config
           : > $CFG
-          # 校验设备是否真实存在于源码（根据源代码支持情况）
+          # 鏍￠獙璁惧鏄惁鐪熷疄瀛樺湪浜庢簮鐮侊紙鏍规嵁婧愪唬鐮佹敮鎸佹儏鍐碉級
           if ! grep -rq "define Device/${DEV}" "target/linux/${PLAT}/${SUB}/" 2>/dev/null && \
              ! grep -rq "define Device/${DEV}" "target/linux/${PLAT}/" 2>/dev/null; then
-            echo "::error::设备 ${DEV} 在源码目标 ${PLAT}/${SUB} 中不存在，请换设备或检查 custom_device"
+            echo "::error::璁惧 ${DEV} 鍦ㄦ簮鐮佺洰鏍?${PLAT}/${SUB} 涓笉瀛樺湪锛岃鎹㈣澶囨垨妫€鏌?custom_device"
             exit 1
           fi
-          # 目标平台 + 单一设备（MULTI_PROFILE=y 且只开一个 DEVICE => 只出这一个镜像）
+          # 鐩爣骞冲彴 + 鍗曚竴璁惧锛圡ULTI_PROFILE=y 涓斿彧寮€涓€涓?DEVICE => 鍙嚭杩欎竴涓暅鍍忥級
           echo "CONFIG_TARGET_${PLAT}=y"               >> $CFG
           echo "CONFIG_TARGET_${PLAT}_${SUB}=y"        >> $CFG
           echo "CONFIG_TARGET_MULTI_PROFILE=y"         >> $CFG
           echo "CONFIG_TARGET_PER_DEVICE_ROOTFS=y"     >> $CFG
           echo "CONFIG_TARGET_DEVICE_${PLAT}_${SUB}_DEVICE_${DEV}=y" >> $CFG
 
-          # 内核版本：根据源代码实际支持情况选取（运行时从源码读取该目标可用的内核）
+          # 鍐呮牳鐗堟湰锛氭牴鎹簮浠ｇ爜瀹為檯鏀寔鎯呭喌閫夊彇锛堣繍琛屾椂浠庢簮鐮佽鍙栬鐩爣鍙敤鐨勫唴鏍革級
           KSEL="${{ inputs.kernel }}"
-          if [ "$KSEL" != "自动（源码默认）" ]; then
+          if [ "$KSEL" != "鑷姩锛堟簮鐮侀粯璁わ級" ]; then
             MK="target/linux/${PLAT}/Makefile"
             [ -f "$MK" ] || MK="target/linux/${PLAT}/${SUB}/Makefile"
             if [ -f "$MK" ]; then
@@ -2314,7 +2303,7 @@ jobs:
               VERS="$DEF_KV $TST_KV"
               for d in target/linux/${PLAT}/linux-*; do [ -d "$d" ] && VERS="$VERS ${d##*linux-}"; done
               AVAIL="$(echo "$VERS" | tr ' ' '\n' | grep -v '^$' | sort -V -u)"
-              echo "该目标 $PLAT/$SUB 源码支持的内核版本：$AVAIL（默认 $DEF_KV，测试版 $TST_KV）"
+              echo "璇ョ洰鏍?$PLAT/$SUB 婧愮爜鏀寔鐨勫唴鏍哥増鏈細$AVAIL锛堥粯璁?$DEF_KV锛屾祴璇曠増 $TST_KV锛?
               if echo "$AVAIL" | grep -qx "$KSEL"; then
                 if [ "$KSEL" = "$TST_KV" ] && [ -n "$TST_KV" ]; then
                   sed -i "s/^KERNEL_TESTING_PATCHVER:=.*/KERNEL_TESTING_PATCHVER:=$KSEL/" "$MK"
@@ -2322,55 +2311,51 @@ jobs:
                 else
                   sed -i "s/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=$KSEL/" "$MK"
                 fi
-                echo "内核已切换为 $KSEL"
+                echo "鍐呮牳宸插垏鎹负 $KSEL"
               else
-                echo "::warning::该目标 $PLAT/$SUB 不支持内核 $KSEL（可用：$AVAIL），保持源码默认 $DEF_KV"
+                echo "::warning::璇ョ洰鏍?$PLAT/$SUB 涓嶆敮鎸佸唴鏍?$KSEL锛堝彲鐢細$AVAIL锛夛紝淇濇寔婧愮爜榛樿 $DEF_KV"
               fi
             else
-              echo "::warning::未找到 $MK，保持源码默认内核"
+              echo "::warning::鏈壘鍒?$MK锛屼繚鎸佹簮鐮侀粯璁ゅ唴鏍?
             fi
           else
-            echo "内核：使用源码默认（由分支决定）"
+            echo "鍐呮牳锛氫娇鐢ㄦ簮鐮侀粯璁わ紙鐢卞垎鏀喅瀹氾級"
           fi
 
-          # LuCI + 中文 + 主题
+          # LuCI + 涓枃 + 涓婚
           echo "CONFIG_PACKAGE_luci=y"                          >> $CFG
           echo "CONFIG_LUCI_LANG_zh_Hans=y"                     >> $CFG
           echo "CONFIG_PACKAGE_luci-i18n-base-zh-cn=y"          >> $CFG
           echo "CONFIG_PACKAGE_luci-theme-${{ inputs.theme }}=y" >> $CFG
           [ "${{ inputs.theme }}" = "argon" ] && echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> $CFG
 
-          # x86 出 img + vmdk，给 1G 根分区
-          if [ "$PLAT" = "x86" ]; then
+          # x86 鍑?img + vmdk锛岀粰 1G 鏍瑰垎鍖?          if [ "$PLAT" = "x86" ]; then
             echo "CONFIG_GRUB_IMAGES=y"                 >> $CFG
             echo "CONFIG_TARGET_ROOTFS_PARTSIZE=1024"   >> $CFG
           fi
 
-          # 用户预装插件（按空白切分，兼容换行/空格分隔）
-          for raw in $PLUGINS_RAW; do
+          # 鐢ㄦ埛棰勮鎻掍欢锛堟寜绌虹櫧鍒囧垎锛屽吋瀹规崲琛?绌烘牸鍒嗛殧锛?          for raw in $PLUGINS_RAW; do
             name="$(echo "$raw" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
             [ -z "$name" ] && continue
             echo "CONFIG_PACKAGE_${name}=y" >> $CFG
           done
 
           env -u PLAT make defconfig
-          # 校验预装插件是否真实存在于源码/feeds（根据源代码支持情况）
-          if [ -f tmp/.config-package.in ]; then
+          # 鏍￠獙棰勮鎻掍欢鏄惁鐪熷疄瀛樺湪浜庢簮鐮?feeds锛堟牴鎹簮浠ｇ爜鏀寔鎯呭喌锛?          if [ -f tmp/.config-package.in ]; then
             for raw in $PLUGINS_RAW; do
               p="$(echo "$raw" | sed 's/#.*//; s/CONFIG_PACKAGE_//; s/=y//; s/[[:space:]]//g')"
               [ -z "$p" ] && continue
-              # tmp/.config-package.in 是 kconfig 文件，符号名为 "config PACKAGE_xxx"（无 CONFIG_ 前缀）
-              if ! grep -Eq "^config PACKAGE_${p}\$" tmp/.config-package.in 2>/dev/null; then
-                echo "::warning::插件 ${p} 在源码/feeds 中不存在，已跳过"
+              # tmp/.config-package.in 鏄?kconfig 鏂囦欢锛岀鍙峰悕涓?"config PACKAGE_xxx"锛堟棤 CONFIG_ 鍓嶇紑锛屼笖涓嬪垝绾夸唬鏇胯繛瀛楃锛?              p_k="$(echo "$p" | tr '-' '_')"
+              if ! grep -Eq "^config PACKAGE_${p_k}\$" tmp/.config-package.in 2>/dev/null; then
+                echo "::warning::鎻掍欢 ${p} 鍦ㄦ簮鐮?feeds 涓笉瀛樺湪锛屽凡璺宠繃"
                 sed -i "/CONFIG_PACKAGE_${p}=y/d" .config
               fi
             done
           fi
-          echo "===== 最终 target 相关配置 ====="
+          echo "===== 鏈€缁?target 鐩稿叧閰嶇疆 ====="
           grep -E 'CONFIG_TARGET.*=y' .config | head -n 40
 
-      - name: 定制设置（IP / 主机名 / WiFi）
-        working-directory: openwrt
+      - name: 瀹氬埗璁剧疆锛圛P / 涓绘満鍚?/ WiFi锛?        working-directory: openwrt
         run: |
           CFG=./package/base-files/files/bin/config_generate
           sed -i "s/192\.168\.[0-9]*\.[0-9]*/${{ inputs.lan_ip }}/g" "$CFG" || true
@@ -2381,57 +2366,49 @@ jobs:
             done
           fi
 
-      - name: 下载依赖包
-        working-directory: openwrt
-        # 不要把这个 PLAT(mediatek 等目标平台名)泄漏给 openwrt 的 make 子进程
-        run: env -u PLAT make download -j$(nproc) V=s
+      - name: 涓嬭浇渚濊禆鍖?        working-directory: openwrt
+        # 涓嶈鎶婅繖涓?PLAT(mediatek 绛夌洰鏍囧钩鍙板悕)娉勬紡缁?openwrt 鐨?make 瀛愯繘绋?        run: env -u PLAT make download -j$(nproc) V=s
 
-      - name: 编译固件（仅此设备）
+      - name: 缂栬瘧鍥轰欢锛堜粎姝よ澶囷級
         working-directory: openwrt
         run: |
-          echo "开始编译：$PLAT/$SUB 设备 $DEV"
-          # 关键修复：本工作流把目标平台名(如 mediatek)写进了 $GITHUB_ENV 的 PLAT 变量，
-          # 会被 make 作为环境变量泄漏给 openwrt 子进程；而 ATF 的 fiptool 把 PLAT 当成
-          # “ATF 平台(mt7981 等)”解析，遇到未知的 mediatek 会报 Invalid platform 导致编译失败。
-          # 因此编译阶段必须清空该环境变量（fiptool 是通用工具，不需要 PLAT）。
-          unset PLAT
+          echo "寮€濮嬬紪璇戯細$PLAT/$SUB 璁惧 $DEV"
+          # 鍏抽敭淇锛氭湰宸ヤ綔娴佹妸鐩爣骞冲彴鍚?濡?mediatek)鍐欒繘浜?$GITHUB_ENV 鐨?PLAT 鍙橀噺锛?          # 浼氳 make 浣滀负鐜鍙橀噺娉勬紡缁?openwrt 瀛愯繘绋嬶紱鑰?ATF 鐨?fiptool 鎶?PLAT 褰撴垚
+          # 鈥淎TF 骞冲彴(mt7981 绛?鈥濊В鏋愶紝閬囧埌鏈煡鐨?mediatek 浼氭姤 Invalid platform 瀵艰嚧缂栬瘧澶辫触銆?          # 鍥犳缂栬瘧闃舵蹇呴』娓呯┖璇ョ幆澧冨彉閲忥紙fiptool 鏄€氱敤宸ュ叿锛屼笉闇€瑕?PLAT锛夈€?          unset PLAT
           make -j$(nproc) tools/install || make -j1 V=s tools/install
           make -j$(nproc) toolchain/install || make -j1 V=s toolchain/install
           make -j$(nproc) || make -j1 V=s
 
-      - name: 整理产物
+      - name: 鏁寸悊浜х墿
         working-directory: openwrt
         run: |
           mkdir -p ../firmware
           find bin/targets/ -type f \( -iname "*.bin" -o -iname "*.img.gz" -o -iname "*.itb" -o -iname "*.fip" -o -iname "*.ubi" -o -iname "*.vmdk" -o -iname "*sysupgrade*" -o -iname "*factory*" -o -iname "*.manifest" \) -exec cp -f {} ../firmware/ \;
           cp -f .config ../firmware/config-${SAFE_TARGET}-${DEV}-${DATE}.txt
           echo "KVER=$(find bin/targets/ -name '*.manifest' -exec grep -oP '^kernel - \K[\d\.]+' {} \; | head -n1)" >> $GITHUB_ENV
-          echo "===== 产物 ====="
+          echo "===== 浜х墿 ====="
           ls -lh ../firmware/
 
-      - name: 上传固件（Artifact）
-        uses: actions/upload-artifact@v4
+      - name: 涓婁紶鍥轰欢锛圓rtifact锛?        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.SAFE_TARGET }}-${{ env.DEV }}-${{ env.DATE }}
           path: firmware/*
 
-      - name: 发布 Release
+      - name: 鍙戝竷 Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.SAFE_TARGET }}-${{ env.DEV }}-${{ env.DATE }}
           files: firmware/*
           body: |
-            单设备定制固件
+            鍗曡澶囧畾鍒跺浐浠?
+            婧愮爜锛?{{ env.REPO }}
+            鍒嗘敮锛?{{ inputs.branch }}
+            鎻愪氦锛?{{ env.HASH }}
+            鍐呮牳锛?{{ inputs.kernel }}锛?{{ env.KVER }}锛?
+            骞冲彴锛?{{ env.SAFE_TARGET }}
+            璁惧锛?{{ env.DEV }}
+            涓婚锛?{{ inputs.theme }}
 
-            源码：${{ env.REPO }}
-            分支：${{ inputs.branch }}
-            提交：${{ env.HASH }}
-            内核：${{ inputs.kernel }}（${{ env.KVER }}）
-
-            平台：${{ env.SAFE_TARGET }}
-            设备：${{ env.DEV }}
-            主题：${{ inputs.theme }}
-
-            管理地址：${{ inputs.lan_ip }}
-            WiFi 名称：${{ inputs.ssid }}
-            登录密码：无（首次登录自行设置）
+            绠＄悊鍦板潃锛?{{ inputs.lan_ip }}
+            WiFi 鍚嶇О锛?{{ inputs.ssid }}
+            鐧诲綍瀵嗙爜锛氭棤锛堥娆＄櫥褰曡嚜琛岃缃級
